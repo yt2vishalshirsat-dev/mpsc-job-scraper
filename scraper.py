@@ -3,7 +3,20 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-def extract_real_image_url(element):
+def extract_from_srcset(srcset_str):
+    """ Extract highest resolution image URL from srcset string """
+    if not srcset_str:
+        return None
+    try:
+        sources = [s.strip().split(' ')[0] for s in srcset_str.split(',') if s.strip()]
+        if sources:
+            return sources[-1]
+    except Exception:
+        pass
+    return None
+
+def extract_real_image_from_card(element):
+    """ Level 1: Extract image from listing card elements """
     if not element:
         return None
     img_tag = element.find('img') if element.name != 'img' else element
@@ -17,13 +30,68 @@ def extract_real_image_url(element):
         img_tag.get('src')
     )
 
-    if (not raw_url or "blank.gif" in raw_url or "placeholder" in raw_url) and (img_tag.get('srcset') or img_tag.get('data-srcset')):
-        srcset = img_tag.get('srcset') or img_tag.get('data-srcset')
-        sources = [s.strip().split(' ')[0] for s in srcset.split(',') if s.strip()]
-        if sources:
-            raw_url = sources[-1]
+    if (not raw_url or "blank.gif" in raw_url or "placeholder" in raw_url):
+        raw_url = extract_from_srcset(img_tag.get('srcset') or img_tag.get('data-srcset'))
 
     return raw_url
+
+def deep_scrape_image_from_page(page_url, headers):
+    """ Deep Scrape Engine: Checks Meta Tags, JSON-LD, and Article Body """
+    try:
+        res = requests.get(page_url, headers=headers, timeout=5)
+        if res.status_code != 200:
+            return None
+        
+        soup = BeautifulSoup(res.text, 'html.parser')
+
+        # Level 2: OpenGraph Meta Tag (Highest Accuracy for WordPress/MajhiNaukri)
+        og_img = soup.find('meta', property=re.compile(r'^og:image$', re.I)) or soup.find('meta', attrs={'name': re.compile(r'^og:image$', re.I)})
+        if og_img and og_img.get('content'):
+            return og_img['content']
+
+        # Level 3: Twitter Image Meta Tag
+        tw_img = soup.find('meta', attrs={'name': re.compile(r'twitter:image', re.I)})
+        if tw_img and tw_img.get('content'):
+            return tw_img['content']
+
+        # Level 4: Schema JSON-LD Metadata
+        for script in soup.find_all('script', type='application/ld+json'):
+            if script.string:
+                try:
+                    data = json.loads(script.string)
+                    # Handle single object or @graph array
+                    items = data.get('@graph', [data]) if isinstance(data, dict) else data
+                    if isinstance(items, list):
+                        for item in items:
+                            if isinstance(item, dict) and 'image' in item:
+                                img_val = item['image']
+                                if isinstance(img_val, str):
+                                    return img_val
+                                elif isinstance(img_val, dict) and 'url' in img_val:
+                                    return img_val['url']
+                                elif isinstance(img_val, list) and len(img_val) > 0:
+                                    return img_val[0]
+                except Exception:
+                    continue
+
+        # Level 5: First Content Image inside article post body
+        content_div = soup.find(['div', 'article', 'main'], class_=re.compile(r'content|entry|post|body|article', re.I))
+        if content_div:
+            img_tag = content_div.find('img')
+            if img_tag:
+                found_url = (
+                    img_tag.get('data-src') or 
+                    img_tag.get('data-lazy-src') or 
+                    img_tag.get('src') or 
+                    extract_from_srcset(img_tag.get('srcset'))
+                )
+                if found_url and not any(x in found_url.lower() for x in ["blank.gif", "placeholder", "avatar"]):
+                    return found_url
+
+    except Exception:
+        pass
+
+    return None
 
 def fetch_jobs_from_url(url, default_category, headers):
     jobs_list = []
@@ -36,6 +104,7 @@ def fetch_jobs_from_url(url, default_category, headers):
                 title = a_tag.text.strip()
                 link = a_tag['href']
                 
+                # Filter irrelevant links
                 if len(title) < 15 or not any(k in title for k in ["भरती", "MPSC", "जाहिरात", "Hall Ticket", "प्रवेशपत्र", "निकाल", "Result", "उत्तरतालिका", "वेळापत्रक", "Bharti"]):
                     continue
                 if "/category/" in link or link.endswith(".in/") or link == "https://www.majhinaukri.in/":
@@ -47,26 +116,19 @@ def fetch_jobs_from_url(url, default_category, headers):
                 elif any(k in title for k in ["निकाल", "Result", "उत्तरतालिका"]):
                     category = "result"
 
-                # Extract image (NO FAKE FALLBACK AT ALL)
+                # Step 1: Extract from Card
                 img_src = None
                 parent = a_tag.find_parent(['article', 'div', 'li', 'section', 'tr'])
                 if parent:
-                    img_src = extract_real_image_url(parent)
+                    img_src = extract_real_image_from_card(parent)
 
+                # Step 2: Deep Scrape if card image missing or invalid
                 if not img_src or any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar"]):
-                    try:
-                        sub_img_res = requests.get(link, headers=headers, timeout=4)
-                        if sub_img_res.status_code == 200:
-                            sub_img_soup = BeautifulSoup(sub_img_res.text, 'html.parser')
-                            content_div = sub_img_soup.find(['div', 'article', 'main'], class_=re.compile(r'content|entry|post|body|article'))
-                            if content_div:
-                                img_src = extract_real_image_url(content_div)
-                    except Exception:
-                        pass
+                    img_src = deep_scrape_image_from_page(link, headers)
 
-                # Clean URL or set empty string
+                # Step 3: Clean URL Format
                 if img_src and not any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
-                    img_src = img_src.split('?')[0]
+                    img_src = img_src.split('?')[0] # Strip CDN URL params
                     if img_src.startswith('//'):
                         img_src = "https:" + img_src
                     elif img_src.startswith('/'):
@@ -74,9 +136,9 @@ def fetch_jobs_from_url(url, default_category, headers):
                     elif img_src.startswith('http://'):
                         img_src = img_src.replace('http://', 'https://')
                 else:
-                    img_src = "" # STRICTLY EMPTY - NO FAKE IMAGE!
+                    img_src = ""
 
-                # Last Date Scrape
+                # Step 4: Last Date Scrape
                 last_date = "तपशील पहा"
                 try:
                     sub_res = requests.get(link, headers=headers, timeout=4)
