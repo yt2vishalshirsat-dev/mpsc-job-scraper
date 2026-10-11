@@ -4,52 +4,42 @@ import requests
 from bs4 import BeautifulSoup
 
 def extract_qualifications(text):
-    """ Dynamically extracts and normalizes qualifications from article text """
+    """ Smart Multilingual Extractor: Handles English, Marathi & Mixed formats (10th, 10 vi, दहावी, etc.) case-insensitively """
     if not text:
-        return ["Any / Details Inside"]
+        return ["Any / General"]
     
     qualifications = set()
     text_lower = text.lower()
     
-    # Clean text to handle spaces, dots (e.g. l.l.b -> llb, b.e -> be)
-    normalized_text = re.sub(r'[\.\-\s]', '', text_lower)
+    # Comprehensive multilingual regex rules (Case-insensitive via re.IGNORECASE)
+    rules = [
+        ("10th Pass", [r'10\s*th', r'ssc', r'दहावी', r'१०\s*वी', r'10\s*वी', r'10\s*vi', r'uttirn.*10', r'10.*uttirn', r'madhyamik']),
+        ("12th Pass", [r'12\s*th', r'hsc', r'बारावी', r'१२\s*वी', r'12\s*वी', r'12\s*vi', r'uttirn.*12', r'12.*uttirn', r'higher\s*secondary']),
+        ("ITI", [r'\biti\b', r'आयटीआय']),
+        ("Diploma", [r'diploma', r'डिप्लोमा', r'पदविका', r'polytechnic']),
+        ("Graduate", [r'graduate', r'degree', r'पदवी', r'पदवीधर', r'bachelor', r'\bba\b', r'bsc', r'bcom', r'be\b', r'btech', r'bba', r'bca']),
+        ("Post Graduate", [r'post\s*graduate', r'\bpg\b', r'master', r'पदव्युत्तर', r'ma\b', r'msc', r'mcom', r'me\b', r'mtech', r'mba', r'mca']),
+        ("MBBS", [r'mbbs']),
+        ("BAMS", [r'bams']),
+        ("BHMS", [r'bhms']),
+        ("BDS", [r'bds']),
+        ("LLB", [r'llb', r'l\.?l\.?b', r'law', r'legal', r'वकील']),
+        ("B.Ed / D.Ed", [r'b\.?ed', r'd\.?ed', r'टीईटी', r'tet', r'ctet']),
+        ("Nursing", [r'gnm', r'b\.?sc\s*nursing', r'anm', r'nursing', r'परिचारिका']),
+        ("Pharmacy", [r'b\.?pharm', r'd\.?pharm', r'pharmacy', r'फार्मसी']),
+        ("CA / CS", [r'\bca\b', r'\bcs\b', r'icwa']),
+        ("Engineering", [r'engineering', r'इंजिनिअरिंग']),
+        ("AFCAT / Defense", [r'afcat', r'nda', r'cds', r'army', r'navy', r'airforce', r'police', r'भरती'])
+    ]
 
-    # Keyword patterns mapping to standard qualification names
-    patterns = {
-        "10th Pass": [r'10th', r'ssc', r'दहावी', r'१०वी', r'madhyamik'],
-        "12th Pass": [r'12th', r'hsc', r'बारावी', r'१२वी', r'highersecondary'],
-        "ITI": [r'iti', r'आयटीआय'],
-        "Diploma": [r'diploma', r'डिप्लोमा', r'पदविका'],
-        "Graduate": [r'graduate', r'degree', r'पदवी', r'bachelor'],
-        "Post Graduate": [r'postgraduate', r'pg', r'master', r'पदव्युत्तर'],
-        "MBBS": [r'mbbs'],
-        "BAMS": [r'bams'],
-        "BHMS": [r'bhms'],
-        "BDS": [r'bds'],
-        "BSc": [r'bsc'],
-        "BCom": [r'bcom'],
-        "BA": [r'ba\b'],
-        "BE / B.Tech": [r'be\b', r'btech', r'bengineering'],
-        "ME / M.Tech": [r'me\b', r'mtech'],
-        "LLB": [r'llb', r'law', r'legal', r'वकील'],
-        "B.Ed / D.Ed": [r'bed', r'ded', r'टीईटी', r'tet', r'ctet'],
-        "Nursing": [r'gnm', r'bscnursing', r'anm', r'nursing', r'परिचारिका'],
-        "Pharmacy": [r'bpharm', r'dpharm', r'pharmacy', r'फार्मसी'],
-        "CA / CS / ICWA": [r'ca\b', r'cs\b', r'icwa'],
-        "Engineering": [r'engineering', r'polytechnic', r'इंजिनिअरिंग'],
-        "AFCAT / Defense": [r'afcat', r'nda', r'cds', r'army', r'navy', r'airforce', r'police', r'भरती']
-    }
-
-    for qual_name, regex_list in patterns.items():
-        for reg in regex_list:
-            # Check against normalized text (ignoring spaces and dots) or original text
-            if re.search(reg, normalized_text) or re.search(reg, text_lower):
+    for qual_name, patterns in rules:
+        for pat in patterns:
+            if re.search(pat, text_lower, re.IGNORECASE):
                 qualifications.add(qual_name)
                 break
 
-    # If specific professional or standard degree words appear that are not captured above, extract them dynamically
-    # Catching general terms like BBA, BCA, MCA, MBA etc. dynamically
-    dynamic_degrees = re.findall(r'\b(bba|bca|mca|mba|msc|mcom|ma\b|phd|iti|bams|bhms|mbbs|llb|afcat)\b', text_lower)
+    # Dynamic fallback capture for standard degrees
+    dynamic_degrees = re.findall(r'\b(bba|bca|mca|mba|msc|mcom|ma\b|phd|iti|bams|bhms|mbbs|llb|afcat)\b', text_lower, re.IGNORECASE)
     for deg in dynamic_degrees:
         qualifications.add(deg.upper())
 
@@ -216,7 +206,7 @@ def fetch_jobs_from_url(url, default_category, headers):
                 except Exception:
                     pass
 
-                # Extract Qualifications dynamically including title & page content
+                # Extract Qualifications using Multilingual Engine
                 combined_text = f"{title} {page_text}"
                 qualifications_list = extract_qualifications(combined_text)
 
