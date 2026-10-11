@@ -3,7 +3,7 @@ name: Auto Job Scraper
 on:
   schedule:
     - cron: '0 */3 * * *' # Runs every 3 hours
-  workflow_dispatch: # Allows manual trigger
+  workflow_dispatch: # Allows manual run
 
 jobs:
   run-scraper:
@@ -15,8 +15,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0 # Full history required for clean rebase
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,15 +31,10 @@ jobs:
       - name: Run Scraper Script
         run: python scraper.py
 
-      - name: Sync, Commit and Push jobs.json
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and Force Push jobs.json
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          git reset --soft origin/main
           git add jobs.json
-          git commit -m "Auto-update jobs.json via scraper" || echo "No changes to commit"
-          git rebase origin/main
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main
+          git commit -m "Auto-update jobs.json via scraper" || exit 0
+          git push --force origin HEAD:main
