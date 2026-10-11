@@ -2,16 +2,16 @@ name: Auto Forum Post Bot
 
 on:
   schedule:
-    # दर तासाला रन होईल (Cron is in UTC: 7 AM IST is 1:30 AM UTC, 10 PM IST is 4:30 PM UTC)
-    - cron: '30 1-16 * * *'
+    # 7 AM IST to 10 PM IST (UTC timings: 1:30 AM UTC to 4:30 PM UTC)
+    - cron: '0 2-16 * * *'
   
-  workflow_dispatch: # मॅन्युअली टेस्ट करण्यासाठी
+  workflow_dispatch: # मॅन्युअल टेस्टसाठी
 
 jobs:
-  post-forum-questions:
+  run-forum-bot:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -19,11 +19,12 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install Dependencies
+      - name: Install Supabase Library
         run: |
-          pip install requests firebase-admin
+          pip install supabase
 
-      - name: Run Auto Forum Bot Script
+      - name: Run Auto Forum Bot
         env:
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: python auto_forum_bot.py
