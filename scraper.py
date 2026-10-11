@@ -4,33 +4,36 @@ import requests
 from bs4 import BeautifulSoup
 
 def extract_qualifications_from_clean_content(content_text, title_text=""):
-    """ Scrapes qualifications strictly from the post body and title, avoiding sidebars & menus """
+    """ Smart Multilingual & Separator Aware Extractor with Dynamic Auto-Discovery """
     if not content_text:
         return ["Any / General"]
     
     qualifications = set()
     full_text = f"{title_text} {content_text}"
-    text_lower = full_text.lower()
     
-    # 1. Regex rules using strict word boundaries (\b)
+    # Replace slashes, dots, and hyphens with spaces to split compound degrees like B.E./B.Tech/M.E/M.Tech
+    normalized_text = re.sub(r'[\/\.\-\,\(\)]', ' ', full_text)
+    text_lower = normalized_text.lower()
+    
+    # Pre-defined Standard Rules with multilingual variants
     rules = [
         ("10th Pass", [r'\b10\s*th\b', r'\bssc\b', r'दहावी', r'१०\s*वी', r'10\s*वी', r'10\s*vi\b', r'madhyamik']),
         ("12th Pass", [r'\b12\s*th\b', r'\bhsc\b', r'बारावी', r'१२\s*वी', r'12\s*वी', r'12\s*vi\b', r'higher\s*secondary']),
         ("ITI", [r'\biti\b', r'आयटीआय']),
         ("Diploma", [r'\bdiploma\b', r'डिप्लोमा', r'पदविका', r'\bpolytechnic\b']),
-        ("Graduate", [r'\bgraduate\b', r'पदवीधर', r'\bbachelor\b', r'\bba\b', r'\bbsc\b', r'\bbcom\b', r'\bbe\b', r'\bbtech\b', r'\bbba\b', r'\bbca\b']),
-        ("Post Graduate", [r'post\s*graduate', r'\bpg\b', r'\bmasters?\b', r'पदव्युत्तर', r'\bma\b', r'\bmsc\b', r'\bmcom\b', r'\bme\b', r'\bmtech\b', r'\bmba\b', r'\bmca\b']),
+        ("Graduate", [r'\bgraduate\b', r'पदवीधर', r'\bbachelor\b', r'\bba\b', r'\bbsc\b', r'\bbcom\b']),
+        ("Post Graduate", [r'post\s*graduate', r'\bpg\b', r'\bmasters?\b', r'पदव्युत्तर', r'\bma\b', r'\bmsc\b', r'\bmcom\b']),
         ("MBBS", [r'\bmbbs\b']),
         ("BAMS", [r'\bbams\b']),
         ("BHMS", [r'\bbhms\b']),
         ("BDS", [r'\bbds\b']),
-        ("LLB", [r'\bllb\b', r'l\.?l\.?b', r'\blaw\b', r'वकील']),
-        ("B.Ed / D.Ed", [r'b\.?ed', r'd\.?ed', r'\btet\b', r'\bctet\b']),
-        ("Nursing", [r'\bgnm\b', r'b\.?sc\s*nursing', r'\banm\b', r'nursing', r'परिचारिका']),
-        ("Pharmacy", [r'b\.?pharm', r'd\.?pharm', r'pharmacy', r'फार्मसी']),
+        ("LLB / Law", [r'\bllb\b', r'l\s*l\s*b', r'\blaw\b', r'\blegal\b', r'वकील', r'legal\s*officer']),
+        ("B.Ed / D.Ed", [r'b\s*ed', r'd\s*ed', r'\btet\b', r'\bctet\b']),
+        ("Nursing", [r'\bgnm\b', r'b\s*sc\s*nursing', r'\banm\b', r'nursing', r'परिचारिका']),
+        ("Pharmacy", [r'b\s*pharm', r'd\s*pharm', r'pharmacy', r'फार्मसी']),
         ("CA / CS", [r'\bca\b', r'\bcs\b', r'\bicwa\b']),
-        ("Engineering", [r'engineering', r'इंजिनिअरिंग']),
-        ("AFCAT / Defense", [r'\bafcat\b', r'\bnda\b', r'\bcds\b'])
+        ("Engineering", [r'\bengineering\b', r'\bbe\b', r'\bb\s*tech\b', r'\bm\s*tech\b', r'\bme\b', r'इंजिनिअरिंग']),
+        ("AFCAT / Defense", [r'\bafcat\b', r'\bnda\b', r'\bcds\b', r'army', r'navy', r'airforce'])
     ]
 
     for qual_name, patterns in rules:
@@ -38,6 +41,14 @@ def extract_qualifications_from_clean_content(content_text, title_text=""):
             if re.search(pat, text_lower, re.IGNORECASE):
                 qualifications.add(qual_name)
                 break
+
+    # Dynamic Discovery: Automatically catch capitalized degree acronyms found in text if not explicitly hardcoded
+    # This ensures B.Tech, M.Tech, BCA, MCA, BBA, MBA etc. are automatically picked up and added
+    potential_degrees = re.findall(r'\b([bms][a-tech]{2,5})\b', full_text, re.IGNORECASE)
+    for deg in potential_degrees:
+        clean_deg = deg.upper().strip()
+        if len(clean_deg) >= 2 and clean_deg not in ["THE", "AND", "FOR", "WITH"]:
+            qualifications.add(clean_deg)
 
     if not qualifications:
         qualifications.add("Any / General")
@@ -170,7 +181,7 @@ def fetch_jobs_from_url(url, default_category, headers):
                 else:
                     img_src = ""
 
-                # Step 3: Deep Scrape Article Body ONLY (Excluding Headers, Footers & Sidebars)
+                # Step 3: Deep Scrape Article Body
                 last_date = "तपशील पहा"
                 qualifications_list = ["Any / General"]
                 
@@ -179,13 +190,11 @@ def fetch_jobs_from_url(url, default_category, headers):
                     if sub_res.status_code == 200:
                         sub_soup = BeautifulSoup(sub_res.text, 'html.parser')
                         
-                        # Target ONLY the main post content container
                         article_content = sub_soup.find(['div', 'article'], class_=re.compile(r'entry-content|post-content|article-body|entry-content-single', re.I))
                         
                         if not article_content:
                             article_content = sub_soup.find('main') or sub_soup.body
 
-                        # Remove sidebars, navs, footers, and widgets before extracting text
                         if article_content:
                             for element in article_content.find_all(['aside', 'nav', 'footer', 'header', 'script', 'style', 'div'], class_=re.compile(r'sidebar|widget|footer|menu|related', re.I)):
                                 element.decompose()
@@ -205,7 +214,7 @@ def fetch_jobs_from_url(url, default_category, headers):
                                 if fallback_date:
                                     last_date = fallback_date.group(0)
 
-                            # Scrape Qualifications strictly from article content
+                            # Scrape Qualifications with dynamic and separator handling
                             qualifications_list = extract_qualifications_from_clean_content(content_text, title)
 
                 except Exception:
