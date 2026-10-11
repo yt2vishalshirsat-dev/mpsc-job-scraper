@@ -1,0 +1,64 @@
+name: Auto Job Scraper API Sync
+
+on:
+  schedule:
+    - cron: '0 */3 * * *' # Every 3 hours
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run Scraper & Direct API Upload
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          REPO_NAME: "yt2vishalshirsat-dev/mpsc-job-scraper"
+        run: |
+          python scraper.py
+          
+          python -c '
+          import os, json, base64, requests
+
+          with open("jobs.json", "r", encoding="utf-8") as f:
+              content = f.read()
+
+          encoded_content = base64.b64encode(content.encode("utf-8")).decode("utf-8")
+          token = os.environ.get("GH_PAT")
+          repo = os.environ.get("REPO_NAME")
+
+          url = f"https://api.github.com/repos/{repo}/contents/jobs.json"
+          headers = {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json"
+          }
+
+          res = requests.get(url, headers=headers)
+          sha = res.json().get("sha") if res.status_code == 200 else None
+
+          payload = {
+              "message": "Auto-update jobs.json via GitHub Direct API",
+              "content": encoded_content
+          }
+          if sha:
+              payload["sha"] = sha
+
+          put_res = requests.put(url, headers=headers, json=payload)
+          print("API Status:", put_res.status_code)
+          if put_res.status_code in [200, 201]:
+              print("SUCCESS: jobs.json updated perfectly!")
+          else:
+              print("Error Response:", put_res.text)
+              exit(1)
+          '
