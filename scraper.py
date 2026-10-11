@@ -33,7 +33,6 @@ def fetch_jobs_from_url(url, default_category, headers):
                 # Method 1: Check inside the immediate parent container or article block
                 parent = a_tag.find_parent(['article', 'div', 'li', 'section'])
                 if parent:
-                    # Look for any image inside this block
                     img_tag = parent.find('img')
                     if img_tag:
                         img_src = (
@@ -42,15 +41,14 @@ def fetch_jobs_from_url(url, default_category, headers):
                             img_tag.get('src')
                         )
                         if not img_src and img_tag.get('srcset'):
-                            img_src = img_tag.get('srcset'].split(',')[0].split(' ')[0]
+                            img_src = img_tag.get('srcset').split(',')[0].split(' ')[0]
 
-                # Method 2: If still not found, deep-scrape the actual article page to get the first real banner image!
+                # Method 2: Deep-scrape the actual article page if card image is missing
                 if not img_src or "via.placeholder" in img_src or "blank.gif" in img_src:
                     try:
                         sub_img_res = requests.get(link, headers=headers, timeout=4)
                         if sub_img_res.status_code == 200:
                             sub_img_soup = BeautifulSoup(sub_img_res.text, 'html.parser')
-                            # Look inside common article content containers
                             content_div = sub_img_soup.find(['div', 'article'], class_=re.compile(r'content|entry|post|body'))
                             if content_div:
                                 first_img = content_div.find('img')
@@ -63,7 +61,7 @@ def fetch_jobs_from_url(url, default_category, headers):
                     except Exception:
                         pass
 
-                # Fallback only if absolutely no image exists anywhere on page/card
+                # Fallback only if absolutely no image exists anywhere
                 fallback_img = "https://upload.wikimedia.org/wikipedia/commons/e/e4/Seal_of_Maharashtra.png"
                 
                 if not img_src or any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
@@ -108,7 +106,7 @@ def fetch_jobs_from_url(url, default_category, headers):
                     "last_date": last_date
                 })
 
-                if len(jobs_list) >= 15: # Limit per section
+                if len(jobs_list) >= 15:
                     break
     except Exception as e:
         print(f"Error: {e}")
