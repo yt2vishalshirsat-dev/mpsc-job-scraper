@@ -29,7 +29,6 @@ def fetch_jobs_from_url(url, default_category, headers):
                     category = "result"
 
                 # Image शोधण्यासाठी parent card baghu
-                # Image Extraction (Keeping original URLs including .svg.png)
                 img_src = None
                 parent = a_tag.find_parent(['article', 'div', 'li'])
                 if parent:
@@ -43,32 +42,13 @@ def fetch_jobs_from_url(url, default_category, headers):
                         if not img_src and img_tag.get('srcset'):
                             img_src = img_tag.get('srcset').split(',')[0].split(' ')[0]
 
-                fallback_img = "https://upload.wikimedia.org/wikipedia/commons/e/e4/Seal_of_Maharashtra.png"
+                # Fallback Maharashtra Emblem image
+                fallback_img = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Seal_of_Maharashtra.svg/200px-Seal_of_Maharashtra.svg.png"
                 
-                if not img_src or any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
+                if not img_src or "via.placeholder" in img_src or "blank.gif" in img_src:
                     img_src = fallback_img
                 else:
                     img_src = img_src.split('?')[0] # Remove query params
-                    
-                    if img_src.startswith('//'):
-                        img_src = "https:" + img_src
-                    elif img_src.startswith('/'):
-                        img_src = "https://www.majhinaukri.in" + img_src
-                    elif img_src.startswith('http://'):
-                        img_src = img_src.replace('http://', 'https://')
-
-                # Clean & Robust Fallback Image (Avoiding .svg.png conflict)
-                fallback_img = "https://upload.wikimedia.org/wikipedia/commons/e/e4/Seal_of_Maharashtra.png"
-                
-                if not img_src or any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
-                    img_src = fallback_img
-                else:
-                    img_src = img_src.split('?')[0] # Remove query params
-                    
-                    # Fix Wikimedia / CDN double extensions like .svg.png which break image loaders
-                    if ".svg.png" in img_src.lower():
-                        img_src = fallback_img
-
                     if img_src.startswith('//'):
                         img_src = "https:" + img_src
                     elif img_src.startswith('/'):
