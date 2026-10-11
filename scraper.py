@@ -10,7 +10,6 @@ def fetch_jobs_from_url(url, default_category, headers):
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # Sagle links ani anchor tags check karu je job articles ahet
             for a_tag in soup.find_all('a', href=True):
                 title = a_tag.text.strip()
                 link = a_tag['href']
@@ -28,10 +27,13 @@ def fetch_jobs_from_url(url, default_category, headers):
                 elif any(k in title for k in ["निकाल", "Result", "उत्तरतालिका"]):
                     category = "result"
 
-                # Image शोधण्यासाठी parent card baghu
+                # --- ADVANCED REAL IMAGE EXTRACTOR ---
                 img_src = None
-                parent = a_tag.find_parent(['article', 'div', 'li'])
+                
+                # Method 1: Check inside the immediate parent container or article block
+                parent = a_tag.find_parent(['article', 'div', 'li', 'section'])
                 if parent:
+                    # Look for any image inside this block
                     img_tag = parent.find('img')
                     if img_tag:
                         img_src = (
@@ -40,12 +42,31 @@ def fetch_jobs_from_url(url, default_category, headers):
                             img_tag.get('src')
                         )
                         if not img_src and img_tag.get('srcset'):
-                            img_src = img_tag.get('srcset').split(',')[0].split(' ')[0]
+                            img_src = img_tag.get('srcset'].split(',')[0].split(' ')[0]
 
-                # Fallback Maharashtra Emblem image
-                fallback_img = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Seal_of_Maharashtra.svg/200px-Seal_of_Maharashtra.svg.png"
-                
+                # Method 2: If still not found, deep-scrape the actual article page to get the first real banner image!
                 if not img_src or "via.placeholder" in img_src or "blank.gif" in img_src:
+                    try:
+                        sub_img_res = requests.get(link, headers=headers, timeout=4)
+                        if sub_img_res.status_code == 200:
+                            sub_img_soup = BeautifulSoup(sub_img_res.text, 'html.parser')
+                            # Look inside common article content containers
+                            content_div = sub_img_soup.find(['div', 'article'], class_=re.compile(r'content|entry|post|body'))
+                            if content_div:
+                                first_img = content_div.find('img')
+                                if first_img:
+                                    img_src = (
+                                        first_img.get('data-src') or 
+                                        first_img.get('data-lazy-src') or 
+                                        first_img.get('src')
+                                    )
+                    except Exception:
+                        pass
+
+                # Fallback only if absolutely no image exists anywhere on page/card
+                fallback_img = "https://upload.wikimedia.org/wikipedia/commons/e/e4/Seal_of_Maharashtra.png"
+                
+                if not img_src or any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
                     img_src = fallback_img
                 else:
                     img_src = img_src.split('?')[0] # Remove query params
