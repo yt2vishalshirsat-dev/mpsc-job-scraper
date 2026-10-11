@@ -1,0 +1,29 @@
+name: Auto Forum Post Bot
+
+on:
+  schedule:
+    # दर तासाला रन होईल (Cron is in UTC: 7 AM IST is 1:30 AM UTC, 10 PM IST is 4:30 PM UTC)
+    - cron: '30 1-16 * * *'
+  
+  workflow_dispatch: # मॅन्युअली टेस्ट करण्यासाठी
+
+jobs:
+  post-forum-questions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install requests firebase-admin
+
+      - name: Run Auto Forum Bot Script
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: python auto_forum_bot.py
