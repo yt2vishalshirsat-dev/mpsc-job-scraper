@@ -23,10 +23,9 @@ def extract_real_image_url(element):
     # Parse srcset if direct src is missing or standard placeholder
     if (not raw_url or "blank.gif" in raw_url or "placeholder" in raw_url) and (img_tag.get('srcset') or img_tag.get('data-srcset')):
         srcset = img_tag.get('srcset') or img_tag.get('data-srcset')
-        # Take the first or highest res URL from srcset entry (URL [resolution])
         sources = [s.strip().split(' ')[0] for s in srcset.split(',') if s.strip()]
         if sources:
-            raw_url = sources[-1] # Usually last or first is highest res
+            raw_url = sources[-1]
 
     return raw_url
 
@@ -67,19 +66,15 @@ def fetch_jobs_from_url(url, default_category, headers):
                         sub_img_res = requests.get(link, headers=headers, timeout=4)
                         if sub_img_res.status_code == 200:
                             sub_img_soup = BeautifulSoup(sub_img_res.text, 'html.parser')
-                            # Look for article banner/first content image
                             content_div = sub_img_soup.find(['div', 'article', 'main'], class_=re.compile(r'content|entry|post|body|article'))
                             if content_div:
                                 img_src = extract_real_image_url(content_div)
                     except Exception:
                         pass
 
-                # Clean & Normalize Real Image URL
-                default_emblem = "https://upload.wikimedia.org/wikipedia/commons/e/e4/Seal_of_Maharashtra.png"
-                
+                # Clean & Normalize Real Image URL (NO FAKE FALLBACK)
                 if img_src and not any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
-                    # Strip URL parameters like ?w=150&ssl=1
-                    img_src = img_src.split('?')[0]
+                    img_src = img_src.split('?')[0] # Remove query params like ?w=150
                     if img_src.startswith('//'):
                         img_src = "https:" + img_src
                     elif img_src.startswith('/'):
@@ -87,7 +82,7 @@ def fetch_jobs_from_url(url, default_category, headers):
                     elif img_src.startswith('http://'):
                         img_src = img_src.replace('http://', 'https://')
                 else:
-                    img_src = default_emblem
+                    img_src = "" # Leave empty if real image doesn't exist, avoiding fake fallback!
 
                 # --- 3. LAST DATE / EXAM DATE DEEP SCRAPE ---
                 last_date = "तपशील पहा"
