@@ -2,17 +2,18 @@ name: Auto Job Scraper
 
 on:
   schedule:
-    - cron: '0 */3 * * *' # Runs every 3 hours
-  workflow_dispatch:
+    - cron: '0 */3 * * *' # दर ३ तासांनी आपोआप रन होईल
+  workflow_dispatch: # मॅन्युअली रन करण्यासाठी
 
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Fetches all history for safe rebase/pull
+          fetch-depth: 0 # गिटची पूर्ण हिस्टरी फेच करण्यासाठी (Rebase साठी गरजेचे)
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -25,7 +26,7 @@ jobs:
       - name: Run Scraper Script
         run: python scraper.py
 
-      - name: Commit and Push jobs.json safely
+      - name: Commit and Push jobs.json Safely
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -33,5 +34,5 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add jobs.json
           git commit -m "Auto-update jobs.json via scraper" || exit 0
-          git pull --rebase origin main
+          git pull origin main --rebase
           git push origin main
