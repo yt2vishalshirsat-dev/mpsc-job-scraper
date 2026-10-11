@@ -4,36 +4,33 @@ import requests
 from bs4 import BeautifulSoup
 
 def extract_qualifications_from_clean_content(content_text, title_text=""):
-    """ Smart Multilingual & Separator Aware Extractor with Dynamic Auto-Discovery """
+    """ Strict Multilingual Qualification Extractor with Zero False Positives """
     if not content_text:
         return ["Any / General"]
     
     qualifications = set()
     full_text = f"{title_text} {content_text}"
+    text_lower = full_text.lower()
     
-    # Replace slashes, dots, and hyphens with spaces to split compound degrees like B.E./B.Tech/M.E/M.Tech
-    normalized_text = re.sub(r'[\/\.\-\,\(\)]', ' ', full_text)
-    text_lower = normalized_text.lower()
-    
-    # Pre-defined Standard Rules with multilingual variants
+    # Strict word boundary rules (\b ensures exact term matching)
     rules = [
-        ("10th Pass", [r'\b10\s*th\b', r'\bssc\b', r'दहावी', r'१०\s*वी', r'10\s*वी', r'10\s*vi\b', r'madhyamik']),
-        ("12th Pass", [r'\b12\s*th\b', r'\bhsc\b', r'बारावी', r'१२\s*वी', r'12\s*वी', r'12\s*vi\b', r'higher\s*secondary']),
+        ("10th Pass", [r'\b10\s*th\b', r'\bssc\b', r'दहावी', r'१०\s*वी', r'\b10\s*vi\b']),
+        ("12th Pass", [r'\b12\s*th\b', r'\bhsc\b', r'बारावी', r'१२\s*वी', r'\b12\s*vi\b']),
         ("ITI", [r'\biti\b', r'आयटीआय']),
         ("Diploma", [r'\bdiploma\b', r'डिप्लोमा', r'पदविका', r'\bpolytechnic\b']),
         ("Graduate", [r'\bgraduate\b', r'पदवीधर', r'\bbachelor\b', r'\bba\b', r'\bbsc\b', r'\bbcom\b']),
-        ("Post Graduate", [r'post\s*graduate', r'\bpg\b', r'\bmasters?\b', r'पदव्युत्तर', r'\bma\b', r'\bmsc\b', r'\bmcom\b']),
+        ("Post Graduate", [r'\bpost\s*graduate\b', r'\bpg\b', r'पदव्युत्तर', r'\bma\b', r'\bmsc\b', r'\bmcom\b']),
         ("MBBS", [r'\bmbbs\b']),
         ("BAMS", [r'\bbams\b']),
         ("BHMS", [r'\bbhms\b']),
-        ("BDS", [r'\bbds\b']),
-        ("LLB / Law", [r'\bllb\b', r'l\s*l\s*b', r'\blaw\b', r'\blegal\b', r'वकील', r'legal\s*officer']),
-        ("B.Ed / D.Ed", [r'b\s*ed', r'd\s*ed', r'\btet\b', r'\bctet\b']),
-        ("Nursing", [r'\bgnm\b', r'b\s*sc\s*nursing', r'\banm\b', r'nursing', r'परिचारिका']),
-        ("Pharmacy", [r'b\s*pharm', r'd\s*pharm', r'pharmacy', r'फार्मसी']),
+        ("B.Tech / B.E", [r'\bb\s*tech\b', r'\bbe\b', r'इंजिनिअरिंग']),
+        ("M.Tech / M.E", [r'\bm\s*tech\b', r'\bme\b']),
+        ("LLB / Law", [r'\bllb\b', r'\bl\.l\.b\b', r'\blaw\b', r'\blegal\b', r'वकील', r'कायदा']),
+        ("B.Ed / D.Ed", [r'\bb\.?\s*ed\b', r'\bd\.?\s*ed\b', r'\btet\b', r'\bctet\b']),
+        ("Nursing", [r'\bgnm\b', r'\banm\b', r'\bnursing\b', r'परिचारिका']),
+        ("Pharmacy", [r'\bb\.?\s*pharm\b', r'\bd\.?\s*pharm\b', r'\bpharmacy\b', r'फार्मसी']),
         ("CA / CS", [r'\bca\b', r'\bcs\b', r'\bicwa\b']),
-        ("Engineering", [r'\bengineering\b', r'\bbe\b', r'\bb\s*tech\b', r'\bm\s*tech\b', r'\bme\b', r'इंजिनिअरिंग']),
-        ("AFCAT / Defense", [r'\bafcat\b', r'\bnda\b', r'\bcds\b', r'army', r'navy', r'airforce'])
+        ("AFCAT / Defense", [r'\bafcat\b', r'\bnda\b', r'\bcds\b', r'\barmy\b', r'\bnavy\b', r'\bairforce\b'])
     ]
 
     for qual_name, patterns in rules:
@@ -41,14 +38,6 @@ def extract_qualifications_from_clean_content(content_text, title_text=""):
             if re.search(pat, text_lower, re.IGNORECASE):
                 qualifications.add(qual_name)
                 break
-
-    # Dynamic Discovery: Automatically catch capitalized degree acronyms found in text if not explicitly hardcoded
-    # This ensures B.Tech, M.Tech, BCA, MCA, BBA, MBA etc. are automatically picked up and added
-    potential_degrees = re.findall(r'\b([bms][a-tech]{2,5})\b', full_text, re.IGNORECASE)
-    for deg in potential_degrees:
-        clean_deg = deg.upper().strip()
-        if len(clean_deg) >= 2 and clean_deg not in ["THE", "AND", "FOR", "WITH"]:
-            qualifications.add(clean_deg)
 
     if not qualifications:
         qualifications.add("Any / General")
