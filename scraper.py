@@ -17,15 +17,14 @@ def scrape_mpsc_jobs():
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # Target the post list blocks/cards on Homepage directly (as seen in screenshot)
-            post_cards = soup.find_all(['article', 'div'], class_=['post', 'post-outer', 'entry-card', 'mega-menu-item', 'type-post'])
+            # Target post list cards on Homepage
+            post_cards = soup.find_all(['article', 'div'], class_=['post', 'post-outer', 'entry-card', 'type-post'])
 
             if not post_cards:
-                # Fallback to general list containers
                 post_cards = soup.find_all('div', class_=re.compile(r'post|entry|card|item'))
 
             for card in post_cards:
-                # 1. Find Title Link
+                # 1. Find Title & Link
                 a_tag = card.find('a', href=True)
                 if not a_tag:
                     continue
@@ -33,33 +32,40 @@ def scrape_mpsc_jobs():
                 title = a_tag.text.strip()
                 link = a_tag['href']
                 
-                # Ignore menu headers and non-job categories
+                # Filter out menu links and non-job categories
                 if len(title) < 18 or not any(k in title for k in ["भरती", "MPSC", "जाहिरात", "Hall Ticket", "निकाल", "Bharti", "Result"]):
                     continue
                 if "current-recruitment" in link or "/category/" in link or link.endswith(".in/"):
                     continue
 
-                # 2. Extract Exact Thumbnail Image from Homepage Card
+                # 2. Extract Exact Thumbnail Image
                 img_src = None
                 img_tag = card.find('img')
                 
                 if img_tag:
-                    # Check for lazy-loaded image sources used by WordPress
                     img_src = (
                         img_tag.get('data-src') or 
                         img_tag.get('data-lazy-src') or 
                         img_tag.get('src')
                     )
                     
-                    # Handle srcset if available
                     if not img_src and img_tag.get('srcset'):
                         img_src = img_tag.get('srcset').split(',')[0].split(' ')[0]
 
-                # Fallback Maharashtra Emblem if image not found
+                # Clean & Normalize Image URL for Android
+                fallback_img = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Seal_of_Maharashtra.svg/200px-Seal_of_Maharashtra.svg.png"
+                
                 if not img_src or "via.placeholder" in img_src or "blank.gif" in img_src:
-                    img_src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Seal_of_Maharashtra.svg/200px-Seal_of_Maharashtra.svg.png"
-                elif img_src.startswith('/'):
-                    img_src = "https://www.majhinaukri.in" + img_src
+                    img_src = fallback_img
+                else:
+                    # Remove query params like ?w=150&ssl=1
+                    img_src = img_src.split('?')[0]
+                    if img_src.startswith('//'):
+                        img_src = "https:" + img_src
+                    elif img_src.startswith('/'):
+                        img_src = "https://www.majhinaukri.in" + img_src
+                    elif img_src.startswith('http://'):
+                        img_src = img_src.replace('http://', 'https://')
 
                 # 3. Determine Category
                 category = "advertisement"
@@ -76,7 +82,6 @@ def scrape_mpsc_jobs():
                         sub_soup = BeautifulSoup(sub_res.text, 'html.parser')
                         page_text = sub_soup.get_text()
 
-                        # Marathi/English Last Date Regex
                         date_pattern = r'(?:अर्ज\s*करण्याची\s*शेवटची\s*तारीख|ऑनलाइन\s*अर्ज\s*करण्याची\s*शेवटची\s*तारीख|अंतिम\s*तारीख|Last\s*Date)\s*[:\-]\s*([^\n\r<]{3,35})'
                         date_match = re.search(date_pattern, page_text, re.IGNORECASE)
 
@@ -106,14 +111,14 @@ def scrape_mpsc_jobs():
     except Exception as e:
         print(f"Scraping error: {e}")
 
-    # Remove duplicates
+    # Remove duplicates based on source_url
     unique_jobs = list({job['source_url']: job for job in jobs_list}.values())
 
-    # Save cleanly
+    # Save cleanly to jobs.json
     with open("jobs.json", "w", encoding="utf-8") as f:
         json.dump(unique_jobs, f, ensure_ascii=False, indent=4)
         
-    print(f"Successfully saved {len(unique_jobs)} items with accurate thumbnails & dates!")
+    print(f"Successfully processed {len(unique_jobs)} clean job entries!")
 
 if __name__ == "__main__":
     scrape_mpsc_jobs()
