@@ -4,15 +4,12 @@ import requests
 from bs4 import BeautifulSoup
 
 def extract_real_image_url(element):
-    """ Helper function to extract exact highest-resolution image URL from any HTML tag """
     if not element:
         return None
-        
     img_tag = element.find('img') if element.name != 'img' else element
     if not img_tag:
         return None
 
-    # Check all possible lazy-load & standard src attributes used by WordPress/CDNs
     raw_url = (
         img_tag.get('data-src') or 
         img_tag.get('data-lazy-src') or 
@@ -20,7 +17,6 @@ def extract_real_image_url(element):
         img_tag.get('src')
     )
 
-    # Parse srcset if direct src is missing or standard placeholder
     if (not raw_url or "blank.gif" in raw_url or "placeholder" in raw_url) and (img_tag.get('srcset') or img_tag.get('data-srcset')):
         srcset = img_tag.get('srcset') or img_tag.get('data-srcset')
         sources = [s.strip().split(' ')[0] for s in srcset.split(',') if s.strip()]
@@ -40,27 +36,23 @@ def fetch_jobs_from_url(url, default_category, headers):
                 title = a_tag.text.strip()
                 link = a_tag['href']
                 
-                # Filter irrelevant header/navigation links
                 if len(title) < 15 or not any(k in title for k in ["भरती", "MPSC", "जाहिरात", "Hall Ticket", "प्रवेशपत्र", "निकाल", "Result", "उत्तरतालिका", "वेळापत्रक", "Bharti"]):
                     continue
                 if "/category/" in link or link.endswith(".in/") or link == "https://www.majhinaukri.in/":
                     continue
 
-                # Category determine karne
                 category = default_category
                 if any(k in title for k in ["Hall Ticket", "प्रवेशपत्र", "वेळापत्रक"]):
                     category = "hall_ticket"
                 elif any(k in title for k in ["निकाल", "Result", "उत्तरतालिका"]):
                     category = "result"
 
-                # --- 1. REAL IMAGE EXTRACTOR FROM CONTAINER CARD ---
+                # Extract image (NO FAKE FALLBACK AT ALL)
                 img_src = None
                 parent = a_tag.find_parent(['article', 'div', 'li', 'section', 'tr'])
-                
                 if parent:
                     img_src = extract_real_image_url(parent)
 
-                # --- 2. DEEP SCRAPE ARTICLE PAGE IF HOMEPAGE HAS NO IMAGE ---
                 if not img_src or any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar"]):
                     try:
                         sub_img_res = requests.get(link, headers=headers, timeout=4)
@@ -72,9 +64,9 @@ def fetch_jobs_from_url(url, default_category, headers):
                     except Exception:
                         pass
 
-                # Clean & Normalize Real Image URL (NO FAKE FALLBACK)
+                # Clean URL or set empty string
                 if img_src and not any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
-                    img_src = img_src.split('?')[0] # Remove query params like ?w=150
+                    img_src = img_src.split('?')[0]
                     if img_src.startswith('//'):
                         img_src = "https:" + img_src
                     elif img_src.startswith('/'):
@@ -82,19 +74,17 @@ def fetch_jobs_from_url(url, default_category, headers):
                     elif img_src.startswith('http://'):
                         img_src = img_src.replace('http://', 'https://')
                 else:
-                    img_src = "" # Leave empty if real image doesn't exist, avoiding fake fallback!
+                    img_src = "" # STRICTLY EMPTY - NO FAKE IMAGE!
 
-                # --- 3. LAST DATE / EXAM DATE DEEP SCRAPE ---
+                # Last Date Scrape
                 last_date = "तपशील पहा"
                 try:
                     sub_res = requests.get(link, headers=headers, timeout=4)
                     if sub_res.status_code == 200:
                         sub_soup = BeautifulSoup(sub_res.text, 'html.parser')
                         page_text = sub_soup.get_text()
-
                         date_pattern = r'(?:अर्ज\s*करण्याची\s*शेवटची\s*तारीख|ऑनलाइन\s*अर्ज\s*करण्याची\s*शेवटची\s*तारीख|अंतिम\s*तारीख|परीक्षा\s*तारीख|Last\s*Date)\s*[:\-]\s*([^\n\r<]{3,35})'
                         date_match = re.search(date_pattern, page_text, re.IGNORECASE)
-
                         if date_match:
                             extracted_date = date_match.group(1).strip()
                             extracted_date = re.sub(r'(पर्यंत|आहे|\.|<.*?>)', '', extracted_date).strip()
@@ -128,7 +118,6 @@ def main():
     }
 
     all_jobs = []
-    
     print("Scraping New Ads...")
     all_jobs.extend(fetch_jobs_from_url("https://www.majhinaukri.in/", "advertisement", headers))
     
@@ -138,7 +127,6 @@ def main():
     print("Scraping Results...")
     all_jobs.extend(fetch_jobs_from_url("https://www.majhinaukri.in/result/", "result", headers))
 
-    # Remove duplicates
     unique_jobs = list({job['source_url']: job for job in all_jobs}.values())
 
     with open("jobs.json", "w", encoding="utf-8") as f:
