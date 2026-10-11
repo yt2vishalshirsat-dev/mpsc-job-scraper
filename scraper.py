@@ -3,33 +3,34 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-def extract_qualifications(text):
-    """ Smart Multilingual Extractor: Handles English, Marathi & Mixed formats (10th, 10 vi, दहावी, etc.) case-insensitively """
-    if not text:
+def extract_qualifications_from_clean_content(content_text, title_text=""):
+    """ Scrapes qualifications strictly from the post body and title, avoiding sidebars & menus """
+    if not content_text:
         return ["Any / General"]
     
     qualifications = set()
-    text_lower = text.lower()
+    full_text = f"{title_text} {content_text}"
+    text_lower = full_text.lower()
     
-    # Comprehensive multilingual regex rules (Case-insensitive via re.IGNORECASE)
+    # 1. Regex rules using strict word boundaries (\b)
     rules = [
-        ("10th Pass", [r'10\s*th', r'ssc', r'दहावी', r'१०\s*वी', r'10\s*वी', r'10\s*vi', r'uttirn.*10', r'10.*uttirn', r'madhyamik']),
-        ("12th Pass", [r'12\s*th', r'hsc', r'बारावी', r'१२\s*वी', r'12\s*वी', r'12\s*vi', r'uttirn.*12', r'12.*uttirn', r'higher\s*secondary']),
+        ("10th Pass", [r'\b10\s*th\b', r'\bssc\b', r'दहावी', r'१०\s*वी', r'10\s*वी', r'10\s*vi\b', r'madhyamik']),
+        ("12th Pass", [r'\b12\s*th\b', r'\bhsc\b', r'बारावी', r'१२\s*वी', r'12\s*वी', r'12\s*vi\b', r'higher\s*secondary']),
         ("ITI", [r'\biti\b', r'आयटीआय']),
-        ("Diploma", [r'diploma', r'डिप्लोमा', r'पदविका', r'polytechnic']),
-        ("Graduate", [r'graduate', r'degree', r'पदवी', r'पदवीधर', r'bachelor', r'\bba\b', r'bsc', r'bcom', r'be\b', r'btech', r'bba', r'bca']),
-        ("Post Graduate", [r'post\s*graduate', r'\bpg\b', r'master', r'पदव्युत्तर', r'ma\b', r'msc', r'mcom', r'me\b', r'mtech', r'mba', r'mca']),
-        ("MBBS", [r'mbbs']),
-        ("BAMS", [r'bams']),
-        ("BHMS", [r'bhms']),
-        ("BDS", [r'bds']),
-        ("LLB", [r'llb', r'l\.?l\.?b', r'law', r'legal', r'वकील']),
-        ("B.Ed / D.Ed", [r'b\.?ed', r'd\.?ed', r'टीईटी', r'tet', r'ctet']),
-        ("Nursing", [r'gnm', r'b\.?sc\s*nursing', r'anm', r'nursing', r'परिचारिका']),
+        ("Diploma", [r'\bdiploma\b', r'डिप्लोमा', r'पदविका', r'\bpolytechnic\b']),
+        ("Graduate", [r'\bgraduate\b', r'पदवीधर', r'\bbachelor\b', r'\bba\b', r'\bbsc\b', r'\bbcom\b', r'\bbe\b', r'\bbtech\b', r'\bbba\b', r'\bbca\b']),
+        ("Post Graduate", [r'post\s*graduate', r'\bpg\b', r'\bmasters?\b', r'पदव्युत्तर', r'\bma\b', r'\bmsc\b', r'\bmcom\b', r'\bme\b', r'\bmtech\b', r'\bmba\b', r'\bmca\b']),
+        ("MBBS", [r'\bmbbs\b']),
+        ("BAMS", [r'\bbams\b']),
+        ("BHMS", [r'\bbhms\b']),
+        ("BDS", [r'\bbds\b']),
+        ("LLB", [r'\bllb\b', r'l\.?l\.?b', r'\blaw\b', r'वकील']),
+        ("B.Ed / D.Ed", [r'b\.?ed', r'd\.?ed', r'\btet\b', r'\bctet\b']),
+        ("Nursing", [r'\bgnm\b', r'b\.?sc\s*nursing', r'\banm\b', r'nursing', r'परिचारिका']),
         ("Pharmacy", [r'b\.?pharm', r'd\.?pharm', r'pharmacy', r'फार्मसी']),
-        ("CA / CS", [r'\bca\b', r'\bcs\b', r'icwa']),
+        ("CA / CS", [r'\bca\b', r'\bcs\b', r'\bicwa\b']),
         ("Engineering", [r'engineering', r'इंजिनिअरिंग']),
-        ("AFCAT / Defense", [r'afcat', r'nda', r'cds', r'army', r'navy', r'airforce', r'police', r'भरती'])
+        ("AFCAT / Defense", [r'\bafcat\b', r'\bnda\b', r'\bcds\b'])
     ]
 
     for qual_name, patterns in rules:
@@ -38,18 +39,12 @@ def extract_qualifications(text):
                 qualifications.add(qual_name)
                 break
 
-    # Dynamic fallback capture for standard degrees
-    dynamic_degrees = re.findall(r'\b(bba|bca|mca|mba|msc|mcom|ma\b|phd|iti|bams|bhms|mbbs|llb|afcat)\b', text_lower, re.IGNORECASE)
-    for deg in dynamic_degrees:
-        qualifications.add(deg.upper())
-
     if not qualifications:
         qualifications.add("Any / General")
 
     return list(qualifications)
 
 def extract_from_srcset(srcset_str):
-    """ Extract highest resolution image URL from srcset string """
     if not srcset_str:
         return None
     try:
@@ -61,7 +56,6 @@ def extract_from_srcset(srcset_str):
     return None
 
 def extract_real_image_from_card(element):
-    """ Level 1: Extract image from listing card elements """
     if not element:
         return None
     img_tag = element.find('img') if element.name != 'img' else element
@@ -81,7 +75,6 @@ def extract_real_image_from_card(element):
     return raw_url
 
 def deep_scrape_image_from_page(page_url, headers):
-    """ Deep Scrape Engine: Checks Meta Tags, JSON-LD, and Article Body """
     try:
         res = requests.get(page_url, headers=headers, timeout=5)
         if res.status_code != 200:
@@ -89,17 +82,14 @@ def deep_scrape_image_from_page(page_url, headers):
         
         soup = BeautifulSoup(res.text, 'html.parser')
 
-        # Level 2: OpenGraph Meta Tag
         og_img = soup.find('meta', property=re.compile(r'^og:image$', re.I)) or soup.find('meta', attrs={'name': re.compile(r'^og:image$', re.I)})
         if og_img and og_img.get('content'):
             return og_img['content']
 
-        # Level 3: Twitter Image Meta Tag
         tw_img = soup.find('meta', attrs={'name': re.compile(r'twitter:image', re.I)})
         if tw_img and tw_img.get('content'):
             return tw_img['content']
 
-        # Level 4: Schema JSON-LD Metadata
         for script in soup.find_all('script', type='application/ld+json'):
             if script.string:
                 try:
@@ -118,7 +108,6 @@ def deep_scrape_image_from_page(page_url, headers):
                 except Exception:
                     continue
 
-        # Level 5: First Content Image inside article post body
         content_div = soup.find(['div', 'article', 'main'], class_=re.compile(r'content|entry|post|body|article', re.I))
         if content_div:
             img_tag = content_div.find('img')
@@ -148,7 +137,6 @@ def fetch_jobs_from_url(url, default_category, headers):
                 title = a_tag.text.strip()
                 link = a_tag['href']
                 
-                # Filter irrelevant links
                 if len(title) < 15 or not any(k in title for k in ["भरती", "MPSC", "जाहिरात", "Hall Ticket", "प्रवेशपत्र", "निकाल", "Result", "उत्तरतालिका", "वेळापत्रक", "Bharti"]):
                     continue
                 if "/category/" in link or link.endswith(".in/") or link == "https://www.majhinaukri.in/":
@@ -166,11 +154,11 @@ def fetch_jobs_from_url(url, default_category, headers):
                 if parent:
                     img_src = extract_real_image_from_card(parent)
 
-                # Step 2: Deep Scrape if card image missing or invalid
+                # Step 2: Deep Scrape image if needed
                 if not img_src or any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar"]):
                     img_src = deep_scrape_image_from_page(link, headers)
 
-                # Step 3: Clean URL Format
+                # Clean Image URL
                 if img_src and not any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
                     img_src = img_src.split('?')[0]
                     if img_src.startswith('//'):
@@ -182,33 +170,46 @@ def fetch_jobs_from_url(url, default_category, headers):
                 else:
                     img_src = ""
 
-                # Step 4: Last Date & Qualifications Deep Scrape
+                # Step 3: Deep Scrape Article Body ONLY (Excluding Headers, Footers & Sidebars)
                 last_date = "तपशील पहा"
-                page_text = ""
+                qualifications_list = ["Any / General"]
+                
                 try:
-                    sub_res = requests.get(link, headers=headers, timeout=4)
+                    sub_res = requests.get(link, headers=headers, timeout=5)
                     if sub_res.status_code == 200:
                         sub_soup = BeautifulSoup(sub_res.text, 'html.parser')
-                        page_text = sub_soup.get_text()
                         
-                        # Date Scrape
-                        date_pattern = r'(?:अर्ज\s*करण्याची\s*शेवटची\s*तारीख|ऑनलाइन\s*अर्ज\s*करण्याची\s*शेवटची\s*तारीख|अंतिम\s*तारीख|परीक्षा\s*तारीख|Last\s*Date)\s*[:\-]\s*([^\n\r<]{3,35})'
-                        date_match = re.search(date_pattern, page_text, re.IGNORECASE)
-                        if date_match:
-                            extracted_date = date_match.group(1).strip()
-                            extracted_date = re.sub(r'(पर्यंत|आहे|\.|<.*?>)', '', extracted_date).strip()
-                            if len(extracted_date) > 2:
-                                last_date = extracted_date[:30]
-                        else:
-                            fallback_date = re.search(r'(\d{1,2}\s*(?:जानेवारी|फेब्रुवारी|मार्च|एप्रिल|मे|जून|जुलै|ऑगस्ट|सप्टेंबर|ऑक्टोबर|नोव्हेंबर|डिसेंबर|\/\d{1,2}\/|\-\d{1,2}\-)\s*\d{2,4})', page_text)
-                            if fallback_date:
-                                last_date = fallback_date.group(0)
+                        # Target ONLY the main post content container
+                        article_content = sub_soup.find(['div', 'article'], class_=re.compile(r'entry-content|post-content|article-body|entry-content-single', re.I))
+                        
+                        if not article_content:
+                            article_content = sub_soup.find('main') or sub_soup.body
+
+                        # Remove sidebars, navs, footers, and widgets before extracting text
+                        if article_content:
+                            for element in article_content.find_all(['aside', 'nav', 'footer', 'header', 'script', 'style', 'div'], class_=re.compile(r'sidebar|widget|footer|menu|related', re.I)):
+                                element.decompose()
+
+                            content_text = article_content.get_text()
+
+                            # Scrape Last Date
+                            date_pattern = r'(?:अर्ज\s*करण्याची\s*शेवटची\s*तारीख|ऑनलाइन\s*अर्ज\s*करण्याची\s*शेवटची\s*तारीख|अंतिम\s*तारीख|परीक्षा\s*तारीख|Last\s*Date)\s*[:\-]\s*([^\n\r<]{3,35})'
+                            date_match = re.search(date_pattern, content_text, re.IGNORECASE)
+                            if date_match:
+                                extracted_date = date_match.group(1).strip()
+                                extracted_date = re.sub(r'(पर्यंत|आहे|\.|<.*?>)', '', extracted_date).strip()
+                                if len(extracted_date) > 2:
+                                    last_date = extracted_date[:30]
+                            else:
+                                fallback_date = re.search(r'(\d{1,2}\s*(?:जानेवारी|फेब्रुवारी|मार्च|एप्रिल|मे|जून|जुलै|ऑगस्ट|सप्टेंबर|ऑक्टोबर|नोव्हेंबर|डिसेंबर|\/\d{1,2}\/|\-\d{1,2}\-)\s*\d{2,4})', content_text)
+                                if fallback_date:
+                                    last_date = fallback_date.group(0)
+
+                            # Scrape Qualifications strictly from article content
+                            qualifications_list = extract_qualifications_from_clean_content(content_text, title)
+
                 except Exception:
                     pass
-
-                # Extract Qualifications using Multilingual Engine
-                combined_text = f"{title} {page_text}"
-                qualifications_list = extract_qualifications(combined_text)
 
                 jobs_list.append({
                     "title": title,
