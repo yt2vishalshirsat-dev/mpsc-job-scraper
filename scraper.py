@@ -27,10 +27,10 @@ def fetch_jobs_from_url(url, default_category, headers):
                 elif any(k in title for k in ["निकाल", "Result", "उत्तरतालिका"]):
                     category = "result"
 
-                # --- ADVANCED REAL IMAGE EXTRACTOR ---
+                # --- REAL IMAGE EXTRACTOR WITHOUT FAKE FALLBACK ---
                 img_src = None
                 
-                # Method 1: Check inside the immediate parent container or article block
+                # Method 1: Check inside parent container
                 parent = a_tag.find_parent(['article', 'div', 'li', 'section'])
                 if parent:
                     img_tag = parent.find('img')
@@ -61,19 +61,17 @@ def fetch_jobs_from_url(url, default_category, headers):
                     except Exception:
                         pass
 
-                # Fallback only if absolutely no image exists anywhere
-                fallback_img = "https://upload.wikimedia.org/wikipedia/commons/e/e4/Seal_of_Maharashtra.png"
-                
-                if not img_src or any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
-                    img_src = fallback_img
-                else:
-                    img_src = img_src.split('?')[0] # Remove query params
+                # Clean valid image URL if found
+                if img_src and not any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default", "seal_of_maharashtra"]):
+                    img_src = img_src.split('?')[0]
                     if img_src.startswith('//'):
                         img_src = "https:" + img_src
                     elif img_src.startswith('/'):
                         img_src = "https://www.majhinaukri.in" + img_src
                     elif img_src.startswith('http://'):
                         img_src = img_src.replace('http://', 'https://')
+                else:
+                    img_src = "" # Keep empty string if real image is not found, preventing fake fallback!
 
                 # Last Date / Exam Date Deep Scrape
                 last_date = "तपशील पहा"
