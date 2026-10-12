@@ -245,7 +245,7 @@ def fetch_jobs_from_url(url, default_category, headers):
 
 
 def init_firebase_admin():
-    """ Initialize Firebase Admin SDK safely (Supports both naming conventions) """
+    """ Initialize Firebase Admin SDK safely """
     try:
         if not firebase_admin._apps:
             cred_json_str = os.getenv("FIREBASE_CREDENTIALS") or os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
@@ -265,18 +265,8 @@ def init_firebase_admin():
 
 
 def get_supabase_credentials():
-    """ Fetch Supabase credentials with multiple fallback env var names """
-    url = (
-        os.getenv("SUPABASE_URL") or 
-        os.getenv("SUPABASE_PROJECT_URL") or 
-        os.getenv("SUPABASE_REST_URL") or ""
-    ).rstrip('/')
-    
-    key = (
-        os.getenv("SUPABASE_KEY") or 
-        os.getenv("SUPABASE_ANON_KEY") or 
-        os.getenv("SUPABASE_SERVICE_KEY") or ""
-    )
+    url = (os.getenv("SUPABASE_URL") or os.getenv("SUPABASE_PROJECT_URL") or "").rstrip('/')
+    key = os.getenv("SUPABASE_KEY") or os.getenv("SUPABASE_ANON_KEY") or ""
     return url, key
 
 
@@ -285,7 +275,7 @@ def save_jobs_to_supabase(unique_jobs):
     SUPABASE_URL, SUPABASE_KEY = get_supabase_credentials()
 
     if not SUPABASE_URL or not SUPABASE_KEY:
-        print(f"⚠️ Supabase credentials missing! (URL Loaded: {bool(SUPABASE_URL)}, KEY Loaded: {bool(SUPABASE_KEY)})")
+        print("⚠️ Supabase credentials missing. Skipping cloud sync.")
         return
 
     print("☁️ Syncing scraped jobs with Supabase database...")
@@ -308,19 +298,19 @@ def save_jobs_to_supabase(unique_jobs):
         }
         try:
             requests.post(rest_url, headers=headers, json=payload, timeout=5)
-        except Exception as e:
-            print(f"⚠️ Supabase Post Error: {e}")
+        except Exception:
+            pass
     print("✅ Supabase cloud sync completed!")
 
 
-def send_push_notification_for_new_job(job_title, job_url):
-    """ Fetch active device tokens from Supabase REST API and broadcast FCM notification """
-    print("🚀 Triggering Instant FCM Push Notification via Supabase REST & Firebase Admin SDK...")
+def send_push_notification_for_new_job(job_title, job_url, thumbnail_url=""):
+    """ 🚀 Fetch tokens from Supabase and broadcast Rich FCM notification with Image & Deep Link """
+    print("🚀 Triggering Rich FCM Push Notification with Image & Deep Link...")
     
     SUPABASE_URL, SUPABASE_KEY = get_supabase_credentials()
 
     if not SUPABASE_URL or not SUPABASE_KEY:
-        print(f"⚠️ Supabase credentials missing for Push! (URL Loaded: {bool(SUPABASE_URL)}, KEY Loaded: {bool(SUPABASE_KEY)})")
+        print("⚠️ Supabase credentials missing. Skipping push notification.")
         return
 
     if not init_firebase_admin():
@@ -346,68 +336,36 @@ def send_push_notification_for_new_job(job_title, job_url):
             return
 
         tokens = list(set([item["token"] for item in tokens_data if item.get("token")]))
-        print(f"📱 Broadcasting notification to {len(tokens)} registered devices...")
+        print(f"📱 Broadcasting Rich Notification to {len(tokens)} registered devices...")
+
+        # 🖼️ जर इमेज उपलब्ध असेल तरच FCM नोटिफिकेशनमध्ये अटॅच करा
+        image_to_send = thumbnail_url if (thumbnail_url and thumbnail_url.startswith("http")) else None
 
         message = messaging.MulticastMessage(
             notification=messaging.Notification(
                 title="🎯 नवीन शासकीय नोकरी अपडेट!",
-                body=f"{job_title} - सविस्तर पाहण्यासाठी क्लिक करा."
+                body=job_title,
+                image=image_to_send  # नोटिफिकेशनच्या खाली इमेज दिसेल
             ),
             data={
                 "title": job_title,
-                "official_url": job_url,
-                "open_deep_link": "true"
+                "source_url": job_url,
+                "thumbnail_url": thumbnail_url if thumbnail_url else "",
+                "click_action": "OPEN_JOB_DETAILS"
             },
             tokens=tokens,
             android=messaging.AndroidConfig(
                 priority="high",
                 notification=messaging.AndroidNotification(
                     sound="default",
+                    image=image_to_send,
                     click_action="OPEN_JOB_DETAILS"
                 )
             )
         )
 
         response_fcm = messaging.send_each_for_multicast(message)
-        print(f"✅ Successfully sent message to {response_fcm.success_count} devices.")
-        if response_fcm.failure_count > 0:
-            print(f"⚠️ Failed for {response_fcm.failure_count} tokens.")
-
-    except Exception as e:
-        print(f"❌ Error broadcasting push notification: {e}")
-
-
-def send_push_notification_for_new_job(job_title, job_url, thumbnail_url=""):
-    """ Send Rich FCM Notification with Image & Deep Link payload """
-    # ... (Supabase tokens fetch logic remains same) ...
-
-    # इमेज जर उपलब्ध नसेल तर डीफॉल्ट लोगो किंवा रिकामा ठेवू शकता
-    image_to_send = thumbnail_url if thumbnail_url else None
-
-    message = messaging.MulticastMessage(
-        notification=messaging.Notification(
-            title="🎯 नवीन शासकीय नोकरी अपडेट!",
-            body=job_title,
-            image=image_to_send  # 🖼️ इथून नोटिफिकेशनमध्ये इमेज दिसेल
-        ),
-        data={
-            "title": job_title,
-            "source_url": job_url,
-            "thumbnail_url": thumbnail_url,
-            "click_action": "OPEN_JOB_DETAILS"  # 🔗 Android Deep Linking साठी
-        },
-        tokens=tokens,
-        android=messaging.AndroidConfig(
-            priority="high",
-            notification=messaging.AndroidNotification(
-                sound="default",
-                image=image_to_send,
-                click_action="OPEN_JOB_DETAILS"
-            )
-        )
-    )
-
-    response_fcm = messaging.send_each_for_multicast(message)        print(f"✅ Successfully sent message to {response_fcm.success_count} devices.")
+        print(f"✅ Successfully sent rich notification to {response_fcm.success_count} devices.")
         if response_fcm.failure_count > 0:
             print(f"⚠️ Failed for {response_fcm.failure_count} tokens.")
 
@@ -451,15 +409,15 @@ def main():
     # 1. Save jobs to Supabase cloud
     save_jobs_to_supabase(unique_jobs)
 
-    # 2. Trigger push notification
+    # 2. Trigger Rich Push Notification with Image and Data payload
     if new_jobs_found:
         print(f"🎉 Found {len(new_jobs_found)} new job(s)!")
         for job in new_jobs_found:
-            send_push_notification_for_new_job(job["title"], job["source_url"])
+            send_push_notification_for_new_job(job["title"], job["source_url"], job.get("thumbnail_url", ""))
     elif unique_jobs:
         print("ℹ️ No new jobs found compared to last run. Sending latest job alert for testing.")
         latest_job = unique_jobs[0]
-        send_push_notification_for_new_job(latest_job["title"], latest_job["source_url"])
+        send_push_notification_for_new_job(latest_job["title"], latest_job["source_url"], latest_job.get("thumbnail_url", ""))
 
 
 if __name__ == "__main__":
