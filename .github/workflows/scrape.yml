@@ -1,11 +1,8 @@
-name: Run Job Scraper
+name: Run Job Scraper & Notify
 
 on:
   scheduled:
-    # दर ३ तासांनी रन होण्यासाठी Cron expression (UTC वेळेनुसार चालते)
     - cron: '0 */3 * * *'
-  
-  # Manual Run बटन (Workflow dispatch) चालू ठेवायचे असेल तर हे ठेवा
   workflow_dispatch:
 
 jobs:
@@ -23,9 +20,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          pip install requests beautifulsoup4 supabase
 
-      - name: Run scraper script
+      - name: Run scraper script & Send Push Notifications
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          FCM_SERVER_KEY: ${{ secrets.FCM_SERVER_KEY }}
         run: python scraper.py
 
       - name: Commit and push changes if jobs.json updated
@@ -33,4 +34,4 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add jobs.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update jobs.json [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update jobs.json and trigger notifications [skip ci]" && git push)
