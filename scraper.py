@@ -397,13 +397,14 @@ def main():
         
     print(f"Total jobs saved locally: {len(unique_jobs)}")
 
-    # ☁️ Save scraped jobs directly to Supabase cloud database
+    # 1. Pahile jobs Supabase cloud var save kara
     save_jobs_to_supabase(unique_jobs)
 
+    # 2. ATA HA TUMI VICHARLELA CODE ITHE EXACTLY PLACE KARA:
     if new_jobs_found:
         print(f"🎉 Found {len(new_jobs_found)} new job(s)!")
-        latest_job = new_jobs_found[0]
-        send_push_notification_for_new_job(latest_job["title"], latest_job["source_url"])
+        for job in new_jobs_found:
+            send_push_notification_for_new_job(job["title"], job["source_url"])
     elif unique_jobs:
         print("ℹ️ No new jobs found compared to last run. Sending latest job alert for testing.")
         latest_job = unique_jobs[0]
