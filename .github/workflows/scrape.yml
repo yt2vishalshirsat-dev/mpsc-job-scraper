@@ -22,6 +22,8 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          REPO_NAME: ${{ github.repository }}
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install requests beautifulsoup4 firebase-admin
