@@ -17,17 +17,15 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run scraper script & Send Push Notifications
+      - name: Install dependencies and Run Scraper
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
-        run: python scraper.py
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests beautifulsoup4 supabase firebase-admin
+          python scraper.py
 
       - name: Commit and push changes if jobs.json updated
         run: |
