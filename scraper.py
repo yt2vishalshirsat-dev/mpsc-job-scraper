@@ -265,6 +265,40 @@ def init_firebase_admin():
         return False
 
 
+def save_jobs_to_supabase(unique_jobs):
+    """ ☁️ Save scraped jobs directly to Supabase cloud table (posts) """
+    SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip('/')
+    SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
+
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        print("⚠️ Supabase credentials missing. Skipping cloud sync.")
+        return
+
+    print("☁️ Syncing scraped jobs with Supabase database...")
+    rest_url = f"{SUPABASE_URL}/rest/v1/posts"
+    
+    headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json",
+        "Prefer": "resolution=merge-duplicates"
+    }
+
+    for job in unique_jobs:
+        payload = {
+            "title": job["title"],
+            "source_url": job["source_url"],
+            "thumbnail_url": job["thumbnail_url"],
+            "category": job["category"],
+            "last_date": job["last_date"]
+        }
+        try:
+            requests.post(rest_url, headers=headers, json=payload, timeout=5)
+        except Exception:
+            pass
+    print("✅ Supabase cloud sync completed!")
+
+
 def send_push_notification_for_new_job(job_title, job_url):
     """ Fetch active device tokens from Supabase REST API and broadcast FCM notification """
     print("🚀 Triggering Instant FCM Push Notification via Supabase REST & Firebase Admin SDK...")
@@ -281,7 +315,6 @@ def send_push_notification_for_new_job(job_title, job_url):
         return
 
     try:
-        # Supabase REST endpoint to read push_tokens table
         rest_url = f"{SUPABASE_URL}/rest/v1/push_tokens?select=token"
         headers = {
             "apikey": SUPABASE_KEY,
@@ -363,6 +396,9 @@ def main():
         json.dump(unique_jobs, f, ensure_ascii=False, indent=4)
         
     print(f"Total jobs saved locally: {len(unique_jobs)}")
+
+    # ☁️ Save scraped jobs directly to Supabase cloud database
+    save_jobs_to_supabase(unique_jobs)
 
     if new_jobs_found:
         print(f"🎉 Found {len(new_jobs_found)} new job(s)!")
