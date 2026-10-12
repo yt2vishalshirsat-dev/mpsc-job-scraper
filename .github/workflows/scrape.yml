@@ -24,7 +24,7 @@ jobs:
           FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install requests beautifulsoup4 supabase firebase-admin
+          python3 -m pip install requests beautifulsoup4 firebase-admin
           python3 scraper.py
 
       - name: Commit and push changes if jobs.json updated
