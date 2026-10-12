@@ -1,8 +1,11 @@
-import sys
-import subprocess
 import os
 import json
 import re
+import requests
+from bs4 import BeautifulSoup
+from supabase import create_client, Client
+import firebase_admin
+from firebase_admin import credentials, messaging
 
 # --- FAIL-SAFE AUTO INSTALLER (गारंटीड इन्स्टॉलेशन) ---
 required_packages = {
