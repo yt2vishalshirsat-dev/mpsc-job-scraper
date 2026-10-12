@@ -5,7 +5,6 @@ import json
 import re
 
 # --- FAIL-SAFE AUTO INSTALLER GUARD ---
-# जर GitHub एनव्हायरनमेंटमध्ये लायब्ररी मिसिंग असेल तर रनटाईमला स्वतः इन्स्टॉल करेल
 required_packages = [
     ('requests', 'requests'),
     ('bs4', 'beautifulsoup4'),
@@ -246,10 +245,10 @@ def fetch_jobs_from_url(url, default_category, headers):
 
 
 def init_firebase_admin():
-    """ Initialize Firebase Admin SDK safely """
+    """ Initialize Firebase Admin SDK safely (Supports both naming conventions) """
     try:
         if not firebase_admin._apps:
-            cred_json_str = os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
+            cred_json_str = os.getenv("FIREBASE_CREDENTIALS") or os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
             if cred_json_str:
                 cred_dict = json.loads(cred_json_str)
                 cred = credentials.Certificate(cred_dict)
@@ -267,8 +266,8 @@ def init_firebase_admin():
 
 def save_jobs_to_supabase(unique_jobs):
     """ ☁️ Save scraped jobs directly to Supabase cloud table (posts) """
-    SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip('/')
-    SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
+    SUPABASE_URL = (os.getenv("SUPABASE_URL") or os.getenv("SUPABASE_PROJECT_URL") or "").rstrip('/')
+    SUPABASE_KEY = os.getenv("SUPABASE_KEY") or os.getenv("SUPABASE_ANON_KEY") or ""
 
     if not SUPABASE_URL or not SUPABASE_KEY:
         print("⚠️ Supabase credentials missing. Skipping cloud sync.")
@@ -303,8 +302,8 @@ def send_push_notification_for_new_job(job_title, job_url):
     """ Fetch active device tokens from Supabase REST API and broadcast FCM notification """
     print("🚀 Triggering Instant FCM Push Notification via Supabase REST & Firebase Admin SDK...")
     
-    SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip('/')
-    SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
+    SUPABASE_URL = (os.getenv("SUPABASE_URL") or os.getenv("SUPABASE_PROJECT_URL") or "").rstrip('/')
+    SUPABASE_KEY = os.getenv("SUPABASE_KEY") or os.getenv("SUPABASE_ANON_KEY") or ""
 
     if not SUPABASE_URL or not SUPABASE_KEY:
         print("⚠️ Supabase credentials missing. Skipping push notification.")
@@ -397,10 +396,10 @@ def main():
         
     print(f"Total jobs saved locally: {len(unique_jobs)}")
 
-    # 1. Pahile jobs Supabase cloud var save kara
+    # 1. Save jobs to Supabase cloud
     save_jobs_to_supabase(unique_jobs)
 
-    # 2. ATA HA TUMI VICHARLELA CODE ITHE EXACTLY PLACE KARA:
+    # 2. Trigger push notification
     if new_jobs_found:
         print(f"🎉 Found {len(new_jobs_found)} new job(s)!")
         for job in new_jobs_found:
