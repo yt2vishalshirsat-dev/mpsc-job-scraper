@@ -255,7 +255,6 @@ def send_push_notification_for_new_job(job_title, job_url):
         return
 
     try:
-        # Supabase REST API endpoint to query push_tokens table
         rest_url = f"{SUPABASE_URL}/rest/v1/push_tokens?select=token"
         headers = {
             "apikey": SUPABASE_KEY,
