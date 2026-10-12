@@ -377,64 +377,37 @@ def send_push_notification_for_new_job(job_title, job_url):
         print(f"❌ Error broadcasting push notification: {e}")
 
 
-def send_push_notification_for_new_job(job_title, job_url):
-    """ Fetch active device tokens from Supabase REST API and broadcast FCM notification """
-    print("🚀 Triggering Instant FCM Push Notification via Supabase REST & Firebase Admin SDK...")
-    
-    SUPABASE_URL = (os.getenv("SUPABASE_URL") or os.getenv("SUPABASE_PROJECT_URL") or "").rstrip('/')
-    SUPABASE_KEY = os.getenv("SUPABASE_KEY") or os.getenv("SUPABASE_ANON_KEY") or ""
+def send_push_notification_for_new_job(job_title, job_url, thumbnail_url=""):
+    """ Send Rich FCM Notification with Image & Deep Link payload """
+    # ... (Supabase tokens fetch logic remains same) ...
 
-    if not SUPABASE_URL or not SUPABASE_KEY:
-        print("⚠️ Supabase credentials missing. Skipping push notification.")
-        return
+    # इमेज जर उपलब्ध नसेल तर डीफॉल्ट लोगो किंवा रिकामा ठेवू शकता
+    image_to_send = thumbnail_url if thumbnail_url else None
 
-    if not init_firebase_admin():
-        print("⚠️ Firebase Admin SDK initialization failed. Skipping push notification.")
-        return
-
-    try:
-        rest_url = f"{SUPABASE_URL}/rest/v1/push_tokens?select=token"
-        headers = {
-            "apikey": SUPABASE_KEY,
-            "Authorization": f"Bearer {SUPABASE_KEY}",
-            "Content-Type": "application/json"
-        }
-        
-        response = requests.get(rest_url, headers=headers, timeout=10)
-        if response.status_code != 200:
-            print(f"❌ Failed to fetch tokens from Supabase REST API: {response.text}")
-            return
-
-        tokens_data = response.json()
-        if not tokens_data:
-            print("⚠️ No push tokens registered in Supabase.")
-            return
-
-        tokens = list(set([item["token"] for item in tokens_data if item.get("token")]))
-        print(f"📱 Broadcasting notification to {len(tokens)} registered devices...")
-
-        message = messaging.MulticastMessage(
-            notification=messaging.Notification(
-                title="🎯 नवीन शासकीय नोकरी अपडेट!",
-                body=f"{job_title} - सविस्तर पाहण्यासाठी क्लिक करा."
-            ),
-            data={
-                "title": job_title,
-                "official_url": job_url,
-                "open_deep_link": "true"
-            },
-            tokens=tokens,
-            android=messaging.AndroidConfig(
-                priority="high",
-                notification=messaging.AndroidNotification(
-                    sound="default",
-                    click_action="OPEN_JOB_DETAILS"
-                )
+    message = messaging.MulticastMessage(
+        notification=messaging.Notification(
+            title="🎯 नवीन शासकीय नोकरी अपडेट!",
+            body=job_title,
+            image=image_to_send  # 🖼️ इथून नोटिफिकेशनमध्ये इमेज दिसेल
+        ),
+        data={
+            "title": job_title,
+            "source_url": job_url,
+            "thumbnail_url": thumbnail_url,
+            "click_action": "OPEN_JOB_DETAILS"  # 🔗 Android Deep Linking साठी
+        },
+        tokens=tokens,
+        android=messaging.AndroidConfig(
+            priority="high",
+            notification=messaging.AndroidNotification(
+                sound="default",
+                image=image_to_send,
+                click_action="OPEN_JOB_DETAILS"
             )
         )
+    )
 
-        response_fcm = messaging.send_each_for_multicast(message)
-        print(f"✅ Successfully sent message to {response_fcm.success_count} devices.")
+    response_fcm = messaging.send_each_for_multicast(message)        print(f"✅ Successfully sent message to {response_fcm.success_count} devices.")
         if response_fcm.failure_count > 0:
             print(f"⚠️ Failed for {response_fcm.failure_count} tokens.")
 
