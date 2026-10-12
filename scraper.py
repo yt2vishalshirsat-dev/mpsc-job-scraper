@@ -2,10 +2,22 @@ import os
 import json
 import re
 import requests
+import sys
+import subprocess
 from bs4 import BeautifulSoup
 from supabase import create_client, Client
 import firebase_admin
 from firebase_admin import credentials, messaging
+
+# --- FAIL-SAFE AUTO INSTALLER ---
+required_packages = ['supabase', 'firebase-admin', 'requests', 'beautifulsoup4']
+for package in required_packages:
+    try:
+        __import__(package if package != 'beautifulsoup4' else 'bs4')
+    except ImportError:
+        print(f"📦 Installing missing package: {package}...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+# --------------------------------
 
 # Auto-install missing packages if GitHub runner skips pip step
 try:
