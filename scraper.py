@@ -3,32 +3,8 @@ import json
 import re
 import requests
 from bs4 import BeautifulSoup
-from supabase import create_client, Client
 import firebase_admin
 from firebase_admin import credentials, messaging
-
-# --- FAIL-SAFE AUTO INSTALLER (गारंटीड इन्स्टॉलेशन) ---
-required_packages = {
-    'supabase': 'supabase',
-    'firebase_admin': 'firebase-admin',
-    'requests': 'requests',
-    'bs4': 'beautifulsoup4'
-}
-
-for module_name, pkg_name in required_packages.items():
-    try:
-        __import__(module_name)
-    except ImportError:
-        print(f"📦 Installing missing package: {pkg_name}...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg_name])
-
-# --- IMPORTS ---
-import requests
-from bs4 import BeautifulSoup
-from supabase import create_client, Client
-import firebase_admin
-from firebase_admin import credentials, messaging
-
 
 def extract_qualifications_from_clean_content(content_text, title_text=""):
     """ Strict Multilingual Qualification Extractor with Zero False Positives """
@@ -70,7 +46,6 @@ def extract_qualifications_from_clean_content(content_text, title_text=""):
 
     return list(qualifications)
 
-
 def extract_from_srcset(srcset_str):
     if not srcset_str:
         return None
@@ -81,7 +56,6 @@ def extract_from_srcset(srcset_str):
     except Exception:
         pass
     return None
-
 
 def extract_real_image_from_card(element):
     if not element:
@@ -101,7 +75,6 @@ def extract_real_image_from_card(element):
         raw_url = extract_from_srcset(img_tag.get('srcset') or img_tag.get('data-srcset'))
 
     return raw_url
-
 
 def deep_scrape_image_from_page(page_url, headers):
     try:
@@ -154,7 +127,6 @@ def deep_scrape_image_from_page(page_url, headers):
         pass
 
     return None
-
 
 def fetch_jobs_from_url(url, default_category, headers):
     jobs_list = []
@@ -248,7 +220,6 @@ def fetch_jobs_from_url(url, default_category, headers):
 
     return jobs_list
 
-
 def init_firebase_admin():
     """ Initialize Firebase Admin SDK safely """
     try:
@@ -268,12 +239,11 @@ def init_firebase_admin():
         print(f"⚠️ Firebase Admin initialization error: {e}")
         return False
 
-
 def send_push_notification_for_new_job(job_title, job_url):
-    """ Fetch active device tokens from Supabase and broadcast high-priority FCM notification """
-    print("🚀 Triggering Instant FCM Push Notification using Firebase Admin SDK...")
+    """ Fetch active device tokens from Supabase REST API and broadcast FCM notification """
+    print("🚀 Triggering Instant FCM Push Notification via Supabase REST & Firebase Admin SDK...")
     
-    SUPABASE_URL = os.getenv("SUPABASE_URL", "")
+    SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip('/')
     SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
 
     if not SUPABASE_URL or not SUPABASE_KEY:
@@ -285,10 +255,20 @@ def send_push_notification_for_new_job(job_title, job_url):
         return
 
     try:
-        supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-        response = supabase.table("push_tokens").select("token").execute()
-        tokens_data = response.data
+        # Supabase REST API endpoint to query push_tokens table
+        rest_url = f"{SUPABASE_URL}/rest/v1/push_tokens?select=token"
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json"
+        }
+        
+        response = requests.get(rest_url, headers=headers, timeout=10)
+        if response.status_code != 200:
+            print(f"❌ Failed to fetch tokens from Supabase REST API: {response.text}")
+            return
 
+        tokens_data = response.json()
         if not tokens_data:
             print("⚠️ No push tokens registered in Supabase.")
             return
@@ -322,8 +302,7 @@ def send_push_notification_for_new_job(job_title, job_url):
             print(f"⚠️ Failed for {response_fcm.failure_count} tokens.")
 
     except Exception as e:
-        print(f"❌ Error broadcasting push notification via Admin SDK: {e}")
-
+        print(f"❌ Error broadcasting push notification: {e}")
 
 def main():
     headers = {
@@ -366,7 +345,6 @@ def main():
         print("ℹ️ No new jobs found compared to last run. Sending latest job alert for testing.")
         latest_job = unique_jobs[0]
         send_push_notification_for_new_job(latest_job["title"], latest_job["source_url"])
-
 
 if __name__ == "__main__":
     main()
