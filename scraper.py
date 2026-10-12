@@ -1,10 +1,30 @@
+import sys
+import subprocess
 import os
 import json
 import re
+
+# --- FAIL-SAFE AUTO INSTALLER GUARD ---
+# जर GitHub एनव्हायरनमेंटमध्ये लायब्ररी मिसिंग असेल तर रनटाईमला स्वतः इन्स्टॉल करेल
+required_packages = [
+    ('requests', 'requests'),
+    ('bs4', 'beautifulsoup4'),
+    ('firebase_admin', 'firebase-admin')
+]
+
+for mod, pkg in required_packages:
+    try:
+        __import__(mod)
+    except ImportError:
+        print(f"📦 Installing missing package runtime: {pkg}...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
+
+# --- IMPORTS ---
 import requests
 from bs4 import BeautifulSoup
 import firebase_admin
 from firebase_admin import credentials, messaging
+
 
 def extract_qualifications_from_clean_content(content_text, title_text=""):
     """ Strict Multilingual Qualification Extractor with Zero False Positives """
@@ -46,6 +66,7 @@ def extract_qualifications_from_clean_content(content_text, title_text=""):
 
     return list(qualifications)
 
+
 def extract_from_srcset(srcset_str):
     if not srcset_str:
         return None
@@ -56,6 +77,7 @@ def extract_from_srcset(srcset_str):
     except Exception:
         pass
     return None
+
 
 def extract_real_image_from_card(element):
     if not element:
@@ -75,6 +97,7 @@ def extract_real_image_from_card(element):
         raw_url = extract_from_srcset(img_tag.get('srcset') or img_tag.get('data-srcset'))
 
     return raw_url
+
 
 def deep_scrape_image_from_page(page_url, headers):
     try:
@@ -127,6 +150,7 @@ def deep_scrape_image_from_page(page_url, headers):
         pass
 
     return None
+
 
 def fetch_jobs_from_url(url, default_category, headers):
     jobs_list = []
@@ -220,6 +244,7 @@ def fetch_jobs_from_url(url, default_category, headers):
 
     return jobs_list
 
+
 def init_firebase_admin():
     """ Initialize Firebase Admin SDK safely """
     try:
@@ -239,6 +264,7 @@ def init_firebase_admin():
         print(f"⚠️ Firebase Admin initialization error: {e}")
         return False
 
+
 def send_push_notification_for_new_job(job_title, job_url):
     """ Fetch active device tokens from Supabase REST API and broadcast FCM notification """
     print("🚀 Triggering Instant FCM Push Notification via Supabase REST & Firebase Admin SDK...")
@@ -255,6 +281,7 @@ def send_push_notification_for_new_job(job_title, job_url):
         return
 
     try:
+        # Supabase REST endpoint to read push_tokens table
         rest_url = f"{SUPABASE_URL}/rest/v1/push_tokens?select=token"
         headers = {
             "apikey": SUPABASE_KEY,
@@ -303,6 +330,7 @@ def send_push_notification_for_new_job(job_title, job_url):
     except Exception as e:
         print(f"❌ Error broadcasting push notification: {e}")
 
+
 def main():
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -344,6 +372,7 @@ def main():
         print("ℹ️ No new jobs found compared to last run. Sending latest job alert for testing.")
         latest_job = unique_jobs[0]
         send_push_notification_for_new_job(latest_job["title"], latest_job["source_url"])
+
 
 if __name__ == "__main__":
     main()
