@@ -264,13 +264,28 @@ def init_firebase_admin():
         return False
 
 
+def get_supabase_credentials():
+    """ Fetch Supabase credentials with multiple fallback env var names """
+    url = (
+        os.getenv("SUPABASE_URL") or 
+        os.getenv("SUPABASE_PROJECT_URL") or 
+        os.getenv("SUPABASE_REST_URL") or ""
+    ).rstrip('/')
+    
+    key = (
+        os.getenv("SUPABASE_KEY") or 
+        os.getenv("SUPABASE_ANON_KEY") or 
+        os.getenv("SUPABASE_SERVICE_KEY") or ""
+    )
+    return url, key
+
+
 def save_jobs_to_supabase(unique_jobs):
     """ ☁️ Save scraped jobs directly to Supabase cloud table (posts) """
-    SUPABASE_URL = (os.getenv("SUPABASE_URL") or os.getenv("SUPABASE_PROJECT_URL") or "").rstrip('/')
-    SUPABASE_KEY = os.getenv("SUPABASE_KEY") or os.getenv("SUPABASE_ANON_KEY") or ""
+    SUPABASE_URL, SUPABASE_KEY = get_supabase_credentials()
 
     if not SUPABASE_URL or not SUPABASE_KEY:
-        print("⚠️ Supabase credentials missing. Skipping cloud sync.")
+        print(f"⚠️ Supabase credentials missing! (URL Loaded: {bool(SUPABASE_URL)}, KEY Loaded: {bool(SUPABASE_KEY)})")
         return
 
     print("☁️ Syncing scraped jobs with Supabase database...")
@@ -293,9 +308,73 @@ def save_jobs_to_supabase(unique_jobs):
         }
         try:
             requests.post(rest_url, headers=headers, json=payload, timeout=5)
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"⚠️ Supabase Post Error: {e}")
     print("✅ Supabase cloud sync completed!")
+
+
+def send_push_notification_for_new_job(job_title, job_url):
+    """ Fetch active device tokens from Supabase REST API and broadcast FCM notification """
+    print("🚀 Triggering Instant FCM Push Notification via Supabase REST & Firebase Admin SDK...")
+    
+    SUPABASE_URL, SUPABASE_KEY = get_supabase_credentials()
+
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        print(f"⚠️ Supabase credentials missing for Push! (URL Loaded: {bool(SUPABASE_URL)}, KEY Loaded: {bool(SUPABASE_KEY)})")
+        return
+
+    if not init_firebase_admin():
+        print("⚠️ Firebase Admin SDK initialization failed. Skipping push notification.")
+        return
+
+    try:
+        rest_url = f"{SUPABASE_URL}/rest/v1/push_tokens?select=token"
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json"
+        }
+        
+        response = requests.get(rest_url, headers=headers, timeout=10)
+        if response.status_code != 200:
+            print(f"❌ Failed to fetch tokens from Supabase REST API: {response.text}")
+            return
+
+        tokens_data = response.json()
+        if not tokens_data:
+            print("⚠️ No push tokens registered in Supabase.")
+            return
+
+        tokens = list(set([item["token"] for item in tokens_data if item.get("token")]))
+        print(f"📱 Broadcasting notification to {len(tokens)} registered devices...")
+
+        message = messaging.MulticastMessage(
+            notification=messaging.Notification(
+                title="🎯 नवीन शासकीय नोकरी अपडेट!",
+                body=f"{job_title} - सविस्तर पाहण्यासाठी क्लिक करा."
+            ),
+            data={
+                "title": job_title,
+                "official_url": job_url,
+                "open_deep_link": "true"
+            },
+            tokens=tokens,
+            android=messaging.AndroidConfig(
+                priority="high",
+                notification=messaging.AndroidNotification(
+                    sound="default",
+                    click_action="OPEN_JOB_DETAILS"
+                )
+            )
+        )
+
+        response_fcm = messaging.send_each_for_multicast(message)
+        print(f"✅ Successfully sent message to {response_fcm.success_count} devices.")
+        if response_fcm.failure_count > 0:
+            print(f"⚠️ Failed for {response_fcm.failure_count} tokens.")
+
+    except Exception as e:
+        print(f"❌ Error broadcasting push notification: {e}")
 
 
 def send_push_notification_for_new_job(job_title, job_url):
