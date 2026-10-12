@@ -1,7 +1,9 @@
+import os
 import json
 import re
 import requests
 from bs4 import BeautifulSoup
+from supabase import create_client, Client
 
 def extract_qualifications_from_clean_content(content_text, title_text=""):
     """ Strict Multilingual Qualification Extractor with Zero False Positives """
@@ -12,7 +14,6 @@ def extract_qualifications_from_clean_content(content_text, title_text=""):
     full_text = f"{title_text} {content_text}"
     text_lower = full_text.lower()
     
-    # Strict word boundary rules (\b ensures exact term matching)
     rules = [
         ("10th Pass", [r'\b10\s*th\b', r'\bssc\b', r'दहावी', r'१०\s*वी', r'\b10\s*vi\b']),
         ("12th Pass", [r'\b12\s*th\b', r'\bhsc\b', r'बारावी', r'१२\s*वी', r'\b12\s*vi\b']),
@@ -148,17 +149,14 @@ def fetch_jobs_from_url(url, default_category, headers):
                 elif any(k in title for k in ["निकाल", "Result", "उत्तरतालिका"]):
                     category = "result"
 
-                # Step 1: Extract from Card
                 img_src = None
                 parent = a_tag.find_parent(['article', 'div', 'li', 'section', 'tr'])
                 if parent:
                     img_src = extract_real_image_from_card(parent)
 
-                # Step 2: Deep Scrape image if needed
                 if not img_src or any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar"]):
                     img_src = deep_scrape_image_from_page(link, headers)
 
-                # Clean Image URL
                 if img_src and not any(x in img_src.lower() for x in ["placeholder", "blank.gif", "avatar", "default"]):
                     img_src = img_src.split('?')[0]
                     if img_src.startswith('//'):
@@ -170,7 +168,6 @@ def fetch_jobs_from_url(url, default_category, headers):
                 else:
                     img_src = ""
 
-                # Step 3: Deep Scrape Article Body
                 last_date = "तपशील पहा"
                 qualifications_list = ["Any / General"]
                 
@@ -178,7 +175,6 @@ def fetch_jobs_from_url(url, default_category, headers):
                     sub_res = requests.get(link, headers=headers, timeout=5)
                     if sub_res.status_code == 200:
                         sub_soup = BeautifulSoup(sub_res.text, 'html.parser')
-                        
                         article_content = sub_soup.find(['div', 'article'], class_=re.compile(r'entry-content|post-content|article-body|entry-content-single', re.I))
                         
                         if not article_content:
@@ -190,7 +186,6 @@ def fetch_jobs_from_url(url, default_category, headers):
 
                             content_text = article_content.get_text()
 
-                            # Scrape Last Date
                             date_pattern = r'(?:अर्ज\s*करण्याची\s*शेवटची\s*तारीख|ऑनलाइन\s*अर्ज\s*करण्याची\s*शेवटची\s*तारीख|अंतिम\s*तारीख|परीक्षा\s*तारीख|Last\s*Date)\s*[:\-]\s*([^\n\r<]{3,35})'
                             date_match = re.search(date_pattern, content_text, re.IGNORECASE)
                             if date_match:
@@ -203,7 +198,6 @@ def fetch_jobs_from_url(url, default_category, headers):
                                 if fallback_date:
                                     last_date = fallback_date.group(0)
 
-                            # Scrape Qualifications with dynamic and separator handling
                             qualifications_list = extract_qualifications_from_clean_content(content_text, title)
 
                 except Exception:
@@ -225,6 +219,55 @@ def fetch_jobs_from_url(url, default_category, headers):
 
     return jobs_list
 
+def send_push_notification_for_new_job(job_title, job_url):
+    print("🚀 Triggering Instant FCM Push Notification for new job...")
+    SUPABASE_URL = os.getenv("SUPABASE_URL", "")
+    SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
+    FCM_SERVER_KEY = os.getenv("FCM_SERVER_KEY", "")
+
+    if not SUPABASE_URL or not SUPABASE_KEY or not FCM_SERVER_KEY:
+        print("⚠️ Supabase credentials or FCM_SERVER_KEY missing. Skipping push notification.")
+        return
+
+    try:
+        supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+        response = supabase.table("push_tokens").select("token").execute()
+        tokens_data = response.data
+
+        if not tokens_data:
+            print("⚠️ No push tokens registered in Supabase.")
+            return
+
+        tokens = [item["token"] for item in tokens_data if item.get("token")]
+        print(f"📱 Broadcasting notification to {len(tokens)} registered devices...")
+
+        fcm_url = "https://fcm.googleapis.com/fcm/send"
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"key={FCM_SERVER_KEY}"
+        }
+
+        for token in tokens:
+            payload = {
+                "to": token,
+                "priority": "high",
+                "notification": {
+                    "title": "🎯 नवीन शासकीय नोकरी अपडेट!",
+                    "body": f"{job_title} - सविस्तर पाहण्यासाठी क्लिक करा.",
+                    "click_action": "OPEN_JOB_DETAILS"
+                },
+                "data": {
+                    "title": job_title,
+                    "official_url": job_url,
+                    "open_deep_link": "true"
+                }
+            }
+            requests.post(fcm_url, headers=headers, json=payload, timeout=5)
+
+        print("✅ Push notifications successfully dispatched!")
+    except Exception as e:
+        print(f"❌ Error broadcasting push notification: {e}")
+
 def main():
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -245,7 +288,12 @@ def main():
     with open("jobs.json", "w", encoding="utf-8") as f:
         json.dump(unique_jobs, f, ensure_ascii=False, indent=4)
         
-    print(f"Total jobs saved: {len(unique_jobs)}")
+    print(f"Total jobs saved locally: {len(unique_jobs)}")
+
+    # जर नवीन जॉब सापडला तर पहिल्या ताज्या जॉबसाठी इन्स्टंट नोटिफिकेशन पाठवणे
+    if unique_jobs:
+        latest_job = unique_jobs[0]
+        send_push_notification_for_new_job(latest_job["title"], latest_job["source_url"])
 
 if __name__ == "__main__":
     main()
