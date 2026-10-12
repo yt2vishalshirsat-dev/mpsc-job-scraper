@@ -1,0 +1,24 @@
+name: Test Push Notification
+
+on:
+  workflow_dispatch: # GitHub Actions वरून थेट 'Run Workflow' बटण दाबून चालवण्यासाठी
+
+jobs:
+  send-test-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run Notification Script
+        env:
+          FCM_SERVER_KEY: ${{ secrets.FCM_SERVER_KEY }}
+        run: python test_notification_bot.py
