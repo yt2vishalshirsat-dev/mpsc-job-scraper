@@ -7,6 +7,18 @@ from supabase import create_client, Client
 import firebase_admin
 from firebase_admin import credentials, messaging
 
+# Auto-install missing packages if GitHub runner skips pip step
+try:
+    from supabase import create_client, Client
+    import firebase_admin
+    from firebase_admin import credentials, messaging
+except ModuleNotFoundError:
+    print("⚠️ Missing required modules. Installing supabase and firebase-admin dynamically...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "supabase", "firebase-admin"])
+    from supabase import create_client, Client
+    import firebase_admin
+    from firebase_admin import credentials, messaging
+
 def extract_qualifications_from_clean_content(content_text, title_text=""):
     """ Strict Multilingual Qualification Extractor with Zero False Positives """
     if not content_text:
