@@ -1,35 +1,31 @@
+import sys
+import subprocess
 import os
 import json
 import re
+
+# --- FAIL-SAFE AUTO INSTALLER (गारंटीड इन्स्टॉलेशन) ---
+required_packages = {
+    'supabase': 'supabase',
+    'firebase_admin': 'firebase-admin',
+    'requests': 'requests',
+    'bs4': 'beautifulsoup4'
+}
+
+for module_name, pkg_name in required_packages.items():
+    try:
+        __import__(module_name)
+    except ImportError:
+        print(f"📦 Installing missing package: {pkg_name}...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg_name])
+
+# --- IMPORTS ---
 import requests
-import sys
-import subprocess
 from bs4 import BeautifulSoup
 from supabase import create_client, Client
 import firebase_admin
 from firebase_admin import credentials, messaging
 
-# --- FAIL-SAFE AUTO INSTALLER ---
-required_packages = ['supabase', 'firebase-admin', 'requests', 'beautifulsoup4']
-for package in required_packages:
-    try:
-        __import__(package if package != 'beautifulsoup4' else 'bs4')
-    except ImportError:
-        print(f"📦 Installing missing package: {package}...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-# --------------------------------
-
-# Auto-install missing packages if GitHub runner skips pip step
-try:
-    from supabase import create_client, Client
-    import firebase_admin
-    from firebase_admin import credentials, messaging
-except ModuleNotFoundError:
-    print("⚠️ Missing required modules. Installing supabase and firebase-admin dynamically...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "supabase", "firebase-admin"])
-    from supabase import create_client, Client
-    import firebase_admin
-    from firebase_admin import credentials, messaging
 
 def extract_qualifications_from_clean_content(content_text, title_text=""):
     """ Strict Multilingual Qualification Extractor with Zero False Positives """
@@ -71,6 +67,7 @@ def extract_qualifications_from_clean_content(content_text, title_text=""):
 
     return list(qualifications)
 
+
 def extract_from_srcset(srcset_str):
     if not srcset_str:
         return None
@@ -81,6 +78,7 @@ def extract_from_srcset(srcset_str):
     except Exception:
         pass
     return None
+
 
 def extract_real_image_from_card(element):
     if not element:
@@ -100,6 +98,7 @@ def extract_real_image_from_card(element):
         raw_url = extract_from_srcset(img_tag.get('srcset') or img_tag.get('data-srcset'))
 
     return raw_url
+
 
 def deep_scrape_image_from_page(page_url, headers):
     try:
@@ -152,6 +151,7 @@ def deep_scrape_image_from_page(page_url, headers):
         pass
 
     return None
+
 
 def fetch_jobs_from_url(url, default_category, headers):
     jobs_list = []
@@ -245,6 +245,7 @@ def fetch_jobs_from_url(url, default_category, headers):
 
     return jobs_list
 
+
 def init_firebase_admin():
     """ Initialize Firebase Admin SDK safely """
     try:
@@ -263,6 +264,7 @@ def init_firebase_admin():
     except Exception as e:
         print(f"⚠️ Firebase Admin initialization error: {e}")
         return False
+
 
 def send_push_notification_for_new_job(job_title, job_url):
     """ Fetch active device tokens from Supabase and broadcast high-priority FCM notification """
@@ -291,7 +293,6 @@ def send_push_notification_for_new_job(job_title, job_url):
         tokens = list(set([item["token"] for item in tokens_data if item.get("token")]))
         print(f"📱 Broadcasting notification to {len(tokens)} registered devices...")
 
-        # Construct High Priority FCM Multicast Message
         message = messaging.MulticastMessage(
             notification=messaging.Notification(
                 title="🎯 नवीन शासकीय नोकरी अपडेट!",
@@ -320,6 +321,7 @@ def send_push_notification_for_new_job(job_title, job_url):
     except Exception as e:
         print(f"❌ Error broadcasting push notification via Admin SDK: {e}")
 
+
 def main():
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -337,7 +339,6 @@ def main():
 
     unique_jobs = list({job['source_url']: job for job in all_jobs}.values())
 
-    # Check if we have new jobs comparing to old jobs.json
     old_jobs = []
     if os.path.exists("jobs.json"):
         try:
@@ -354,7 +355,6 @@ def main():
         
     print(f"Total jobs saved locally: {len(unique_jobs)}")
 
-    # Send push notification if new jobs are detected or on manual run
     if new_jobs_found:
         print(f"🎉 Found {len(new_jobs_found)} new job(s)!")
         latest_job = new_jobs_found[0]
@@ -363,6 +363,7 @@ def main():
         print("ℹ️ No new jobs found compared to last run. Sending latest job alert for testing.")
         latest_job = unique_jobs[0]
         send_push_notification_for_new_job(latest_job["title"], latest_job["source_url"])
+
 
 if __name__ == "__main__":
     main()
