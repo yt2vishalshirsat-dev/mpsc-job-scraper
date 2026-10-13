@@ -409,15 +409,13 @@ def main():
     # 1. Save jobs to Supabase cloud
     save_jobs_to_supabase(unique_jobs)
 
-    # 2. Trigger Rich Push Notification with Image and Data payload
+    # 2. Trigger Rich Push Notification only if new jobs are found
     if new_jobs_found:
         print(f"🎉 Found {len(new_jobs_found)} new job(s)!")
         for job in new_jobs_found:
             send_push_notification_for_new_job(job["title"], job["source_url"], job.get("thumbnail_url", ""))
-    elif unique_jobs:
-        print("ℹ️ No new jobs found compared to last run. Sending latest job alert for testing.")
-        latest_job = unique_jobs[0]
-        send_push_notification_for_new_job(latest_job["title"], latest_job["source_url"], latest_job.get("thumbnail_url", ""))
+    else:
+        print("ℹ️ No new jobs found. Skipping notifications.")
 
 
 if __name__ == "__main__":
