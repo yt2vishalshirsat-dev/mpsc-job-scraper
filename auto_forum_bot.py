@@ -273,6 +273,272 @@ QUESTION_POOL = [
         "title": "MPSC Prelims Answer Key आणि Objection Form कसा सबमिट करायचा?",
         "content": "First answer key आल्यावर चुकीच्या प्रश्नांवर Objections घेण्याची पद्धत काय असते? किती फी असते?",
         "category": "MPSC Updates"
+    },
+    {
+        "title": "MPSC द्वारे होणाऱ्या तलाठी (ग्राम महसूल अधिकारी) भरतीचे नवीन परीक्षेचे स्वरूप कसे आहे?",
+        "content": "शासनाने तलाठी भरती MPSC कडे वर्ग केल्यावर आता परीक्षा दोन टप्प्यात (पूर्व आणि मुख्य) होणार की थेट एकाच टप्प्यात? OMR आधारित परीक्षेचे स्वरूप स्पष्ट करा.",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC गट-क संयुक्त पूर्व परीक्षेत तलाठी पदासाठी कट-ऑफ कसा निश्चित होतो?",
+        "content": "गट-क पूर्व परीक्षा ही सर्व पदांसाठी एकच असते की तलाठी (Gram Mahsul Adhikari) पदासाठी स्वतंत्र कट-ऑफ जाहीर केला जातो? सविस्तर माहिती हवी आहे.",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC तलाठी परीक्षेसाठी शैक्षणिक पात्रता आणि एमएससीआयटी (MS-CIT) बाबत काय नियम आहेत?",
+        "content": "कोणत्याही शाखेतील पदवीधर या परीक्षेसाठी पात्र आहेत का? तसेच अर्ज करताना MS-CIT किंवा संगणक अर्हता प्रमाणपत्र लगेच लागते की नियुक्तीनंतर सादर करता येते?",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "महाराष्ट्र महसूल अधिनियम आणि जमीन सुधारणा कायद्यांचा अभ्यास MPSC तलाठी मुख्य परीक्षेसाठी कसा करावा?",
+        "content": "MPSC द्वारे घेतल्या जाणाऱ्या तलाठी मुख्य परीक्षेत महसूल विभागाशी संबंधित विशेष कायदे (उदा. महाराष्ट्र जमीन महसूल संहिता १९६६) विचारले जातात का?",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC तलाठी भरती २०२६ साठी नकारात्मक गुणपद्धती (Negative Marking) कशी लागू होते?",
+        "content": "पूर्व आणि मुख्य दोन्ही परीक्षांमध्ये १/४ (0.25) निगेटिव्ह मार्किंग असते का? चुकीच्या उत्तरांमुळे गुण कसे कापले जातात ते उदाहरणासह सांगा.",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC तलाठी परीक्षेसाठी 'जिल्हा निवड' (District Choice) कशी करावी लागते?",
+        "content": "MPSC च्या नवीन नियमांनुसार अर्ज करताना विशिष्ट जिल्ह्यासाठीच अर्ज करावा लागतो की गुणवत्ता यादीनुसार राज्यस्तरावर जिल्हा वाटप होतो?",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC तलाठी परीक्षेतील 'अंकगणित आणि बुद्धिमत्ता' घटकाचा काठिण्य पातळीचा स्तर कसा असेल?",
+        "content": "पूर्वीच्या TCS/IBPS पॅटर्नपेक्षा MPSC च्या गट-क संयुक्त परीक्षेतील गणितांचे प्रश्न वेगळे असतात का? कोणत्या घटकांवर जास्त भर दिला पाहिजे?",
+        "category": "गणिते & बुद्धिमत्ता"
+    },
+    {
+        "title": "MPSC तलाठी पूर्व परीक्षेत सामान्य ज्ञान (GS) विषयातील कोणत्या घटकांना सर्वाधिक वेटेज आहे?",
+        "content": "इतिहास, भूगोल, राज्यशास्त्र आणि अर्थव्यवस्था यांपैकी कोणत्या विषयावर जास्त प्रश्न विचारले जातात? पूर्व परीक्षेसाठी मायक्रो-प्लॅनिंग कसे करावे?",
+        "category": "सामान्य ज्ञान"
+    },
+    {
+        "title": "MPSC गट-क मुख्य परीक्षेतील मराठी व्याकरण आणि इंग्रजी विषयाची एकत्रित तयारी कशी करावी?",
+        "content": "मुख्य परीक्षेतील पेपर-१ मध्ये भाषेचे १०० प्रश्न असतात. पैकी मराठी आणि इंग्रजी व्याकरण आणि उताऱ्यांवरील प्रश्नांसाठी कोणते सर्वोत्तम संदर्भ ग्रंथ वापरावेत?",
+        "category": "MPSC Exam Prep"
+    },
+    {
+        "title": "MPSC तलाठी भरतीसाठी डोमासाईल (अधिवास प्रमाणपत्र) आणि नॉन-क्रिमीलेअर (NCL) ची वैधता तारीख कोणती असावी?",
+        "content": "फॉर्म भरण्याच्या अंतिम तारखेपूर्वीचे प्रमाणपत्र असावे लागते का? प्रमाणपत्र अपलोड करताना कोणत्या तांत्रिक गोष्टींची काळजी घ्यावी?",
+        "category": "MPSC Talathi"
+    },
+
+    // ==========================================
+    // 2. MARATHI TYPED IN ENGLISH (Manglish / Roman)
+    // ==========================================
+    {
+        "title": "MPSC Talathi Bharti sathi Group C Combined Prelims chi cutoff kiti jau shakte?",
+        "content": "MPSC kadun Conduct honarya Talathi (Gram Mahsul Adhikari) sathi 100 marks paiki safe score kiti raheel? General aani Reserved category sathi kay target thevava?",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC Talathi exam sathi OMR Sheet bharatana konte rules lakshat thevave?",
+        "content": "Offline exam honar ahe tar Black ball pen vaparava ki Blue? Double circle kelyas negative marking lagte ka? Exam center var konti kaalji ghyavi?",
+        "category": "Exam Strategy"
+    },
+    {
+        "title": "Purvi TCS ghenyat yenari Talathi Bharti aani ata MPSC Talathi madhe kay farak ahe?",
+        "content": "Question paper format, negative marking aani difficulty level madhe kay badal jala ahe? Senior aspirants ni MPSC pattern nusar tips dhyavat.",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC Talathi Bharti sathi Typing Certificate compuslory ahe ka?",
+        "content": "Gram Mahsul Adhikari (Talathi) post sathi English 40 WPM ki Marathi 30 WPM typing lagte ka? Form bharta veli typing detail lagtat ka?",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "Talathi Mains exam sathi Geography & History of Maharashtra cha depth kiti asava?",
+        "content": "MPSC pattern nusar Maharashtra chya Bhugolavar aani Samajshastradnyanvar jatast questions yetat ka? Kontya standard books vachava?",
+        "category": "भूगोल & इतिहास"
+    },
+    {
+        "title": "MPSC Talathi Hall Ticket aani Exam Center change babat kay update ahe?",
+        "content": "MPSC profile madhun preferred exam centre select karta yete ka? Admit card exam chya kiti divas aadhi mpsconline portal var upload hote?",
+        "category": "MPSC Updates"
+    },
+    {
+        "title": "MPSC Group C Prelims madhe Science subject sathi 10+ marks kase score karaye?",
+        "content": "Physics, Chemistry aani Biology packet MPSC Talathi pre exam sathi State Board 8th-10th books purese ahet ka ki Lucent GS vachava?",
+        "category": "सामान्य विज्ञान"
+    },
+    {
+        "title": "Talathi Bharti age limit calculation date konti dharli jate?",
+        "content": "MPSC notification nusar Open category sathi 38 years aani Reserved category sathi 43 years age limit gannasathi cut-off date kashi thartat?",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC Talathi exam sathi Current Affairs kiti mahine aadhiche vachave?",
+        "content": "Exam date chya aadhi 1 year cha Current Affairs vachawa ki 1.5 years cha? Maharashtra Specific Schemes aani Land Revenue updates var questions yetat ka?",
+        "category": "चालू घडामोडी"
+    },
+    {
+        "title": "MPSC Talathi posts sathi Salary structure aani Pay Scale kay ahe?",
+        "content": "7th Pay Commission Level S-8 nusar Talathi (Gram Mahsul Adhikari) cha starting In-hand salary, DA, HRA aani allowances kiti miltat?",
+        "category": "MPSC Talathi"
+    },
+
+    // ==========================================
+    // 3. MARATHI & ENGLISH COMBO (Mixed Language)
+    // ==========================================
+    {
+        "title": "MPSC Talathi Exam Pattern: Preliminary vs Mains Examination मध्ये काय फरक आहे?",
+        "content": "Prelims फक्त Qualifying स्वरूपाची आहे का? आणि Final Selection मेरिट लिस्ट फक्त Mains परीक्षांच्या गुणांवर बनते का? Detailed stage-wise selection process सांगा.",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC Group C Prelims मधील English Language आणि Grammar ची तयारी कशी करावी?",
+        "content": "MPSC pattern नुसार Passage Reading, Vocabulary आणि Grammar Structure वर कसा फोकस ठेवावा? M.J. Sheikh किंवा Balasaheb Shinde सर यांचे पुस्तक पुरेसे आहे का?",
+        "category": "English Grammar"
+    },
+    {
+        "title": "MPSC Talathi post साठी District-wise Vacancies आणि Post Allocation कसे होते?",
+        "content": "महाराष्ट्र लोकसेवा आयोगाद्वारे (MPSC) सर्व जिल्ह्यांसाठी एकच Merit List जाहीर होणार की Candidate ने निवडलेल्या जिल्ह्यानुसार Merit ठरणार?",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "Polity (राज्यशास्त्र) मधील 'महसूल प्रशासन' (Revenue Administration) चा अभ्यास MPSC साठी कसा करावा?",
+        "content": "जिल्हाधिकारी, उपविभागीय अधिकारी (SDO), तहसीलदार आणि तलाठी यांचे अधिकार व कर्तव्य यावर MPSC मध्ये कसे Multiple Choice Questions (MCQs) येतात?",
+        "category": "राज्यशास्त्र"
+    },
+    {
+        "title": "MPSC Talathi Prelims OMR-based test वेळेत पूर्ण करण्यासाठी Speed and Accuracy कशी वाढवावी?",
+        "content": "१ तासात १०० प्रश्न (100 Questions in 60 Minutes) सोडवणे आव्हानात्मक असते. Time Management आणि Mock Test Analysis कसा करावा?",
+        "category": "Exam Strategy"
+    },
+    {
+        "title": "MPSC Talathi recruitment साठी EWS आणि Non-Creamy Layer (NCL) संदर्भातील नियमावली काय आहे?",
+        "content": "Financial year 2025-26 चे EWS certificate चालेल का? Application Form सबमिट करताना लागणारे Certificate validity चे क्रायटेरिया सांगा.",
+        "category": "MPSC Rules"
+    },
+    {
+        "title": "MPSC Talathi Mains Paper 2 साठी CSAT & Reasoning चा syllabus कसा कवर करावा?",
+        "content": "Logic, Data Interpretation, Statement-Assumptions आणि Math Tricks साठी दैनिक सराव कसा करावा? MPSC PYQs सोडवणे किती महत्त्वाचे आहे?",
+        "category": "गणिते & बुद्धिमत्ता"
+    },
+    {
+        "title": "MPSC Talathi Final Answer Key नंतर MPSC कडे Objections कसे नोंदवावे?",
+        "content": "आयोगाने जारी केलेल्या First Key मधील चुकीच्या प्रश्नांवर Proofs (संदर्भ ग्रंथ) सह Objection Raise करण्याची प्रक्रिया आणि Online Portal Fee काय असते?",
+        "category": "MPSC Updates"
+    },
+    {
+        "title": "MPSC Talathi exam मधील Negative Marking मुळे न येणारे questions skip करणे योग्य की Risk घेणे?",
+        "content": "Elimination Technique वापरून ५०-५० संभ्रम असणारे प्रश्न अटेम्प्ट करावेत का? Accuracy राखण्यासाठी Toppers चा काय सल्ला असतो?",
+        "category": "Exam Strategy"
+    },
+    {
+        "title": "MPSC Talathi post भरतीसाठी Document Verification (DV) मध्ये कोणती कागदपत्रे लागतात?",
+        "content": "Caste Certificate, Validity, Domicile, SSC Board Certificate, Degree Marksheet आणि Small Family Declaration Form याबद्दल सविस्तर चेकलिस्ट हवी आहे.",
+        "category": "MPSC Guidelines"
+    },
+
+    // ==========================================
+    // 4. ENGLISH (पूर्ण इंग्रजीत)
+    // ==========================================
+    {
+        "title": "What is the complete selection process for Talathi (Gram Mahsul Adhikari) via MPSC?",
+        "content": "Detailed overview of Maharashtra Group-C Services Combined Preliminary Examination and the dedicated Main Examination conducted by MPSC for Revenue Officer posts.",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "What is the detailed syllabus for MPSC Group C Combined Preliminary Exam for Talathi post?",
+        "content": "Subject-wise weightage for History, Geography, Polity, Economics, General Science, Current Affairs, and Mental Ability in the 100-mark Preliminary Test.",
+        "category": "MPSC Syllabus"
+    },
+    {
+        "title": "Is a Domicile Certificate compulsory for applying to the MPSC Talathi Recruitment?",
+        "content": "What are the essential Maharashtra Domicile rules and relaxed criteria for candidates residing in border areas like Maharashtra-Karnataka border?",
+        "category": "MPSC Eligibility"
+    },
+    {
+        "title": "How does MPSC conduct the Offline OMR-based test for Maharashtra Group C posts?",
+        "content": "Guidelines on OMR sheet evaluation, carbon copy retention, negative marking calculation, and precautions to avoid answer sheet rejection.",
+        "category": "Exam Guidelines"
+    },
+    {
+        "title": "What are the job responsibilities and career growth of a Talathi (Gram Mahsul Adhikari) in Revenue Dept?",
+        "content": "Promotion hierarchy from Talathi to Circle Officer (Mandal Adhikari), Naib Tehsildar, and Tehsildar along with duty profile in rural administration.",
+        "category": "Career Profile"
+    },
+    {
+        "title": "Which MPSC Previous Year Question Paper (PYQ) books are recommended for Talathi exam?",
+        "content": "How many years of MPSC Group C PYQs should be analyzed to understand question trends, repeated concepts, and difficulty level?",
+        "category": "Preparation Strategy"
+    },
+    {
+        "title": "What is the marking scheme and time duration for MPSC Group C Mains Examination?",
+        "content": "Distribution of marks between Paper 1 (Languages: Marathi & English) and Paper 2 (General Studies & Aptitude Test) for final recruitment.",
+        "category": "MPSC Pattern"
+    },
+    {
+        "title": "How to handle Maharashtra Geography and Local Revenue System for MPSC Mains?",
+        "content": "Important topics related to Maharashtra agriculture, soil types, river basins, district administration, and land records system (7/12 & 8A extracts).",
+        "category": "MPSC Preparation"
+    },
+    {
+        "title": "What is the age relaxation criteria for ex-servicemen, sports persons, and PwD candidates in MPSC Talathi exam?",
+        "content": "Maximum age limit relaxations applicable as per Maharashtra Government service reservation norms for various special categories.",
+        "category": "MPSC Eligibility"
+    },
+    {
+        "title": "How to effectively manage time between Marathi, English, and Aptitude during MPSC Mains?",
+        "content": "Sectional time distribution strategy for clearing high sectional cutoffs in Paper 1 and Paper 2 of MPSC Group-C Main exam.",
+        "category": "Exam Strategy"
+    },
+
+    // ==========================================
+    // 5. ADDITIONAL VARIATIONS (विविधतापूर्ण मिश्र प्रश्न)
+    // ==========================================
+    {
+        "title": "MPSC द्वारे घेण्यात येणाऱ्या तलाठी भरतीत ७/१२ उतारा आणि ८-अ उतारा यावर प्रश्न विचारतात का?",
+        "content": "महसूल प्रशासनातील प्राथमिक संकल्पनांचा अभ्यास पूर्व परीक्षेत उपयुक्त ठरतो की मुख्य परीक्षेत? महसूल शब्दावलीची तयारी कशी करावी?",
+        "category": "MPSC Talathi"
+    },
+    {
+        "title": "MPSC Talathi form bhartana Maharashtra Domicile uploaded file size aani format kay pahije?",
+        "content": "MPSC Portal var Documents upload kartana PDF format required ahe ki JPG? Document size limit (100KB to 500KB) kashi adjust karaychi?",
+        "category": "MPSC Portal Help"
+    },
+    {
+        "title": "MPSC Talathi cut-off clearing strategy: १ महिन्यात Revision कशी पूर्ण करावी?",
+        "content": "शेवटच्या ३० दिवसांत दररोज किती Mock Tests सोडवाव्यात? MPSC Previous Year Questions (PYQs) ची उजळणी करण्याची योग्य पद्धत कोणती?",
+        "category": "Exam Strategy"
+    },
+    {
+        "title": "What is the penalty rule for wrong answers in MPSC OMR-based examinations?",
+        "content": "Explanation of 25% or 0.25 negative marks deduction per wrong question and its impact on overall score calculation.",
+        "category": "MPSC Rules"
+    },
+    {
+        "title": "MPSC तलाठी परीक्षेसाठी 'इतिहास' घटकात महाराष्ट्रातील समाजसुधारकांवर किती प्रश्न असतात?",
+        "content": "महात्मा फुले, डॉ. बाबासाहेब आंबेडकर, छत्रपती शाहू महाराज व महर्षी कर्वे यांच्या कार्यावरील प्रश्नांसाठी कोणते पुस्तक वाचावे?",
+        "category": "इतिहास"
+    },
+    {
+        "title": "MPSC Talathi recruitment madhe Parallel Reservation (समांतर आरक्षण) kase lagu hote?",
+        "content": "Women reservation, Sports persons, Orphan (अनाथ), aani Ex-servicemen sathi parallel reservation MPSC kase apply karte?",
+        "category": "MPSC Rules"
+    },
+    {
+        "title": "MPSC गट-क परीक्षा केंद्रावर सोबत कोणती ओळखपत्रे (ID Proofs) नेणे बंधनकारक आहे?",
+        "content": "आधार कार्ड, पॅन कार्ड किंवा ड्रायव्हिंग लायसन्सची मूळ प्रत आणि झेरॉक्स प्रत सोबत नेण्याबाबत MPSC च्या अधिकृत सूचना काय आहेत?",
+        "category": "Exam Guidelines"
+    },
+    {
+        "title": "How to prepare Current Affairs specific to Maharashtra Schemes for MPSC Talathi exam?",
+        "content": "Key government welfare schemes, agricultural policies, and administrative infrastructure developments in Maharashtra to focus on.",
+        "category": "चालू घडामोडी"
+    },
+    {
+        "title": "MPSC तलाठी पूर्व परीक्षेत Pass झाल्यावर Mains Exam साठी पुन्हा वेगळा Form भरावा लागतो का?",
+        "content": "मुख्य परीक्षेसाठी पुन्हा फी भरावी लागते का आणि केंद्र निवडीचा पर्याय पुन्हा उपलब्ध होतो का?",
+        "category": "MPSC Updates"
+    },
+    {
+        "title": "MPSC Talathi Bharti Mains Paper-1 Marathi Vyakaran sathi K'Sagar ki Balasaheb Shinde?",
+        "content": "समानार्थी शब्द, विरुद्धार्थी शब्द, म्हणी व वाक्प्रचार यांचा सराव करण्यासाठी रोज किती वेळ द्यावा?",
+        "category": "मराठी व्याकरण"
     }
 ]
 
