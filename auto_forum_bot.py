@@ -814,6 +814,8 @@ BOT_USERS = [
     {"user_id": "bot_03", "user_name": "राहुल शिंदे", "badge": "Contributor", "avatar": "adhikari-avatar-male-3"},
     {"user_id": "bot_04", "user_name": "पूजा देशमुख", "badge": "Active Learner", "avatar": "adhikari-avatar-female-8"},
     {"user_id": "bot_05", "user_name": "अमित पवार", "badge": "Moderator", "avatar": "adhikari-avatar-male-3"}
+    {"user_id": "bot_05", "user_name": "Sagar Shirsat", "badge": "Moderator", "avatar": "adhikari-avatar-male-3"}
+    {"user_id": "bot_05", "user_name": "Jalu Bangar", "badge": "Moderator", "avatar": "adhikari-avatar-male-3"}
 ]
 
 def post_to_supabase(question_data, user_data):
