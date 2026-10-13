@@ -539,6 +539,271 @@ QUESTION_POOL = [
         "title": "MPSC Talathi Bharti Mains Paper-1 Marathi Vyakaran sathi K'Sagar ki Balasaheb Shinde?",
         "content": "समानार्थी शब्द, विरुद्धार्थी शब्द, म्हणी व वाक्प्रचार यांचा सराव करण्यासाठी रोज किती वेळ द्यावा?",
         "category": "मराठी व्याकरण"
+    },
+    {
+        "title": "महाराष्ट्र पोलीस भरतीसाठी शारीरिक पात्रता (Height & Chest) आणि वयोमर्यादा काय आहे?",
+        "content": "पोलीस शिपाई पदासाठी खुला (Open) आणि मागासवर्गीय प्रवर्गातील मुला-मुलींसाठी किमान व कमाल वयोमर्यादा आणि उंची-छातीची मोजमापे काय लागतात?",
+        "category": "पोलीस भरती"
+    },
+    {
+        "title": "पोलीस भरती मैदानी चाचणी (Physical Test) ५० गुणांची कशी विभाजित केलेली असते?",
+        "content": "पुरुष उमेदवारांसाठी १६०० मीटर धावणे, १०० मीटर धावणे आणि गोळाफेक यासाठी गुणांचे वितरण कसे असते? सविस्तर तक्ता सांगा.",
+        "category": "पोलीस भरती"
+    },
+    {
+        "title": "पोलीस भरतीत आधी मैदानी चाचणी (Physical) होते की लेखी परीक्षा (Written Exam)?",
+        "content": "नवीन पोलीस भरती नियमांनुसार मैदानी चाचणीत किमान किती टक्के गुण मिळवणारे उमेदवार लेखी परीक्षेसाठी पात्र ठरतात?",
+        "category": "पोलीस भरती"
+    },
+    {
+        "title": "पोलीस शिपाई लेखी परीक्षेत एकूण किती प्रश्न असतात आणि वेळ किती मिळतो?",
+        "content": "१०० गुणांच्या OMR आधारित लेखी परीक्षेत मराठी व्याकरण, गणित, बुद्धिमत्ता आणि सामान्य ज्ञान या विषयांना प्रत्येकी किती गुण असतात?",
+        "category": "पोलीस भरती"
+    },
+    {
+        "title": "पोलीस भरती चालक (Driver) पदासाठी हलके/जड वाहन चालक परवाना (Driving License) कधी लागते?",
+        "content": "चालक पदासाठी RTO ड्रायव्हिंग टेस्ट ५० गुणांची स्वतंत्रपणे घेतली जाते का? यामध्ये Skill Test कशी होते?",
+        "category": "पोलीस चालक"
+    },
+    {
+        "title": "राज्य राखीव पोलीस बल (SRPF) भरतीसाठी पुरुष उमेदवारांची मैदानी चाचणी किती गुणांची असते?",
+        "content": "SRPF मध्ये ५ किमी धावणे (5 KM Running) असते का? SRPF आणि जिल्हा पोलीस शिपाई यांच्या फिजिकल टेस्टमध्ये काय फरक आहे?",
+        "category": "SRPF भरती"
+    },
+    {
+        "title": "पोलीस भरती लेखी परीक्षेत 'नकारात्मक गुणपद्धती' (Negative Marking) लागू असते का?",
+        "content": "गलत उत्तरांसाठी गुण कापले जातात का? OMR सीट भरताना कोणती काळजी घ्यावी जेणेकरून गुण वजा होणार नाहीत?",
+        "category": "पोलीस भरती"
+    },
+    {
+        "title": "महाराष्ट्रातील पोलीस प्रशासन, परिक्षेत्र आणि आयुक्तालय यावर कसे प्रश्न विचारले जातात?",
+        "content": "महाराष्ट्रात एकूण किती पोलीस आयुक्तालय (Commissionerates) आणि पोलीस परिक्षेत्र (Ranges) आहेत? DG Office संदर्भातील चालू घडामोडी कशा अभ्यासाव्यात?",
+        "category": "सामान्य ज्ञान"
+    },
+    {
+        "title": "पोलीस भरती मराठी व्याकरणासाठी बाळासाहेब शिंदे की मो. रा. वाळंबे कोणते पुस्तक वापरावे?",
+        "content": "मराठी व्याकरणातील २५ गुणांपैकी २५ गुण मिळवण्यासाठी प्रयोग, समास, अलंकार आणि वाक्प्रचारांची तयारी कशी करावी?",
+        "category": "मराठी व्याकरण"
+    },
+    {
+        "title": "पोलीस भरती अंतिम निवड यादी (Final Merit List) कशी तयार केली जाते?",
+        "content": "मैदानी चाचणीचे ५० गुण आणि लेखी परीक्षेचे १०० गुण मिळून १५० पैकी मेरिट ठरते का? कट-ऑफ कसा निश्चित होतो?",
+        "category": "पोलीस भरती"
+    },
+
+    // ==========================================
+    // 2. MARATHI TYPED IN ENGLISH (Manglish / Roman)
+    // ==========================================
+    {
+        "title": "Police Bharti 1600 Meter running timing kashi kamii karaychi?",
+        "content": "1600m run 5 minute 10 second chya aath complete karaychi ahe. Weekly stamina build aani interval running schedule kay asava?",
+        "category": "Physical Fitness"
+    },
+    {
+        "title": "Police Bharti sathi Gola Phek (Shot Put) madhe out-of marks kase ghyaye?",
+        "content": "Gola out of (7.260 kg) feknayasathi shoulder strength aani throwing technique kashi improve karaychi? Any exercise tips?",
+        "category": "Physical Fitness"
+    },
+    {
+        "title": "Police Bharti Document Verification (DV) madhe konte certificates mandatory ahet?",
+        "content": "Form bharta veli 10th-12th marksheets, Domicile, Non-Creamy Layer (NCL), Caste Certificate aani Aadhaar card var naavat badal aslyas kay karaye?",
+        "category": "Police Bharti"
+    },
+    {
+        "title": "Police Bharti Written Exam madhe Math aani Reasoning sathi fast calculation tricks?",
+        "content": "100 marks paiki Math & Reasoning che 50 marks ahet. Time management kase karaye aani Pandharinath Rane sir chya pustakatun kay abhyasava?",
+        "category": "गणिते & बुद्धिमत्ता"
+    },
+    {
+        "title": "Women candidate sathi Police Bharti Physical Test che marks distribution kase aste?",
+        "content": "Female aspirants sathi 800m running, 100m running aani Shot Put (4kg) sathi kiti marks ahet? Out-of marks milvanya sathi target timing kay paije?",
+        "category": "Police Bharti"
+    },
+    {
+        "title": "Police Bharti ekach veli don jillhyat (Districts) form bharu shakto ka?",
+        "content": "Dual form bharla tar candidate reject hoto ka? Government rules aani official notification madhe kay spashtikaran ahe?",
+        "category": "Police Bharti Rules"
+    },
+    {
+        "title": "Police Bharti Hall Ticket aani Physical Exam date kashi check karaychi?",
+        "content": "Mahapolice official portal var admit card aalya var ground center aani batch timing kashi samajte? Physical test varsha-rutut hote ka?",
+        "category": "Police Updates"
+    },
+    {
+        "title": "Police Bharti Current Affairs (चालू घडामोडी) sathi kiti mahine aadhicha data vachava?",
+        "content": "Last 6 months ki 1 year? Maharashtra Police Awards, Sports News aani New Appointments var fix questions yetat ka?",
+        "category": "चालू घडामोडी"
+    },
+    {
+        "title": "Police Constable Ground Test sathi best Diet Plan aani Stamina Exercise?",
+        "content": "Daily morning running nantar shin bone pain aani fatigue kram karnyasathi kay diet ghyava? Protein intake aani recovery timing kashi asavi?",
+        "category": "Physical Fitness"
+    },
+    {
+        "title": "Bandssman aani Karagruh Police (Jail Police) Physical Test madhe kay farak ahe?",
+        "content": "Jail Police sathi physical cutoff vegla lagto ka? Bandssman post sathi musical instrument test kashi hote?",
+        "category": "Police Bharti"
+    },
+
+    // ==========================================
+    // 3. MARATHI & ENGLISH COMBO (Mixed Language)
+    // ==========================================
+    {
+        "title": "Maharashtra Police Bharti: 100m Sprint मध्ये maximum speed आणि scoring कसे करावे?",
+        "content": "100m running चे marks चुकेल न घालवता आउट ऑफ मिळवण्यासाठी Start Block Position, Explosive Power आणि Stride Length वर काम कसे करावे?",
+        "category": "Physical Fitness"
+    },
+    {
+        "title": "Police Bharti GK section मध्ये Maharashtra Police Administration वर किती प्रश्न येतात?",
+        "content": "पोलीस महासंचालक (DGP), पोलीस आयुक्त (CP), विशेष पोलीस महानिरीक्षक (IGP) आणि SP रँकची उतरंड (Hierarchy) कशी लक्षात ठेवावी?",
+        "category": "सामान्य ज्ञान"
+    },
+    {
+        "title": "Police Bharti Math Syllabus: कोणत्या Chapters वर सर्वाधिक लक्ष दिले पाहिजे?",
+        "content": "संख्याशास्त्र, लसावी-मसावी, टक्केवारी, नफा-टोटा, वयोवारी आणि रेल्वे-वेग-वेळ (Speed & Distance) या ५-६ टॉपिक्स वरूनच प्रश्न जास्त येतात का?",
+        "category": "गणिते & बुद्धिमत्ता"
+    },
+    {
+        "title": "Police Bharti Ground Test दरम्यान Shin Splints (पायांच्या नडगीचे दुखणे) कसे टाळावे?",
+        "content": "Hard road running ऐवजी Mud/Grass track वर सराव करणे, Proper Running Shoes निवडणे आणि Ice Fomentation याविषयी मार्गदर्शन हवे आहे.",
+        "category": "Physical Fitness"
+    },
+    {
+        "title": "Police Bharti साठी Home Guard (होमगार्ड) आणि Project Affected (प्रकल्पग्रस्त) Quota चे नियम काय आहेत?",
+        "content": "Home guard मधील ३ वर्षे सेवा पूर्ण असलेल्या उमेदवारांना आरक्षण मिळवण्यासाठी कोणते विशेष दाखले आवश्यक असतात?",
+        "category": "Police Reservation"
+    },
+    {
+        "title": "Police Bharti Written Test OMR Sheet भरताना ५ कॉमन चुका ज्या टाळल्याच पाहिजेत!",
+        "content": "Question paper code चुकीचा भरणे, Roll number बबल्स व्यवस्थित न काळे करणे, किंवा दोन वर्तुळ काळे करणे यामुळे Answer sheet बाद होते का?",
+        "category": "Exam Guidelines"
+    },
+    {
+        "title": "Police Constable vs Driver vs SRPF - कोणत्या पोस्टसाठी Apply करणे फायदेशीर ठरेल?",
+        "content": "तिन्ही पोस्टचे Work Culture, Promotion Scope आणि Physical Test चा फरक समजून घेऊन Form कसा भरावा?",
+        "category": "Police Guidance"
+    },
+    {
+        "title": "Police Bharti Test Series: लेखी परीक्षेच्या १ महिना आधी Weekly किती Mock Tests द्याव्यात?",
+        "content": "९० मिनिटांत १०० प्रश्न सोडवण्याची सवय होण्यासाठी ओएमआर सीटवर टाइम लावून पेपर सोडवण्याचा काय फायदा होतो?",
+        "category": "Exam Strategy"
+    },    {
+        "title": "Maharashtra Special Armed Police Act आणि IPC चे बेसिक कायदे लेखी परीक्षेत विचारतात का?",
+        "content": "सामान्य पोलीस शिपाई परीक्षेसाठी मोटर वाहन कायदा किंवा मूलभूत पोलीस कायदे अभ्यासावे लागतात की फक्त बेसिक सामान्य ज्ञान पुरेसे आहे?",
+        "category": "सामान्य ज्ञान"
+    },
+    {
+        "title": "Police Bharti Medical Examination मध्ये काय काय Check केले जाते?",
+        "content": "Eye vision (Color Blindness), Flat Foot, Knock Knee, Tattoo Rules आणि Chest Expansion Test मधील निकष काय असतात?",
+        "category": "Medical Test"
+    },
+
+    // ==========================================
+    // 4. ENGLISH (पूर्ण इंग्रजीत)
+    // ==========================================
+    {
+        "title": "What is the detailed selection criteria for Maharashtra Police Constable Recruitment?",
+        "content": "Comprehensive step-by-step evaluation procedure comprising Physical Efficiency Test (PET), OMR Written Examination, Document Verification, and Medical Test.",
+        "category": "Police Bharti"
+    },
+    {
+        "title": "What are the physical standards (Height and Chest expansion) for Male and Female candidates?",
+        "content": "Minimum height requirement (165 cm for males, 155 cm for females) and chest measurement norms for open and reserved categories in Maharashtra Police.",
+        "category": "Eligibility Norms"
+    },
+    {
+        "title": "How to clear the 1600 meters running event within the maximum scoring timing?",
+        "content": "Effective track training techniques, breathing control strategies, and pacing methods to complete 1600m in under 5:10 minutes for maximum marks.",
+        "category": "Physical Fitness"
+    },
+    {
+        "title": "What is the syllabus and subject-wise mark weightage for Maharashtra Police Written Exam?",
+        "content": "Breakdown of 100 marks across Marathi Grammar (25), Mathematics (25), Intelligence Test/Reasoning (25), and General Knowledge & Current Affairs (25).",
+        "category": "Exam Syllabus"
+    },
+    {
+        "title": "What are the relaxed physical criteria for Sports Persons and Children of Police Personnel?",
+        "content": "Concessions provided in height and chest measurements for certified National/State level sports candidates and police wards.",
+        "category": "Police Reservation"
+    },
+    {
+        "title": "What is the driving skill test procedure for Maharashtra Police Driver (Chalak) Recruitment?",
+        "content": "Details regarding Light Motor Vehicle (LMV) driving test, Heavy Motor Vehicle test, and traffic rules evaluation conducted for 50 marks.",
+        "category": "Police Driver"
+    },
+    {
+        "title": "List of essential documents required during Maharashtra Police Bharti Verification stage.",
+        "content": "Checklist including Domicile Certificate, SSC/HSC Passing Certificates, Cast Certificate, Cast Validity, Non-Creamy Layer, and Photo ID proof.",
+        "category": "Document Verification"
+    },
+    {
+        "title": "What are the rules regarding Tattoos and Flat Foot in Maharashtra Police Medical Test?",
+        "content": "Official medical guidelines on body tattoos, color vision impairment, knock knees, hearing test, and overall physical fitness standards.",
+        "category": "Medical Test"
+    },
+    {
+        "title": "How to score 25/25 in Marathi Grammar for Maharashtra Police Recruitment Exam?",
+        "content": "Key high-yielding topics such as Samas, Prayog, Vakyaprachar, Mhani, and Sandhi with practice techniques for high accuracy.",
+        "category": "मराठी व्याकरण"
+    },
+    {
+        "title": "What is the job role, training duration, and salary scale of a newly appointed Police Constable in Maharashtra?",
+        "content": "Details about initial training at Police Training Schools (PTS), monthly basic pay + allowances under the 7th Pay Commission, and duty responsibilities.",
+        "category": "Career Profile"
+    },
+
+    // ==========================================
+    // 5. ADDITIONAL VARIATIONS (विविधतापूर्ण मिश्र प्रश्न)
+    // ==========================================
+    {
+        "title": "महाराष्ट्रातील पोलीस भरतीसाठी अनाथ (Orphan) आरक्षणाचा लाभ कसा घ्यावा?",
+        "content": "महिला व बालविकास विभागाचे १% अनाथ प्रमाणपत्र अर्ज करताना जोडणे गरजेचे आहे का? वयोमर्यादा व गुणांमध्ये कोणती सवलत मिळते?",
+        "category": "पोलीस नियम"
+    },
+    {
+        "title": "Police Bharti Shot Put feknatana Line Cut (Foul) टाळण्यासाठी काय काळजी घ्यावी?",
+        "content": "गोळा टाकल्यानंतरCircle मधून बाहेर पडण्याचा योग्य मार्ग कोणता? ३ संधींमध्ये बेस्ट थ्रो कसा नोंदवला जातो?",
+        "category": "Physical Fitness"
+    },
+    {
+        "title": "Police Bharti Written Exam OMR Sheet Pen rules: Gel Pen चालेल की Ball Pen?",
+        "content": "0.7mm Black Ball Pen वापरणे का फायदेशीर मानले जाते? Bubble व्यवस्थित fill करण्यासाठी OMR tips सांगा.",
+        "category": "Exam Guidelines"
+    },
+    {
+        "title": "How is the cut-off calculated if two candidates score equal marks in Police Bharti?",
+        "content": "वयाने मोठा असलेला उमेदवार, शैक्षणिक पात्रता जास्त असलेला, किंवा मैदानी चाचणीत जास्त गुण मिळवलेला candidate यांपैकी कोणाला प्राधान्य दिले जाते?",
+        "category": "Police Rules"
+    },
+    {
+        "title": "पोलीस भरती पूर्वतयारी: दररोज मैदानी सराव आणि अभ्यासाचे Time Table कसे असावे?",
+        "content": "सकाळी २ तास ग्राउंड, दुपारी ४ तास वाचन आणि संध्याकाळी १ तास गणिताचा सराव असा आदर्श daily routine कसा बनवावा?",
+        "category": "Exam Strategy"
+    },
+    {
+        "title": "SRPF Bharti madhe 5 KM running sathi stamina aani speed balance kashi thevavi?",
+        "content": "पहिल्या २ किलोमीटर मध्ये धावण्याचा वेग कसा असावा? शेवटच्या ४०० मीटर मध्ये फिनिशिंग स्प्रिंट कशी मारावी?",
+        "category": "SRPF भरती"
+    },
+    {
+        "title": "पोलीस भरतीसाठी 'चालू घडामोडी' मधील क्रीडा आणि पुरस्कार घटकाची उजळणी कशी करावी?",
+        "content": "अर्जुन पुरस्कार, महाराष्ट्र केसरी, ऑलिम्पिक पदके आणि महाराष्ट्रातील राष्ट्रीय क्रीडा पुरस्कार विजेत्यांची यादी हवी आहे.",
+        "category": "चालू घडामोडी"
+    },
+    {
+        "title": "What is the age limit relaxation for Ex-Servicemen (माजी सैनिक) in Maharashtra Police Bharti?",
+        "content": "सशस्त्र दलातील सेवा कालावधी + ३ वर्षे अशी वयोमर्यादेतील सवलत कशी लागू होते? शस्त्रास्त्र परवाना किंवा ड्रायव्हिंग लायसन्स आवश्यक आहे का?",
+        "category": "Police Rules"
+    },
+    {
+        "title": "पोलीस भरतीत एनसीसी (NCC) 'C' आणि 'B' प्रमाणपत्र धारकांना बोनस गुण कसे मिळतात?",
+        "content": "NCC 'C' Certificate असल्यास ५% आणि 'B' Certificate असल्यास ३% अतिरिक्त गुण लेखी परीक्षेत कसे जोडले जातात?",
+        "category": "पोलीस नियम"
+    },
+    {
+        "title": "Police Bharti Reasoning Section madhe Coding-Decoding aani Series questions fast kase sodvave?",
+        "content": "अक्षरमाला (Alphabets A-Z reverse numbers) आणि वर्ग-घन (Squares & Cubes) तोंडपाठ ठेवल्यास वेळेची बचत कशी होते?",
+        "category": "गणिते & बुद्धिमत्ता"
     }
 ]
 
