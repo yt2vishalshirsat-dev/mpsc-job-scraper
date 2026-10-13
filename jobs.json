@@ -6,12 +6,12 @@
         "category": "result",
         "last_date": "10/11/2026",
         "qualification": [
-            "Diploma",
-            "Graduate",
-            "12th Pass",
+            "ITI",
             "10th Pass",
+            "Diploma",
+            "12th Pass",
             "AFCAT / Defense",
-            "ITI"
+            "Graduate"
         ]
     },
     {
@@ -21,8 +21,8 @@
         "category": "advertisement",
         "last_date": "28 ऑक्टोबर 2026 (11:55 PM)परीक",
         "qualification": [
-            "B.Tech / B.E",
-            "Graduate"
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -44,8 +44,8 @@
         "last_date": "11 नोव्हेंबर 2026अर्ज दुरुस्ती",
         "qualification": [
             "10th Pass",
-            "B.Tech / B.E",
-            "12th Pass"
+            "12th Pass",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -55,8 +55,8 @@
         "category": "advertisement",
         "last_date": "08 नोव्हेंबर 2026प्रिंटेड अर्ज",
         "qualification": [
-            "ITI",
             "10th Pass",
+            "ITI",
             "B.Tech / B.E"
         ]
     },
@@ -77,11 +77,11 @@
         "category": "advertisement",
         "last_date": "24 सप्टेंबर 2026  16 ऑक्टोबर 2",
         "qualification": [
-            "Graduate",
             "B.Tech / B.E",
-            "CA / CS",
+            "Post Graduate",
             "AFCAT / Defense",
-            "Post Graduate"
+            "Graduate",
+            "CA / CS"
         ]
     },
     {
@@ -91,12 +91,12 @@
         "category": "advertisement",
         "last_date": "24 सप्टेंबर 2026  15 ऑक्टोबर 2",
         "qualification": [
+            "CA / CS",
+            "B.Tech / B.E",
+            "Post Graduate",
             "Diploma",
             "Graduate",
-            "B.Tech / B.E",
-            "CA / CS",
-            "Pharmacy",
-            "Post Graduate"
+            "Pharmacy"
         ]
     },
     {
@@ -106,10 +106,10 @@
         "category": "advertisement",
         "last_date": "14 ऑक्टोबर 2026 (11:59 PM)परीक",
         "qualification": [
-            "Diploma",
             "Nursing",
-            "B.Tech / B.E",
-            "12th Pass"
+            "Diploma",
+            "12th Pass",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -119,12 +119,12 @@
         "category": "advertisement",
         "last_date": "28 ऑक्टोबर 2026परीक्षा (Phase ",
         "qualification": [
-            "Diploma",
             "LLB / Law",
-            "Graduate",
             "B.Tech / B.E",
-            "CA / CS",
-            "Post Graduate"
+            "Post Graduate",
+            "Diploma",
+            "Graduate",
+            "CA / CS"
         ]
     },
     {
@@ -134,11 +134,11 @@
         "category": "hall_ticket",
         "last_date": "03 ऑक्टोबर 2026",
         "qualification": [
-            "B.Ed / D.Ed",
-            "Graduate",
             "B.Tech / B.E",
             "10th Pass",
-            "AFCAT / Defense"
+            "B.Ed / D.Ed",
+            "AFCAT / Defense",
+            "Graduate"
         ]
     },
     {
@@ -193,8 +193,8 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
-            "Nursing",
             "10th Pass",
+            "Nursing",
             "AFCAT / Defense"
         ]
     },
@@ -205,13 +205,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "B.Ed / D.Ed",
-            "Graduate",
-            "12th Pass",
-            "CA / CS",
+            "Post Graduate",
             "10th Pass",
+            "B.Ed / D.Ed",
+            "12th Pass",
             "AFCAT / Defense",
-            "Post Graduate"
+            "Graduate",
+            "CA / CS"
         ]
     },
     {
@@ -221,8 +221,8 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "AFCAT / Defense",
             "10th Pass",
+            "AFCAT / Defense",
             "12th Pass"
         ]
     },
@@ -276,9 +276,9 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "AFCAT / Defense",
             "10th Pass",
-            "MBBS"
+            "MBBS",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -288,8 +288,8 @@
         "category": "result",
         "last_date": "16 जून 2026",
         "qualification": [
-            "Nursing",
             "10th Pass",
+            "Nursing",
             "AFCAT / Defense"
         ]
     },
