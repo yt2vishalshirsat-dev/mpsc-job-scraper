@@ -65,8 +65,6 @@ QUESTION_POOL = [
         "content": "चालू घडामोडींसाठी ऑलंपिक, एशियन गेम्स आणि राष्ट्रीय खेळांमधील महाराष्ट्राच्या पदकविजेत्या खेळाडूंची यादी हवी आहे.",
         "category": "चालू घडामोडी"
     },
-
-    // --- 2. MARATHI TYPED IN ENGLISH (Manglish / Roman Marathi) ---
     {
         "title": "Talathi Bharti sathi English Grammar chi tayari kashi karaychi?",
         "content": "Maza English thod kalji sarkha ahe. Talathi paper madhe English Grammar sathi konta book sarvat best rahil? Balasaheb Shinde sir ki M.J. Sheikh sir?",
@@ -117,8 +115,6 @@ QUESTION_POOL = [
         "content": "Gramsevak sathi technical syllabus madhe krushi shakha related questions ahet. Yachya notes kunakade ahet ka?",
         "category": "सरळसेवा भरती"
     },
-
-    // --- 3. MARATHI AND ENGLISH COMBO (Mixed Language) ---
     {
         "title": "IBPS Pattern नुसार Reasoning चे time management कसे करावे?",
         "content": "Saralseva exam आता IBPS/TCS घेत आहेत. Sitting arrangement आणि Puzzles सोडवताना खूप time जातो. Any daily practice routine or tips?",
@@ -169,8 +165,6 @@ QUESTION_POOL = [
         "content": "Biodiversity, Global Warming आणि Environmental Acts वर संकल्पनात्मक (Conceptual) प्रश्न कसे विचारले जातात?",
         "category": "पर्यावरण"
     },
-
-    // --- 4. ENGLISH (पूर्ण इंग्रजीत) ---
     {
         "title": "What is the qualification and age limit for MPSC Rajyaseva Exam?",
         "content": "Can final year degree students apply for MPSC Prelims? Please provide details regarding age relaxation for reserved categories.",
@@ -221,8 +215,6 @@ QUESTION_POOL = [
         "content": "Notes on Mahatma Phule, Savitribai Phule, Chhatrapati Shahu Maharaj, and Dr. B.R. Ambedkar for exam point of view.",
         "category": "इतिहास"
     },
-
-    // --- 5. MIXED REPEATED VARIATIONS (अजून विविध प्रश्न) ---
     {
         "title": "मराठी भाषा गौरव दिन कधी साजरा केला जातो आणि तो कोणाच्या स्मरणार्थ असतो?",
         "content": "कुसुमाग्रज (वि. वा. शिरवाडकर) यांच्या जयंतीनिमित्त हा दिवस साजरा होतो. या संदर्भातील साहित्य पुरस्कारांवर प्रश्न येतात का?",
@@ -323,10 +315,6 @@ QUESTION_POOL = [
         "content": "फॉर्म भरण्याच्या अंतिम तारखेपूर्वीचे प्रमाणपत्र असावे लागते का? प्रमाणपत्र अपलोड करताना कोणत्या तांत्रिक गोष्टींची काळजी घ्यावी?",
         "category": "MPSC Talathi"
     },
-
-    // ==========================================
-    // 2. MARATHI TYPED IN ENGLISH (Manglish / Roman)
-    // ==========================================
     {
         "title": "MPSC Talathi Bharti sathi Group C Combined Prelims chi cutoff kiti jau shakte?",
         "content": "MPSC kadun Conduct honarya Talathi (Gram Mahsul Adhikari) sathi 100 marks paiki safe score kiti raheel? General aani Reserved category sathi kay target thevava?",
@@ -377,10 +365,6 @@ QUESTION_POOL = [
         "content": "7th Pay Commission Level S-8 nusar Talathi (Gram Mahsul Adhikari) cha starting In-hand salary, DA, HRA aani allowances kiti miltat?",
         "category": "MPSC Talathi"
     },
-
-    // ==========================================
-    // 3. MARATHI & ENGLISH COMBO (Mixed Language)
-    // ==========================================
     {
         "title": "MPSC Talathi Exam Pattern: Preliminary vs Mains Examination मध्ये काय फरक आहे?",
         "content": "Prelims फक्त Qualifying स्वरूपाची आहे का? आणि Final Selection मेरिट लिस्ट फक्त Mains परीक्षांच्या गुणांवर बनते का? Detailed stage-wise selection process सांगा.",
@@ -431,10 +415,6 @@ QUESTION_POOL = [
         "content": "Caste Certificate, Validity, Domicile, SSC Board Certificate, Degree Marksheet आणि Small Family Declaration Form याबद्दल सविस्तर चेकलिस्ट हवी आहे.",
         "category": "MPSC Guidelines"
     },
-
-    // ==========================================
-    // 4. ENGLISH (पूर्ण इंग्रजीत)
-    // ==========================================
     {
         "title": "What is the complete selection process for Talathi (Gram Mahsul Adhikari) via MPSC?",
         "content": "Detailed overview of Maharashtra Group-C Services Combined Preliminary Examination and the dedicated Main Examination conducted by MPSC for Revenue Officer posts.",
@@ -485,10 +465,6 @@ QUESTION_POOL = [
         "content": "Sectional time distribution strategy for clearing high sectional cutoffs in Paper 1 and Paper 2 of MPSC Group-C Main exam.",
         "category": "Exam Strategy"
     },
-
-    // ==========================================
-    // 5. ADDITIONAL VARIATIONS (विविधतापूर्ण मिश्र प्रश्न)
-    // ==========================================
     {
         "title": "MPSC द्वारे घेण्यात येणाऱ्या तलाठी भरतीत ७/१२ उतारा आणि ८-अ उतारा यावर प्रश्न विचारतात का?",
         "content": "महसूल प्रशासनातील प्राथमिक संकल्पनांचा अभ्यास पूर्व परीक्षेत उपयुक्त ठरतो की मुख्य परीक्षेत? महसूल शब्दावलीची तयारी कशी करावी?",
@@ -589,10 +565,6 @@ QUESTION_POOL = [
         "content": "मैदानी चाचणीचे ५० गुण आणि लेखी परीक्षेचे १०० गुण मिळून १५० पैकी मेरिट ठरते का? कट-ऑफ कसा निश्चित होतो?",
         "category": "पोलीस भरती"
     },
-
-    // ==========================================
-    // 2. MARATHI TYPED IN ENGLISH (Manglish / Roman)
-    // ==========================================
     {
         "title": "Police Bharti 1600 Meter running timing kashi kamii karaychi?",
         "content": "1600m run 5 minute 10 second chya aath complete karaychi ahe. Weekly stamina build aani interval running schedule kay asava?",
@@ -643,10 +615,6 @@ QUESTION_POOL = [
         "content": "Jail Police sathi physical cutoff vegla lagto ka? Bandssman post sathi musical instrument test kashi hote?",
         "category": "Police Bharti"
     },
-
-    // ==========================================
-    // 3. MARATHI & ENGLISH COMBO (Mixed Language)
-    // ==========================================
     {
         "title": "Maharashtra Police Bharti: 100m Sprint मध्ये maximum speed आणि scoring कसे करावे?",
         "content": "100m running चे marks चुकेल न घालवता आउट ऑफ मिळवण्यासाठी Start Block Position, Explosive Power आणि Stride Length वर काम कसे करावे?",
@@ -696,10 +664,6 @@ QUESTION_POOL = [
         "content": "Eye vision (Color Blindness), Flat Foot, Knock Knee, Tattoo Rules आणि Chest Expansion Test मधील निकष काय असतात?",
         "category": "Medical Test"
     },
-
-    // ==========================================
-    // 4. ENGLISH (पूर्ण इंग्रजीत)
-    // ==========================================
     {
         "title": "What is the detailed selection criteria for Maharashtra Police Constable Recruitment?",
         "content": "Comprehensive step-by-step evaluation procedure comprising Physical Efficiency Test (PET), OMR Written Examination, Document Verification, and Medical Test.",
@@ -750,10 +714,6 @@ QUESTION_POOL = [
         "content": "Details about initial training at Police Training Schools (PTS), monthly basic pay + allowances under the 7th Pay Commission, and duty responsibilities.",
         "category": "Career Profile"
     },
-
-    // ==========================================
-    // 5. ADDITIONAL VARIATIONS (विविधतापूर्ण मिश्र प्रश्न)
-    // ==========================================
     {
         "title": "महाराष्ट्रातील पोलीस भरतीसाठी अनाथ (Orphan) आरक्षणाचा लाभ कसा घ्यावा?",
         "content": "महिला व बालविकास विभागाचे १% अनाथ प्रमाणपत्र अर्ज करताना जोडणे गरजेचे आहे का? वयोमर्यादा व गुणांमध्ये कोणती सवलत मिळते?",
