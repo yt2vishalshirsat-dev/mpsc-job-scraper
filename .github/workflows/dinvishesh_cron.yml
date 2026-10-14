@@ -1,13 +1,13 @@
-name: Daily Dinvishesh Push Notifier
+name: Daily Dinvishesh Auto-Populate & Notifier
 
 on:
   workflow_dispatch:
   schedule:
-    # Runs everyday at 02:30 UTC (8:00 AM IST)
+    # रोज सकाळी ठीक ८:०० वाजता (IST) रन होण्यासाठी
     - cron: '30 2 * * *'
 
 jobs:
-  send-dinvishesh:
+  run-dinvishesh-script:
     runs-on: ubuntu-latest
     
     steps:
@@ -24,50 +24,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests firebase-admin supabase
 
-      - name: Create and Run Notifier Script
+      - name: Run Dinvishesh Script
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           FIREBASE_CREDENTIALS: ${{ secrets.FIREBASE_CREDENTIALS }}
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_CREDENTIALS }}
         run: |
-          python -c "
-          import os, datetime, requests, firebase_admin
-          from firebase_admin import credentials, messaging
-
-          # Init Firebase
-          cred_json = os.getenv('FIREBASE_CREDENTIALS')
-          if cred_json:
-              import json
-              cred = credentials.Certificate(json.loads(cred_json))
-              firebase_admin.initialize_app(cred)
-
-          # Fetch today's date format matching DB (DD-MM)
-          today_str = datetime.datetime.now().strftime('%d-%m')
-          
-          # Fetch from Supabase
-          sb_url = os.getenv('SUPABASE_URL').rstrip('/')
-          sb_key = os.getenv('SUPABASE_KEY')
-          headers = {'apikey': sb_key, 'Authorization': f'Bearer {sb_key}'}
-          
-          res = requests.get(f'{sb_url}/rest/v1/dinvishesh?date_key=eq.{today_str}', headers=headers)
-          if res.status_code == 200 and res.json():
-              data = res.json()[0]
-              title = f'📜 आजचा दिनविशेष: {data[\"title\"]}'
-              body = data['description'][:150] + '...'
-              
-              # Get push tokens
-              tok_res = requests.get(f'{sb_url}/rest/v1/push_tokens?select=token', headers=headers)
-              if tok_res.status_code == 200:
-                  tokens = list(set([t['token'] for t in tok_res.json() if t.get('token')]))
-                  if tokens:
-                      message = messaging.MulticastMessage(
-                          notification=messaging.Notification(title=title, body=body),
-                          data={'click_action': 'OPEN_DINVISHESH', 'date_key': today_str},
-                          tokens=tokens,
-                          android=messaging.AndroidConfig(priority='high', notification=messaging.AndroidNotification(sound='default'))
-                      )
-                      response = messaging.send_each_for_multicast(message)
-                      print(f'✅ Dinvishesh notification sent to {response.success_count} devices.')
-          else:
-              print('ℹ️ No Dinvishesh found for today.')
-          "
+          python dinvishesh_notifier.py
