@@ -6,12 +6,12 @@
         "category": "result",
         "last_date": "29/10/2026",
         "qualification": [
-            "10th Pass",
-            "Diploma",
-            "Graduate",
+            "12th Pass",
             "ITI",
+            "10th Pass",
             "AFCAT / Defense",
-            "12th Pass"
+            "Graduate",
+            "Diploma"
         ]
     },
     {
@@ -21,8 +21,8 @@
         "category": "advertisement",
         "last_date": "29 ऑक्टोबर 2026परीक्षा: 07 नोव",
         "qualification": [
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -33,8 +33,8 @@
         "last_date": "12 नोव्हेंबर 2026 (12:00 PM)पर",
         "qualification": [
             "12th Pass",
-            "AFCAT / Defense",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -44,8 +44,8 @@
         "category": "advertisement",
         "last_date": "28 ऑक्टोबर 2026 (11:55 PM)परीक",
         "qualification": [
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -66,8 +66,8 @@
         "category": "advertisement",
         "last_date": "11 नोव्हेंबर 2026अर्ज दुरुस्ती",
         "qualification": [
-            "10th Pass",
             "12th Pass",
+            "10th Pass",
             "B.Tech / B.E"
         ]
     },
@@ -78,8 +78,8 @@
         "category": "advertisement",
         "last_date": "08 नोव्हेंबर 2026प्रिंटेड अर्ज",
         "qualification": [
-            "10th Pass",
             "ITI",
+            "10th Pass",
             "B.Tech / B.E"
         ]
     },
@@ -90,10 +90,10 @@
         "category": "advertisement",
         "last_date": "24 सप्टेंबर 2026  16 ऑक्टोबर 2",
         "qualification": [
-            "Graduate",
-            "CA / CS",
             "Post Graduate",
+            "CA / CS",
             "AFCAT / Defense",
+            "Graduate",
             "B.Tech / B.E"
         ]
     },
@@ -104,12 +104,12 @@
         "category": "advertisement",
         "last_date": "24 सप्टेंबर 2026  15 ऑक्टोबर 2",
         "qualification": [
-            "Diploma",
-            "Graduate",
-            "CA / CS",
-            "Post Graduate",
             "Pharmacy",
-            "B.Tech / B.E"
+            "Post Graduate",
+            "CA / CS",
+            "Graduate",
+            "B.Tech / B.E",
+            "Diploma"
         ]
     },
     {
@@ -120,9 +120,9 @@
         "last_date": "14 ऑक्टोबर 2026 (11:59 PM)परीक",
         "qualification": [
             "12th Pass",
+            "B.Tech / B.E",
             "Diploma",
-            "Nursing",
-            "B.Tech / B.E"
+            "Nursing"
         ]
     },
     {
@@ -132,10 +132,10 @@
         "category": "hall_ticket",
         "last_date": "03 ऑक्टोबर 2026",
         "qualification": [
-            "10th Pass",
-            "Graduate",
             "B.Ed / D.Ed",
+            "10th Pass",
             "AFCAT / Defense",
+            "Graduate",
             "B.Tech / B.E"
         ]
     },
@@ -203,13 +203,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "Graduate",
-            "CA / CS",
-            "Post Graduate",
+            "12th Pass",
             "B.Ed / D.Ed",
+            "Post Graduate",
+            "10th Pass",
+            "CA / CS",
             "AFCAT / Defense",
-            "12th Pass"
+            "Graduate"
         ]
     },
     {
@@ -219,9 +219,9 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
+            "12th Pass",
             "10th Pass",
-            "AFCAT / Defense",
-            "12th Pass"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -274,8 +274,8 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "10th Pass",
             "AFCAT / Defense",
+            "10th Pass",
             "MBBS"
         ]
     },
