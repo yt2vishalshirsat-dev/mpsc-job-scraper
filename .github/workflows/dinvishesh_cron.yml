@@ -3,7 +3,7 @@ name: Daily Dinvishesh Auto-Populate & Notifier
 on:
   workflow_dispatch:
   schedule:
-    # रोज सकाळी ठीक ८:०० वाजता (IST) रन होण्यासाठी
+    # Runs everyday at 02:30 UTC (8:00 AM IST)
     - cron: '30 2 * * *'
 
 jobs:
