@@ -10,7 +10,7 @@ def get_daily_dinvishesh_dictionary():
     Returns exact daily historical/global events from Oct 14, 2026 to Dec 31, 2026.
     Format: "DD-MM": (Title, Description, Category)
     """
-    events = {
+    return {
         # --- OCTOBER ---
         "14-10": ("धम्मचक्र प्रवर्तन दिन / जागतिक मानक दिन", "भारतीय राज्यघटनेचे शिल्पकार डॉ. बाबासाहेब आंबेडकर यांनी नागपूरच्या दीक्षाभूमीवर अनुयायांसह बौद्ध धम्माची दीक्षा घेतली तो ऐतिहासिक दिवस.", "historical"),
         "15-10": ("वाचन प्रेरणा दिन (डॉ. ए.पी.जे. अब्दुल कलाम जन्मदिवस)", "भारताचे मिसाइल मॅन आणि माजी राष्ट्रपती डॉ. ए.पी.जे. अब्दुल कलाम यांचा जन्मदिवस, ज्यानिमित्त वाचन प्रेरणा दिन पाळला जातो.", "birthday"),
@@ -25,7 +25,7 @@ def get_daily_dinvishesh_dictionary():
         "24-10": ("संयुक्त राष्ट्र संघ स्थापना दिन (UN Day)", "१९४५ मध्ये दुसऱ्या महायुद्धानंतर जागतिक शांततेसाठी संयुक्त राष्ट्र संघ स्थापन झाला.", "global"),
         "25-10": ("जागतिक ऑपेरा व कला दिन", "जागतिक स्तरावर कला आणि संस्कृतीचा प्रसार करणारा दिवस.", "global"),
         "26-10": ("काश्मीर विलय दिन", "१९४७ मध्ये महाराजा हरी सिंह यांनी भारतासोबतच्या विलय पत्रावर स्वाक्षरी केली.", "historical"),
-        "27-10": ("भारतीय पदাতিক दिन (Infantry Day)", "भारतीय लष्कराच्या इन्फंट्री पथकाच्या शौर्याचा गौरव करण्याचा दिवस.", "national"),
+        "27-10": ("भारतीय पदतिक दिन (Infantry Day)", "भारतीय लष्कराच्या इन्फंट्री पथकाच्या शौर्याचा गौरव करण्याचा दिवस.", "national"),
         "28-10": ("आंतरराष्ट्रीय अ‍ॅनिमेशन दिन", "कला आणि तंत्रज्ञानाचा संगम असलेल्या अ‍ॅनिमेशन क्षेत्राचा गौरव.", "global"),
         "29-10": ("जागतिक स्ट्रोक दिन", "आरोग्याविषयी जागरूकता निर्माण करून पक्षाघातासारख्या आजारांवर नियंत्रण मिळवण्याबाबत मार्गदर्शन.", "health"),
         "30-10": ("जागतिक बचत दिन पूर्वतयारी / राष्ट्रीय कायदेशीर सेवा जागृती", "आर्थिक शिस्त आणि बचतीचे महत्त्व सांगणारा दिवस.", "national"),
@@ -38,33 +38,33 @@ def get_daily_dinvishesh_dictionary():
         "04-11": ("आंतरराष्ट्रीय बायोस्फिअर रिझर्व्ह दिन", "पर्यावरण आणि जैवविविधतेच्या संरक्षणाबाबत जनजागृती.", "global"),
         "05-11": ("जागतिक त्सुनामी जनजागृती दिन", "नैसर्गिक आपत्ती व्यवस्थापनाबद्दल लोकांमध्ये सतर्कता निर्माण करणे.", "global"),
         "06-11": ("युद्ध आणि सशस्त्र संघर्षात पर्यावरण संरक्षणाचा आंतरराष्ट्रीय दिन", "युद्धाच्या काळात पर्यावरणाचे होणारे नुकसान टाळण्यासाठीचा दिवस.", "global"),
-        "07-11": ("राष्ट्रीय छात्र सेना (NCC) स्थापना दिन / शिशिर ऋतू आरंभ", "विद्यार्थ्यांमध्ये शिस्त आणि देशभक्ती रुजवण्यासाठी एनसीसीचा स्थापना दिन.", "national"),
+        "07-11": ("राष्ट्रीय छात्र सेना (NCC) स्थापना दिन", "विद्यार्थ्यांमध्ये शिस्त आणि देशभक्ती रुजवण्यासाठी एनसीसीचा स्थापना दिन.", "national"),
         "08-11": ("जागतिक नगररचना दिन (World Urbanism Day)", "शहरांचे नियोजन आणि शाश्वत विकासाबाबत विचारमंथन.", "global"),
         "09-11": ("राष्ट्रीय कायदेशीर सेवा दिन (Legal Services Day)", "सर्वसामान्यांना मोफत आणि सुलभ कायदेशीर मदत मिळवून देण्याचा अधिकार दिन.", "legal"),
         "10-11": ("शांती आणि विकासासाठी जागतिक विज्ञान दिन", "विज्ञानाचा वापर मानवाच्या कल्याणासाठी आणि शांततेसाठी करण्याबाबतचा दिन.", "global"),
-        "11-11": ("राष्ट्रीय शिक्षण दिन (मौलाना Abul Kalam Azad जयंती)", "स्वतंत्र भारताचे पहिले शिक्षण मंत्री मौलाना अ‍ॅड. अब्दुल कलाम आझाद यांचा जन्मदिवस.", "birthday"),
+        "11-11": ("राष्ट्रीय शिक्षण दिन (मौलाना अ‍ॅड. अब्दुल कलाम आझाद जयंती)", "स्वतंत्र भारताचे पहिले शिक्षण मंत्री मौलाना आझाद यांचा जन्मदिवस.", "birthday"),
         "12-11": ("जागतिक निमोनिया दिन", "आरोग्यविषयक जनजागृतीचा विशेष दिवस.", "health"),
         "13-11": ("जागतिक दयाळूपणा दिन (World Kindness Day)", "माणुसकी, दया आणि परोपकार या मूल्यांची आठवण करून देणारा दिवस.", "global"),
-        "14-11": ("बालदिन (पं. जवाहरलाल नेहरू जन्मदिवस) / जागतिक मधुमेह दिन", "पंडित नेहरूंच्या जन्मोदिनानिमित्त बालदिन आणि आरोग्याविषयी मधुमेह जनजागृती.", "birthday"),
+        "14-11": ("बालदिन (पं. नेहरू जन्मदिवस) / जागतिक मधुमेह दिन", "पंडित नेहरूंच्या जन्मोदिनानिमित्त बालदिन आणि आरोग्याविषयी मधुमेह जनजागृती.", "birthday"),
         "15-11": ("भगवान बिरसा मुंडा जयंती (जातीय गौरव दिन)", "आदिवासी स्वातंत्र्य लढाऊ भगवान बिरसा मुंडा यांच्या स्मृतीस अभिवादन.", "historical"),
-        "16-11": ("आंतरराष्ट्रीय सहिष्णुता दिन (International Day for Tolerance)", "समाजात सलोखा आणि सहनशीलता टिकवून ठेवण्याचा दिवस.", "global"),
+        "16-11": ("आंतरराष्ट्रीय सहिष्णुता दिन", "समाजात सलोखा आणि सहनशीलता टिकवून ठेवण्याचा दिवस.", "global"),
         "17-11": ("राष्ट्रीय पत्रकारिता दिन / लाला लजपत राय स्मृती दिन", "भारतीय वृत्तपत्र परिषदेची स्थापना व पत्रकारितेचा गौरव दिन.", "national"),
         "18-11": ("जागतिक प्रौढ शिक्षा दिन", "शिक्षणाचे महत्त्व सर्व वयोगटातील लोकांपर्यंत पोहोचवणे.", "global"),
-        "19-11": ("जागतिक शौर्य दिन / राणी लक्ष्मीबाई जयंती / जागतिक शौचालय दिन", "झाशीची राणी लक्ष्मीबाई यांच्या जयंतीनिमित्त स्त्री शौर्याचा गौरव.", "birthday"),
+        "19-11": ("जागतिक शौर्य दिन / राणी लक्ष्मीबाई जयंती", "झाशीची राणी लक्ष्मीबाई यांच्या जयंतीनिमित्त स्त्री शौर्याचा गौरव.", "birthday"),
         "20-11": ("सार्वत्रिक बाल दिन (Universal Children's Day)", "बालकांच्या हक्कांचे रक्षण करण्यासाठी युनिसेफद्वारा पाळला जाणारा दिन.", "global"),
-        "21-11": ("जागतिक दूरदर्शन (Television) दिन", "माहिती व मनोरंजनाच्या क्षेत्रात दूरदर्शनच्या योगदानाचे स्मरण.", "global"),
+        "21-11": ("जागतिक दूरदर्शन दिन", "माहिती व मनोरंजनाच्या क्षेत्रात दूरदर्शनच्या योगदानाचे स्मरण.", "global"),
         "22-11": ("संविधान निर्मिती अंतिम टप्पा विशेष", "भारतीय राज्यघटना सभेतील चर्चांचा अंतिम कालखंड.", "historical"),
         "23-11": ("श्री गुरु नानक देव जी प्रकाश पर्व", "शिखांचे पहिले गुरु गुरु नानक देव यांच्या जयंतीनिमित्त प्रकाशोत्सव.", "birthday"),
         "24-11": ("गुरु तेग बहादूर बलिदान दिन", "धर्माच्या रक्षणासाठी प्राणांची आहुती देणारे शिखांचे नववे गुरु तेग बहादूर यांचा स्मृती दिन.", "historical"),
         "25-11": ("महिलांवरील हिंसाचार निर्मूलनासाठी आंतरराष्ट्रीय दिन", "महिला सुरक्षेविषयी कठोर कायदे आणि जनजागृती.", "global"),
-        "26-11": ("संविधान दिन (National Constitution Day)", "१९४९ मध्ये भारताचे संविधान अधिकृतपणे स्वीकारले गेले, त्याबद्दल कृतज्ञता व्यक्त करण्याचा दिवस.", "historical"),
+        "26-11": ("संविधान दिन (National Constitution Day)", "१९४९ मध्ये भारताचे संविधान अधिकृतपणे स्वीकारले गेले.", "historical"),
         "27-11": ("राष्ट्रीय अंगदान जनजागृती दिन", "मरणोत्तर अंगदानाचे महत्त्व पटवून देणारा राष्ट्रीय दिन.", "health"),
         "28-11": ("महात्मा ज्योतिराव फुले पुण्यतिदी", "महाराष्ट्राचे महान समाजसुधारक आणि सत्यशोधक समाजाचे संस्थापक महात्मा फुले यांना आदरांजली.", "historical"),
         "29-11": ("पॅलेस्टाईन लोकांशी ऐक्य दर्शवणारा आंतरराष्ट्रीय दिन", "जागतिक पातळीवर मानवी हक्कांचे समर्थन.", "global"),
         "30-11": ("जागतिक सुरक्षा व आपत्ती व्यवस्थापन दिन", "आपत्कालीन परिस्थितीत घ्यावयाच्या दक्षतेविषयी माहिती.", "global"),
 
         # --- DECEMBER ---
-        "01-12": ("जागतिक एड्स दिन (World AIDS Day)", "HIV/AIDS बाबत जनजागृती निर्माण करणे आणि रुग्णांबद्दल सहानुभूती दाखवणे.", "health"),
+        "01-12": ("जागतिक एड्स दिन (World AIDS Day)", "HIV/AIDS बाबत जनजागृती निर्माण करणे.", "health"),
         "02-12": ("राष्ट्रीय प्रदूषण नियंत्रण दिन", "औद्योगिक प्रदूषणामुळे होणाऱ्या दुष्परिणामांवर नियंत्रण मिळवण्यासाठीचा दिवस.", "national"),
         "03-12": ("आंतरराष्ट्रीय दिव्यांग व्यक्ती दिन", "दिव्यांग बांधवांच्या हक्कांचा व आत्मविश्वासाचा सन्मान करणारा दिन.", "global"),
         "04-12": ("भारतीय नौदल दिन (Navy Day)", "१९७१ च्या युद्धात कराची बंदर मोहिमेत भारतीय नौदलाच्या विजयाच्या स्मरणार्थ.", "national"),
@@ -84,11 +84,11 @@ def get_daily_dinvishesh_dictionary():
         "18-12": ("आंतरराष्ट्रीय स्थलांतरित दिन", "जागतिक स्तरावर स्थलांतरित नागरिकांच्या समस्या व सुरक्षेविषयी विचार.", "global"),
         "19-12": ("गोवा मुक्ति दिन (Goa Liberation Day)", "१९६१ मध्ये गोवा पोर्तुगीज राजवटीतून मुक्त झाला तो ऐतिहासिक दिवस.", "historical"),
         "20-12": ("मानवी एकता आंतरराष्ट्रीय दिन", "विविधतेत एकता निर्माण करून जागतिक शांतता प्रस्थापित करणे.", "global"),
-        "21-12": ("आयन दिन / हिवाळी संक्रांत (Winter Solstice)", "वर्गातील सर्वात मोठा रात्रकाळ आणि खगोलशास्त्रीयदृष्ट्या महत्त्वाचा दिवस.", "science"),
+        "21-12": ("हिवाळी संक्रांत (Winter Solstice)", "खगोलशास्त्रीयदृष्ट्या महत्त्वाचा आणि वर्षातील सर्वात मोठा रात्रकाळ.", "science"),
         "22-12": ("राष्ट्रीय गणित दिन (श्रीनिवास रामानुजन जन्मदिवस)", "भारताचे महान गणिततज्ज्ञ श्रीनिवास रामानुजन यांच्या जन्मदिवसानिमित्त.", "birthday"),
-        "23-12": ("किसान दिवस (राष्ट्रीय शेतकरी दिन - चौधरी चरण सिंह जयंती)", "भारताचे माजी पंतप्रधान चौधरी चरण सिंह यांच्या जयंतीनिमित्त शेतकऱ्यांचा सन्मान.", "birthday"),
+        "23-12": ("किसान दिवस (राष्ट्रीय शेतकरी दिन - चौधरी चरण सिंह जयंती)", "माजी पंतप्रधान चौधरी चरण सिंह यांच्या जयंतीनिमित्त शेतकऱ्यांचा सन्मान.", "birthday"),
         "24-12": ("राष्ट्रीय ग्राहक हक्क दिन", "ग्राहकांच्या फसवणुकीविरुद्ध कायदेशीर अधिकार आणि जागृतीचा दिवस.", "legal"),
-        "25-12": ("नाताळ (Christmas) / सुशासन दिन (अटल बिहारी वाजपेयी जयंती)", "माजी पंतप्रधान अटल बिहारी वाजपेयी यांच्या जयंतीनिमित्त सुशासन दिन.", "birthday"),
+        "25-12": ("नाताळ (Christmas) / सुशासन दिन (अटल बिहारी वाजपेयी जयंती)", "सुशासन दिन म्हणून पाळला जाणारा विशेष दिवस.", "birthday"),
         "26-12": ("वीर बाल दिवस", "सिख गुरु गोविंद सिंह यांच्या सुपुत्रांच्या बलिदानाच्या स्मरणार्थ वीर बाल दिवस.", "historical"),
         "27-12": ("जैविक विविधता संरक्षण दिन", "निसर्ग आणि सजीवांचे संतुलन राखण्याबाबत मार्गदर्शन.", "global"),
         "28-12": ("काँग्रेस स्थापना दिन (१८८५)", "१८८५ मध्ये भारतीय राष्ट्रीय काँग्रेसची स्थापना झाल्याचा ऐतिहासिक दिवस.", "historical"),
@@ -96,4 +96,120 @@ def get_daily_dinvishesh_dictionary():
         "30-12": ("स्वातंत्र्य लढा स्मरण दिन", "स्वातंत्र्यलढ्यातील थोर क्रांतीकारकांच्या आठवणींना उजाळा.", "historical"),
         "31-12": ("वर्षाचा शेवटचा दिवस / आत्मपरीक्षण दिन", "गेल्या वर्षातील कामगिरीचे सिंहावलोकन करून नवीन वर्षाचे संकल्प करण्याचा दिवस.", "global")
     }
-    return events
+
+def init_firebase_admin():
+    """ Initialize Firebase Admin SDK safely """
+    try:
+        if not firebase_admin._apps:
+            cred_json_str = os.getenv("FIREBASE_CREDENTIALS") or os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
+            if cred_json_str:
+                cred_dict = json.loads(cred_json_str)
+                cred = credentials.Certificate(cred_dict)
+                firebase_admin.initialize_app(cred)
+            else:
+                print("⚠️ No Firebase Credentials found in Environment Variables!")
+                return False
+        return True
+    except Exception as e:
+        print(f"⚠️ Firebase init error: {e}")
+        return False
+
+def main():
+    SUPABASE_URL = (os.getenv("SUPABASE_URL") or "").rstrip('/')
+    SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        print("⚠️ Supabase credentials missing!")
+        return
+
+    headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json",
+        "Prefer": "resolution=merge-duplicates"
+    }
+
+    # --- STEP A: Upsert All Dates Data into Supabase ---
+    print("🔄 Upserting Dinvishesh data to Supabase...")
+    rest_url = f"{SUPABASE_URL}/rest/v1/dinvishesh"
+    
+    events_dict = get_daily_dinvishesh_dictionary()
+    payload_list = []
+    
+    for date_key, (title, description, category) in events_dict.items():
+        payload_list.append({
+            "date_key": date_key,
+            "title": title,
+            "description": description,
+            "category": category,
+            "image_url": "https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=600&auto=format&fit=crop"
+        })
+
+    try:
+        res = requests.post(rest_url, headers=headers, json=payload_list, timeout=15)
+        print(f"📦 Supabase Sync Response Status: {res.status_code}")
+    except Exception as e:
+        print(f"❌ Error syncing data: {e}")
+
+    # --- STEP B: Fetch Today's Dinvishesh using IST Timezone ---
+    utc_now = datetime.datetime.utcnow()
+    ist_now = utc_now + datetime.timedelta(hours=5, minutes=30)
+    today_str = ist_now.strftime('%d-%m')
+    
+    print(f"🔍 Fetching Dinvishesh for today (IST Date: {today_str})...")
+
+    get_url = f"{SUPABASE_URL}/rest/v1/dinvishesh?date_key=eq.{today_str}&select=*"
+    res = requests.get(get_url, headers=headers, timeout=10)
+
+    if res.status_code == 200 and res.json():
+        item = res.json()[0]
+        title = f"📜 आजचा दिनविशेष: {item['title']}"
+        body = item['description'][:150] + "..."
+        image_url = item.get('image_url', '')
+
+        print(f"🎉 Found today's Dinvishesh: {item['title']}")
+
+        if init_firebase_admin():
+            token_url = f"{SUPABASE_URL}/rest/v1/push_tokens?select=token&limit=1000"
+            tok_res = requests.get(token_url, headers=headers, timeout=10)
+            
+            if tok_res.status_code == 200:
+                tokens_data = tok_res.json()
+                tokens = list(set([t['token'] for t in tokens_data if t.get('token')]))
+                print(f"📱 Found {len(tokens)} registered device tokens.")
+                
+                if tokens:
+                    message = messaging.MulticastMessage(
+                        notification=messaging.Notification(
+                            title=title,
+                            body=body,
+                            image=image_url if image_url.startswith("http") else None
+                        ),
+                        data={
+                            "click_action": "OPEN_DINVISHESH",
+                            "date_key": today_str,
+                            "thumbnail_url": image_url
+                        },
+                        tokens=tokens,
+                        android=messaging.AndroidConfig(
+                            priority='high',
+                            notification=messaging.AndroidNotification(
+                                sound='default',
+                                image=image_url if image_url.startswith("http") else None,
+                                click_action="OPEN_DINVISHESH"
+                            )
+                        )
+                    )
+                    response = messaging.send_each_for_multicast(message)
+                    print(f"✅ Notification Result -> Success: {response.success_count}, Failed: {response.failure_count}")
+                else:
+                    print("⚠️ No tokens found in push_tokens table.")
+            else:
+                print(f"❌ Failed to fetch tokens from Supabase: {tok_res.text}")
+        else:
+            print("❌ Firebase Admin failed to initialize. Check FIREBASE_CREDENTIALS secret.")
+    else:
+        print(f"ℹ️ No Dinvishesh record matched in DB for key: '{today_str}'")
+
+if __name__ == "__main__":
+    main()
