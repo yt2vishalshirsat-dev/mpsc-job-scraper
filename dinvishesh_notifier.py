@@ -25,7 +25,7 @@ def get_daily_dinvishesh_dictionary():
         "24-10": ("संयुक्त राष्ट्र संघ स्थापना दिन (UN Day)", "१९४५ मध्ये दुसऱ्या महायुद्धानंतर जागतिक शांततेसाठी संयुक्त राष्ट्र संघ स्थापन झाला.", "global"),
         "25-10": ("जागतिक ऑपेरा व कला दिन", "जागतिक स्तरावर कला आणि संस्कृतीचा प्रसार करणारा दिवस.", "global"),
         "26-10": ("काश्मीर विलय दिन", "१९४७ मध्ये महाराजा हरी सिंह यांनी भारतासोबतच्या विलय पत्रावर स्वाक्षरी केली.", "historical"),
-        "27-10": ("भारतीय पदतिक दिन (Infantry Day)", "भारतीय लष्कराच्या इन्फंट्री पथकाच्या शौर्याचा गौरव करण्याचा दिवस.", "national"),
+        "27-10": ("भारतीय पदাতিক दिन (Infantry Day)", "भारतीय लष्कराच्या इन्फंट्री पथकाच्या शौर्याचा गौरव करण्याचा दिवस.", "national"),
         "28-10": ("आंतरराष्ट्रीय अ‍ॅनिमेशन दिन", "कला आणि तंत्रज्ञानाचा संगम असलेल्या अ‍ॅनिमेशन क्षेत्राचा गौरव.", "global"),
         "29-10": ("जागतिक स्ट्रोक दिन", "आरोग्याविषयी जागरूकता निर्माण करून पक्षाघातासारख्या आजारांवर नियंत्रण मिळवण्याबाबत मार्गदर्शन.", "health"),
         "30-10": ("जागतिक बचत दिन पूर्वतयारी / राष्ट्रीय कायदेशीर सेवा जागृती", "आर्थिक शिस्त आणि बचतीचे महत्त्व सांगणारा दिवस.", "national"),
@@ -98,7 +98,6 @@ def get_daily_dinvishesh_dictionary():
     }
 
 def init_firebase_admin():
-    """ Initialize Firebase Admin SDK safely """
     try:
         if not firebase_admin._apps:
             cred_json_str = os.getenv("FIREBASE_CREDENTIALS") or os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
@@ -107,7 +106,6 @@ def init_firebase_admin():
                 cred = credentials.Certificate(cred_dict)
                 firebase_admin.initialize_app(cred)
             else:
-                print("⚠️ No Firebase Credentials found in Environment Variables!")
                 return False
         return True
     except Exception as e:
@@ -131,7 +129,7 @@ def main():
 
     # --- STEP A: Upsert All Dates Data into Supabase ---
     print("🔄 Upserting Dinvishesh data to Supabase...")
-    rest_url = f"{SUPABASE_URL}/rest/v1/dinvishesh"
+    rest_url = f"{SUPABASE_URL}/rest/v1/dinvishesh?on_conflict=date_key"
     
     events_dict = get_daily_dinvishesh_dictionary()
     payload_list = []
@@ -165,7 +163,9 @@ def main():
         item = res.json()[0]
         title = f"📜 आजचा दिनविशेष: {item['title']}"
         body = item['description'][:150] + "..."
-        image_url = item.get('image_url', '')
+        
+        raw_image = item.get('image_url')
+        image_url = raw_image if (raw_image and isinstance(raw_image, str) and raw_image.startswith("http")) else None
 
         print(f"🎉 Found today's Dinvishesh: {item['title']}")
 
@@ -183,19 +183,19 @@ def main():
                         notification=messaging.Notification(
                             title=title,
                             body=body,
-                            image=image_url if image_url.startswith("http") else None
+                            image=image_url
                         ),
                         data={
                             "click_action": "OPEN_DINVISHESH",
                             "date_key": today_str,
-                            "thumbnail_url": image_url
+                            "thumbnail_url": image_url if image_url else ""
                         },
                         tokens=tokens,
                         android=messaging.AndroidConfig(
                             priority='high',
                             notification=messaging.AndroidNotification(
                                 sound='default',
-                                image=image_url if image_url.startswith("http") else None,
+                                image=image_url,
                                 click_action="OPEN_DINVISHESH"
                             )
                         )
@@ -207,7 +207,7 @@ def main():
             else:
                 print(f"❌ Failed to fetch tokens from Supabase: {tok_res.text}")
         else:
-            print("❌ Firebase Admin failed to initialize. Check FIREBASE_CREDENTIALS secret.")
+            print("❌ Firebase Admin failed to initialize.")
     else:
         print(f"ℹ️ No Dinvishesh record matched in DB for key: '{today_str}'")
 
