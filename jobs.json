@@ -6,12 +6,12 @@
         "category": "result",
         "last_date": "13/11/2026",
         "qualification": [
+            "Diploma",
             "ITI",
+            "Graduate",
             "10th Pass",
             "12th Pass",
-            "AFCAT / Defense",
-            "Diploma",
-            "Graduate"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -44,8 +44,8 @@
         "last_date": "01 जानेवारी 2027",
         "qualification": [
             "B.Tech / B.E",
-            "12th Pass",
-            "Graduate"
+            "Graduate",
+            "12th Pass"
         ]
     },
     {
@@ -67,8 +67,8 @@
         "last_date": "12 नोव्हेंबर 2026 (12:00 PM)पर",
         "qualification": [
             "B.Tech / B.E",
-            "12th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "12th Pass"
         ]
     },
     {
@@ -89,8 +89,8 @@
         "category": "advertisement",
         "last_date": "11 नोव्हेंबर 2026अर्ज दुरुस्ती",
         "qualification": [
-            "10th Pass",
             "B.Tech / B.E",
+            "10th Pass",
             "12th Pass"
         ]
     },
@@ -102,10 +102,10 @@
         "last_date": "24 सप्टेंबर 2026  16 ऑक्टोबर 2",
         "qualification": [
             "B.Tech / B.E",
+            "Graduate",
             "CA / CS",
             "Post Graduate",
-            "AFCAT / Defense",
-            "Graduate"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -116,11 +116,11 @@
         "last_date": "24 सप्टेंबर 2026  15 ऑक्टोबर 2",
         "qualification": [
             "B.Tech / B.E",
+            "Diploma",
+            "Graduate",
             "CA / CS",
             "Post Graduate",
-            "Pharmacy",
-            "Diploma",
-            "Graduate"
+            "Pharmacy"
         ]
     },
     {
@@ -131,10 +131,10 @@
         "last_date": "25 ऑक्टोबर 2026",
         "qualification": [
             "B.Tech / B.E",
-            "10th Pass",
             "B.Ed / D.Ed",
-            "AFCAT / Defense",
-            "Graduate"
+            "Graduate",
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -155,9 +155,9 @@
         "category": "hall_ticket",
         "last_date": "30 ऑक्टोबर 2026",
         "qualification": [
+            "Graduate",
             "10th Pass",
-            "AFCAT / Defense",
-            "Graduate"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -172,31 +172,19 @@
         ]
     },
     {
-        "title": "AIIMS NORCET Result: अखिल भारतीय आयुर्विज्ञान संस्थेत नर्सिंग ऑफिसर पदाची मेगाभरती (NORCET 11) Stage I  निकाल",
-        "source_url": "https://majhinaukri.in/result/aiims-result/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/aiims-result-majhinaukri.webp",
-        "category": "result",
-        "last_date": "12 सप्टेंबर 2026",
-        "qualification": [
-            "10th Pass",
-            "AFCAT / Defense",
-            "Nursing"
-        ]
-    },
-    {
         "title": "View All Results »",
         "source_url": "https://majhinaukri.in/result/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2018/01/Majhi-Naukri-Result.png",
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "12th Pass",
+            "B.Ed / D.Ed",
+            "Graduate",
             "CA / CS",
             "Post Graduate",
-            "B.Ed / D.Ed",
-            "AFCAT / Defense",
-            "Graduate"
+            "10th Pass",
+            "12th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -219,6 +207,18 @@
         "last_date": "तपशील पहा",
         "qualification": [
             "Any / General"
+        ]
+    },
+    {
+        "title": "AIIMS NORCET Result: अखिल भारतीय आयुर्विज्ञान संस्थेत नर्सिंग ऑफिसर पदाची मेगाभरती (NORCET 11) Stage I  निकाल",
+        "source_url": "https://majhinaukri.in/result/aiims-result/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/aiims-result-majhinaukri.webp",
+        "category": "result",
+        "last_date": "12 सप्टेंबर 2026",
+        "qualification": [
+            "Nursing",
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -262,8 +262,8 @@
         "last_date": "21 जून 2026",
         "qualification": [
             "10th Pass",
-            "MBBS",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "MBBS"
         ]
     },
     {
@@ -273,9 +273,9 @@
         "category": "result",
         "last_date": "16 जून 2026",
         "qualification": [
+            "Nursing",
             "10th Pass",
-            "AFCAT / Defense",
-            "Nursing"
+            "AFCAT / Defense"
         ]
     },
     {
