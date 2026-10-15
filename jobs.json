@@ -4,14 +4,37 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "29/10/2026",
+        "last_date": "13/11/2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense",
             "Diploma",
             "12th Pass",
+            "10th Pass",
             "Graduate",
+            "AFCAT / Defense",
             "ITI"
+        ]
+    },
+    {
+        "title": "MH SET Hall Ticket: सहाय्यक प्राध्यापक राज्यस्तरीय पात्रता परीक्षा-2026 प्रवेशपत्र",
+        "source_url": "https://majhinaukri.in/hall-ticket/mh-set-exam-hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/mh-set-exam-hall-ticket-majhinaukri.webp",
+        "category": "hall_ticket",
+        "last_date": "25 ऑक्टोबर 2026",
+        "qualification": [
+            "AFCAT / Defense",
+            "10th Pass"
+        ]
+    },
+    {
+        "title": "RRB NTPC Bharti 2026: भारतीय रेल्वेत 5236 जागांसाठी मेगाभरती",
+        "source_url": "https://majhinaukri.in/rrb-ntpc-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/rrb-ntpc-bharti-2026-majhinaukri-1.png",
+        "category": "advertisement",
+        "last_date": "01 जानेवारी 2027",
+        "qualification": [
+            "12th Pass",
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -21,8 +44,8 @@
         "category": "advertisement",
         "last_date": "29 ऑक्टोबर 2026परीक्षा: 07 नोव",
         "qualification": [
-            "B.Tech / B.E",
-            "Graduate"
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -32,9 +55,9 @@
         "category": "advertisement",
         "last_date": "12 नोव्हेंबर 2026 (12:00 PM)पर",
         "qualification": [
+            "AFCAT / Defense",
             "12th Pass",
-            "B.Tech / B.E",
-            "AFCAT / Defense"
+            "B.Tech / B.E"
         ]
     },
     {
@@ -44,7 +67,85 @@
         "category": "advertisement",
         "last_date": "28 ऑक्टोबर 2026 (11:55 PM)परीक",
         "qualification": [
+            "Graduate",
+            "B.Tech / B.E"
+        ]
+    },
+    {
+        "title": "CRPF Sports Quota Bharti 2026: केंद्रीय राखीव पोलीस दलात खेळाडूंच्या 521 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/crpf-sports-quota-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/crpf-sports-quota-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "11 नोव्हेंबर 2026अर्ज दुरुस्ती",
+        "qualification": [
+            "10th Pass",
+            "12th Pass",
+            "B.Tech / B.E"
+        ]
+    },
+    {
+        "title": "Bank of Baroda Bharti 2026: बँक ऑफ बडोदा मध्ये 1100 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/bank-of-baroda-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/bank-of-baroda-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "24 सप्टेंबर 2026  16 ऑक्टोबर 2",
+        "qualification": [
             "B.Tech / B.E",
+            "CA / CS",
+            "Post Graduate",
+            "Graduate",
+            "AFCAT / Defense"
+        ]
+    },
+    {
+        "title": "PMBI Bharti 2026: फार्मास्युटिकल्स & मेडिकल डिव्हायसेस ब्युरो ऑफ इंडिया मध्ये 178 जागांसाठी...",
+        "source_url": "https://majhinaukri.in/pmbi-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/pmbi-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "24 सप्टेंबर 2026  15 ऑक्टोबर 2",
+        "qualification": [
+            "Diploma",
+            "B.Tech / B.E",
+            "CA / CS",
+            "Post Graduate",
+            "Pharmacy",
+            "Graduate"
+        ]
+    },
+    {
+        "title": "View All Hall Tickets »",
+        "source_url": "https://majhinaukri.in/hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2016/09/Hall-Ticket.png",
+        "category": "hall_ticket",
+        "last_date": "25 ऑक्टोबर 2026",
+        "qualification": [
+            "B.Ed / D.Ed",
+            "B.Tech / B.E",
+            "10th Pass",
+            "Graduate",
+            "AFCAT / Defense"
+        ]
+    },
+    {
+        "title": "Bank of Baroda LBO Hall Ticket: बँक ऑफ बडोदा LBO भरती परीक्षा प्रवेशपत्र",
+        "source_url": "https://majhinaukri.in/hall-ticket/bank-of-baroda-hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/bank-of-baroda-hall-ticket-majhinaukri.webp",
+        "category": "hall_ticket",
+        "last_date": "03 ऑक्टोबर 2026",
+        "qualification": [
+            "AFCAT / Defense",
+            "10th Pass"
+        ]
+    },
+    {
+        "title": "SSC CGL Hall Ticket: SSC संयुक्त पदवीधर स्तर (CGL) परीक्षा 2026",
+        "source_url": "https://majhinaukri.in/hall-ticket/ssc-hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/ssc-hall-ticket-majhinaukri.webp",
+        "category": "hall_ticket",
+        "last_date": "30 ऑक्टोबर 2026",
+        "qualification": [
+            "AFCAT / Defense",
+            "10th Pass",
             "Graduate"
         ]
     },
@@ -55,122 +156,8 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
-        ]
-    },
-    {
-        "title": "CRPF Sports Quota Bharti 2026: केंद्रीय राखीव पोलीस दलात खेळाडूंच्या 521 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/crpf-sports-quota-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/crpf-sports-quota-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "11 नोव्हेंबर 2026अर्ज दुरुस्ती",
-        "qualification": [
-            "12th Pass",
-            "10th Pass",
-            "B.Tech / B.E"
-        ]
-    },
-    {
-        "title": "Naval Dockyard Karwar Apprentice Bharti 2026: कारवार नेव्हल डॉकयार्ड मध्ये अप्रेंटिस पदांच्या 210 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/naval-dockyard-karwar-apprentice-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/naval-dockyard-karwar-apprentice-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "08 नोव्हेंबर 2026प्रिंटेड अर्ज",
-        "qualification": [
-            "B.Tech / B.E",
-            "10th Pass",
-            "ITI"
-        ]
-    },
-    {
-        "title": "Bank of Baroda Bharti 2026: बँक ऑफ बडोदा मध्ये 1100 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/bank-of-baroda-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/bank-of-baroda-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "24 सप्टेंबर 2026  16 ऑक्टोबर 2",
-        "qualification": [
             "AFCAT / Defense",
-            "CA / CS",
-            "Post Graduate",
-            "B.Tech / B.E",
-            "Graduate"
-        ]
-    },
-    {
-        "title": "PMBI Bharti 2026: फार्मास्युटिकल्स & मेडिकल डिव्हायसेस ब्युरो ऑफ इंडिया मध्ये 178 जागांसाठी...",
-        "source_url": "https://majhinaukri.in/pmbi-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/pmbi-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "24 सप्टेंबर 2026  15 ऑक्टोबर 2",
-        "qualification": [
-            "CA / CS",
-            "Pharmacy",
-            "Post Graduate",
-            "B.Tech / B.E",
-            "Diploma",
-            "Graduate"
-        ]
-    },
-    {
-        "title": "RRB Paramedical Bharti 2026: भारतीय रेल्वेत 590 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/rrb-paramedical-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/rrb-paramedical-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "14 ऑक्टोबर 2026 (11:59 PM)परीक",
-        "qualification": [
-            "12th Pass",
-            "B.Tech / B.E",
-            "Nursing",
-            "Diploma"
-        ]
-    },
-    {
-        "title": "View All Hall Tickets »",
-        "source_url": "https://majhinaukri.in/hall-ticket/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2016/09/Hall-Ticket.png",
-        "category": "hall_ticket",
-        "last_date": "03 ऑक्टोबर 2026",
-        "qualification": [
-            "10th Pass",
-            "AFCAT / Defense",
-            "B.Ed / D.Ed",
-            "B.Tech / B.E",
-            "Graduate"
-        ]
-    },
-    {
-        "title": "Bank of Baroda LBO Hall Ticket: बँक ऑफ बडोदा LBO भरती परीक्षा प्रवेशपत्र",
-        "source_url": "https://majhinaukri.in/hall-ticket/bank-of-baroda-hall-ticket/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/bank-of-baroda-hall-ticket-majhinaukri.webp",
-        "category": "hall_ticket",
-        "last_date": "03 ऑक्टोबर 2026",
-        "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
-        ]
-    },
-    {
-        "title": "SSC CGL Hall Ticket: SSC संयुक्त पदवीधर स्तर (CGL) परीक्षा 2026",
-        "source_url": "https://majhinaukri.in/hall-ticket/ssc-hall-ticket/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/ssc-hall-ticket-majhinaukri.webp",
-        "category": "hall_ticket",
-        "last_date": "30 ऑक्टोबर 2026",
-        "qualification": [
-            "10th Pass",
-            "Graduate",
-            "AFCAT / Defense"
-        ]
-    },
-    {
-        "title": "IBPS PO Hall Ticket: IBPS मार्फत ‘PO/MT’ भरती मुख्य परीक्षा प्रवेशपत्र",
-        "source_url": "https://majhinaukri.in/hall-ticket/ibps-hall-ticket/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/ibps-hall-ticket-majhinaukri.webp",
-        "category": "hall_ticket",
-        "last_date": "04 ऑक्टोबर 2026",
-        "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "10th Pass"
         ]
     },
     {
@@ -180,8 +167,8 @@
         "category": "result",
         "last_date": "24 ऑगस्ट 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -191,9 +178,9 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
-            "10th Pass",
             "Nursing",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -203,13 +190,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense",
             "B.Ed / D.Ed",
+            "12th Pass",
             "CA / CS",
             "Post Graduate",
-            "12th Pass",
-            "Graduate"
+            "10th Pass",
+            "Graduate",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -219,9 +206,9 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "12th Pass",
+            "AFCAT / Defense",
             "10th Pass",
-            "AFCAT / Defense"
+            "12th Pass"
         ]
     },
     {
@@ -241,8 +228,8 @@
         "category": "result",
         "last_date": "30 जून 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -252,8 +239,8 @@
         "category": "result",
         "last_date": "08 ऑगस्ट 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -263,8 +250,8 @@
         "category": "result",
         "last_date": "11 जुलै 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -274,9 +261,9 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "10th Pass",
+            "AFCAT / Defense",
             "MBBS",
-            "AFCAT / Defense"
+            "10th Pass"
         ]
     },
     {
@@ -286,9 +273,9 @@
         "category": "result",
         "last_date": "16 जून 2026",
         "qualification": [
-            "10th Pass",
             "Nursing",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -298,8 +285,8 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -309,8 +296,8 @@
         "category": "result",
         "last_date": "09 नोव्हेंबर 2025",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -320,8 +307,8 @@
         "category": "result",
         "last_date": "01 मार्च 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -331,8 +318,8 @@
         "category": "result",
         "last_date": "24 मे 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     }
 ]
