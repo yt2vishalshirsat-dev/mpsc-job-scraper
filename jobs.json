@@ -6,12 +6,12 @@
         "category": "result",
         "last_date": "25/11/2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense",
-            "Diploma",
-            "12th Pass",
+            "ITI",
             "Graduate",
-            "ITI"
+            "AFCAT / Defense",
+            "12th Pass",
+            "Diploma",
+            "10th Pass"
         ]
     },
     {
@@ -21,9 +21,9 @@
         "category": "advertisement",
         "last_date": "25 नोव्हेंबर 2026 (11:55 PM)पर",
         "qualification": [
-            "10th Pass",
+            "12th Pass",
             "B.Tech / B.E",
-            "12th Pass"
+            "10th Pass"
         ]
     },
     {
@@ -68,9 +68,9 @@
         "category": "advertisement",
         "last_date": "01 जानेवारी 2027",
         "qualification": [
-            "Graduate",
+            "12th Pass",
             "B.Tech / B.E",
-            "12th Pass"
+            "Graduate"
         ]
     },
     {
@@ -80,8 +80,8 @@
         "category": "advertisement",
         "last_date": "29 ऑक्टोबर 2026परीक्षा: 07 नोव",
         "qualification": [
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -91,9 +91,9 @@
         "category": "advertisement",
         "last_date": "12 नोव्हेंबर 2026 (12:00 PM)पर",
         "qualification": [
-            "AFCAT / Defense",
+            "12th Pass",
             "B.Tech / B.E",
-            "12th Pass"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -113,11 +113,11 @@
         "category": "advertisement",
         "last_date": "24 सप्टेंबर 2026  16 ऑक्टोबर 2",
         "qualification": [
-            "CA / CS",
-            "AFCAT / Defense",
             "Graduate",
-            "B.Tech / B.E",
-            "Post Graduate"
+            "AFCAT / Defense",
+            "Post Graduate",
+            "CA / CS",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -138,10 +138,10 @@
         "category": "hall_ticket",
         "last_date": "25 ऑक्टोबर 2026",
         "qualification": [
-            "10th Pass",
             "B.Ed / D.Ed",
-            "AFCAT / Defense",
             "Graduate",
+            "AFCAT / Defense",
+            "10th Pass",
             "B.Tech / B.E"
         ]
     },
@@ -163,8 +163,8 @@
         "category": "hall_ticket",
         "last_date": "30 ऑक्टोबर 2026",
         "qualification": [
-            "Graduate",
             "AFCAT / Defense",
+            "Graduate",
             "10th Pass"
         ]
     },
@@ -186,13 +186,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "CA / CS",
             "B.Ed / D.Ed",
-            "AFCAT / Defense",
-            "12th Pass",
             "Graduate",
-            "Post Graduate"
+            "AFCAT / Defense",
+            "Post Graduate",
+            "12th Pass",
+            "10th Pass",
+            "CA / CS"
         ]
     },
     {
@@ -202,9 +202,9 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
+            "12th Pass",
             "AFCAT / Defense",
-            "10th Pass",
-            "12th Pass"
+            "10th Pass"
         ]
     },
     {
@@ -225,8 +225,8 @@
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
             "AFCAT / Defense",
-            "10th Pass",
-            "Nursing"
+            "Nursing",
+            "10th Pass"
         ]
     },
     {
@@ -269,9 +269,9 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
+            "MBBS",
             "AFCAT / Defense",
-            "10th Pass",
-            "MBBS"
+            "10th Pass"
         ]
     },
     {
@@ -282,8 +282,8 @@
         "last_date": "16 जून 2026",
         "qualification": [
             "AFCAT / Defense",
-            "10th Pass",
-            "Nursing"
+            "Nursing",
+            "10th Pass"
         ]
     },
     {
