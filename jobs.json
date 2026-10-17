@@ -6,12 +6,12 @@
         "category": "result",
         "last_date": "15/11/2026",
         "qualification": [
-            "ITI",
             "AFCAT / Defense",
             "12th Pass",
-            "10th Pass",
+            "Diploma",
             "Graduate",
-            "Diploma"
+            "ITI",
+            "10th Pass"
         ]
     },
     {
@@ -21,10 +21,10 @@
         "category": "advertisement",
         "last_date": "15 नोव्हेंबर 2026परीक्षा: नमूद",
         "qualification": [
-            "Diploma",
-            "CA / CS",
+            "Post Graduate",
             "B.Tech / B.E",
-            "Post Graduate"
+            "CA / CS",
+            "Diploma"
         ]
     },
     {
@@ -46,10 +46,10 @@
         "category": "advertisement",
         "last_date": "14 नोव्हेंबर 2026 (11:00 AM)पर",
         "qualification": [
-            "Diploma",
-            "CA / CS",
+            "Post Graduate",
             "B.Tech / B.E",
-            "Post Graduate"
+            "CA / CS",
+            "Diploma"
         ]
     },
     {
@@ -70,9 +70,9 @@
         "category": "advertisement",
         "last_date": "01 जानेवारी 2027",
         "qualification": [
-            "Graduate",
             "B.Tech / B.E",
-            "12th Pass"
+            "12th Pass",
+            "Graduate"
         ]
     },
     {
@@ -82,8 +82,8 @@
         "category": "advertisement",
         "last_date": "29 ऑक्टोबर 2026परीक्षा: 07 नोव",
         "qualification": [
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -103,10 +103,10 @@
         "category": "advertisement",
         "last_date": "24 सप्टेंबर 2026  16 ऑक्टोबर 2",
         "qualification": [
-            "CA / CS",
+            "B.Tech / B.E",
             "AFCAT / Defense",
             "Graduate",
-            "B.Tech / B.E",
+            "CA / CS",
             "Post Graduate"
         ]
     },
@@ -117,8 +117,8 @@
         "category": "advertisement",
         "last_date": "17 ऑक्टोबर 2026महत्वाच्या लिंक",
         "qualification": [
-            "Diploma",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Diploma"
         ]
     },
     {
@@ -128,10 +128,10 @@
         "category": "hall_ticket",
         "last_date": "25 ऑक्टोबर 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass",
-            "Graduate",
             "B.Tech / B.E",
+            "AFCAT / Defense",
+            "Graduate",
+            "10th Pass",
             "B.Ed / D.Ed"
         ]
     },
@@ -164,9 +164,9 @@
         "category": "hall_ticket",
         "last_date": "30 ऑक्टोबर 2026",
         "qualification": [
-            "Graduate",
             "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "Graduate"
         ]
     },
     {
@@ -187,11 +187,11 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "CA / CS",
             "AFCAT / Defense",
             "12th Pass",
-            "10th Pass",
             "Graduate",
+            "CA / CS",
+            "10th Pass",
             "Post Graduate",
             "B.Ed / D.Ed"
         ]
@@ -270,8 +270,8 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "MBBS",
             "AFCAT / Defense",
+            "MBBS",
             "10th Pass"
         ]
     },
