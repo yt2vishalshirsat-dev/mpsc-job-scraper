@@ -8,10 +8,10 @@
         "qualification": [
             "12th Pass",
             "10th Pass",
-            "Diploma",
-            "AFCAT / Defense",
             "ITI",
-            "Graduate"
+            "AFCAT / Defense",
+            "Graduate",
+            "Diploma"
         ]
     },
     {
@@ -21,8 +21,8 @@
         "category": "advertisement",
         "last_date": "17 ऑक्टोबर 2026 27 ऑक्टोबर 202",
         "qualification": [
-            "Diploma",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Diploma"
         ]
     },
     {
@@ -32,9 +32,9 @@
         "category": "advertisement",
         "last_date": "27 ऑक्टोबर 2026महत्वाच्या लिंक",
         "qualification": [
+            "B.Tech / B.E",
             "Graduate",
-            "CA / CS",
-            "B.Tech / B.E"
+            "CA / CS"
         ]
     },
     {
@@ -56,9 +56,9 @@
         "category": "advertisement",
         "last_date": "15 नोव्हेंबर 2026परीक्षा: नमूद",
         "qualification": [
-            "Diploma",
-            "Post Graduate",
             "CA / CS",
+            "Post Graduate",
+            "Diploma",
             "B.Tech / B.E"
         ]
     },
@@ -69,9 +69,9 @@
         "category": "advertisement",
         "last_date": "25 नोव्हेंबर 2026 (11:55 PM)पर",
         "qualification": [
-            "B.Tech / B.E",
             "12th Pass",
-            "10th Pass"
+            "10th Pass",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -93,11 +93,11 @@
         "category": "hall_ticket",
         "last_date": "25 ऑक्टोबर 2026",
         "qualification": [
-            "B.Tech / B.E",
             "10th Pass",
-            "B.Ed / D.Ed",
+            "B.Tech / B.E",
             "AFCAT / Defense",
-            "Graduate"
+            "Graduate",
+            "B.Ed / D.Ed"
         ]
     },
     {
@@ -166,10 +166,10 @@
             "12th Pass",
             "10th Pass",
             "B.Ed / D.Ed",
-            "CA / CS",
             "AFCAT / Defense",
+            "Graduate",
             "Post Graduate",
-            "Graduate"
+            "CA / CS"
         ]
     },
     {
