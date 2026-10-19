@@ -6,12 +6,12 @@
         "category": "result",
         "last_date": "02/11/2026",
         "qualification": [
+            "Diploma",
+            "12th Pass",
+            "AFCAT / Defense",
             "10th Pass",
             "ITI",
-            "Graduate",
-            "Diploma",
-            "AFCAT / Defense",
-            "12th Pass"
+            "Graduate"
         ]
     },
     {
@@ -22,8 +22,8 @@
         "last_date": "02 नोव्हेंबर 2026 महत्वाच्या ल",
         "qualification": [
             "Diploma",
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -33,13 +33,13 @@
         "category": "advertisement",
         "last_date": "09 नोव्हेंबर 2026परीक्षा: नमूद",
         "qualification": [
-            "Nursing",
+            "Diploma",
             "10th Pass",
             "ITI",
+            "Nursing",
             "Graduate",
-            "Diploma",
-            "Post Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Post Graduate"
         ]
     },
     {
@@ -47,9 +47,10 @@
         "source_url": "https://majhinaukri.in/mecon-bharti/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/mecon-bharti-majhinaukri.webp",
         "category": "advertisement",
-        "last_date": "तपशील पहा",
+        "last_date": "17 ऑक्टोबर 2026 27 ऑक्टोबर 202",
         "qualification": [
-            "Any / General"
+            "Diploma",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -60,8 +61,8 @@
         "last_date": "27 ऑक्टोबर 2026महत्वाच्या लिंक",
         "qualification": [
             "CA / CS",
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -72,8 +73,8 @@
         "last_date": "18 नोव्हेंबर 2026 (11:45 PM)पर",
         "qualification": [
             "10th Pass",
-            "ITI",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "ITI"
         ]
     },
     {
@@ -95,10 +96,10 @@
         "category": "advertisement",
         "last_date": "15 नोव्हेंबर 2026परीक्षा: नमूद",
         "qualification": [
-            "CA / CS",
             "Diploma",
+            "B.Tech / B.E",
             "Post Graduate",
-            "B.Tech / B.E"
+            "CA / CS"
         ]
     },
     {
@@ -108,10 +109,10 @@
         "category": "hall_ticket",
         "last_date": "25 ऑक्टोबर 2026",
         "qualification": [
-            "10th Pass",
             "B.Ed / D.Ed",
-            "Graduate",
             "AFCAT / Defense",
+            "10th Pass",
+            "Graduate",
             "B.Tech / B.E"
         ]
     },
@@ -178,13 +179,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "CA / CS",
-            "10th Pass",
             "B.Ed / D.Ed",
+            "12th Pass",
+            "AFCAT / Defense",
+            "10th Pass",
             "Graduate",
             "Post Graduate",
-            "AFCAT / Defense",
-            "12th Pass"
+            "CA / CS"
         ]
     },
     {
