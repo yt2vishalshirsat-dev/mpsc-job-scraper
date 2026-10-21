@@ -4,14 +4,25 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "01/11/2026",
+        "last_date": "25/11/2026",
+        "qualification": [
+            "AFCAT / Defense",
+            "Graduate",
+            "Diploma",
+            "10th Pass",
+            "ITI",
+            "12th Pass"
+        ]
+    },
+    {
+        "title": "RRB Station Master Bharti 2026: भारतीय रेल्वेत स्टेशन मास्टर पदाच्या 1200+जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/rrb-station-master-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/rrb-station-master-bharti-2026-majhinaukri.png",
+        "category": "advertisement",
+        "last_date": "25 नोव्हेंबर 2026 (11:59 PM)पर",
         "qualification": [
             "Graduate",
-            "AFCAT / Defense",
-            "Diploma",
-            "12th Pass",
-            "10th Pass",
-            "ITI"
+            "B.Tech / B.E"
         ]
     },
     {
@@ -32,9 +43,9 @@
         "category": "advertisement",
         "last_date": "02 नोव्हेंबर 2026 महत्वाच्या ल",
         "qualification": [
-            "B.Tech / B.E",
             "Diploma",
-            "Graduate"
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -44,13 +55,13 @@
         "category": "advertisement",
         "last_date": "09 नोव्हेंबर 2026परीक्षा: नमूद",
         "qualification": [
-            "Graduate",
-            "Diploma",
-            "Post Graduate",
-            "10th Pass",
-            "B.Tech / B.E",
             "Nursing",
-            "ITI"
+            "Graduate",
+            "Post Graduate",
+            "Diploma",
+            "10th Pass",
+            "ITI",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -61,18 +72,6 @@
         "last_date": "17 ऑक्टोबर 2026 27 ऑक्टोबर 202",
         "qualification": [
             "Diploma",
-            "B.Tech / B.E"
-        ]
-    },
-    {
-        "title": "South Indian Bank Bharti 2026: साउथ इंडियन बँकेत ज्युनियर ऑफिसर पदाची भरती",
-        "source_url": "https://majhinaukri.in/south-indian-bank-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/07/south-indian-bank-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "27 ऑक्टोबर 2026महत्वाच्या लिंक",
-        "qualification": [
-            "Graduate",
-            "CA / CS",
             "B.Tech / B.E"
         ]
     },
@@ -94,20 +93,8 @@
         "last_date": "22 ऑक्टोबर 2026महत्वाच्या लिंक",
         "qualification": [
             "10th Pass",
-            "B.Tech / B.E",
-            "AFCAT / Defense"
-        ]
-    },
-    {
-        "title": "BHEL Artisan Bharti 2026: भारत हेवी इलेक्ट्रिकल्स लिमिटेड मध्ये 660 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/bhel-artisan-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/bhel-artisan-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "18 नोव्हेंबर 2026 (11:45 PM)पर",
-        "qualification": [
-            "10th Pass",
-            "B.Tech / B.E",
-            "ITI"
+            "AFCAT / Defense",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -117,11 +104,11 @@
         "category": "hall_ticket",
         "last_date": "25 ऑक्टोबर 2026",
         "qualification": [
-            "Graduate",
+            "B.Ed / D.Ed",
             "AFCAT / Defense",
+            "Graduate",
             "10th Pass",
-            "B.Tech / B.E",
-            "B.Ed / D.Ed"
+            "B.Tech / B.E"
         ]
     },
     {
@@ -153,8 +140,8 @@
         "category": "hall_ticket",
         "last_date": "30 ऑक्टोबर 2026",
         "qualification": [
-            "10th Pass",
             "Graduate",
+            "10th Pass",
             "AFCAT / Defense"
         ]
     },
@@ -187,13 +174,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "Graduate",
+            "B.Ed / D.Ed",
             "AFCAT / Defense",
-            "12th Pass",
             "Post Graduate",
-            "10th Pass",
             "CA / CS",
-            "B.Ed / D.Ed"
+            "Graduate",
+            "10th Pass",
+            "12th Pass"
         ]
     },
     {
