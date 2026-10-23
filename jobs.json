@@ -6,12 +6,12 @@
         "category": "result",
         "last_date": "18/11/2026",
         "qualification": [
-            "Diploma",
-            "ITI",
             "Graduate",
             "10th Pass",
-            "12th Pass",
-            "AFCAT / Defense"
+            "Diploma",
+            "AFCAT / Defense",
+            "ITI",
+            "12th Pass"
         ]
     },
     {
@@ -43,8 +43,8 @@
         "category": "advertisement",
         "last_date": "18 नोव्हेंबर 2026 (11:45 PM)पर",
         "qualification": [
-            "ITI",
             "B.Tech / B.E",
+            "ITI",
             "10th Pass"
         ]
     },
@@ -55,8 +55,8 @@
         "category": "advertisement",
         "last_date": "25 नोव्हेंबर 2026 (11:59 PM)पर",
         "qualification": [
-            "B.Tech / B.E",
-            "Graduate"
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -66,8 +66,8 @@
         "category": "advertisement",
         "last_date": "22 नोव्हेंबर 2026महत्वाच्या लि",
         "qualification": [
-            "ITI",
             "B.Tech / B.E",
+            "ITI",
             "10th Pass"
         ]
     },
@@ -78,8 +78,8 @@
         "category": "advertisement",
         "last_date": "01 नोव्हेंबर 2026परीक्षा: 07 न",
         "qualification": [
-            "B.Tech / B.E",
-            "Graduate"
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -89,9 +89,9 @@
         "category": "advertisement",
         "last_date": "02 नोव्हेंबर 2026 महत्वाच्या ल",
         "qualification": [
+            "Graduate",
             "B.Tech / B.E",
-            "Diploma",
-            "Graduate"
+            "Diploma"
         ]
     },
     {
@@ -101,9 +101,9 @@
         "category": "advertisement",
         "last_date": "26 ऑक्टोबर 2026लेखी परीक्षा/मु",
         "qualification": [
+            "CA / CS",
             "B.Tech / B.E",
-            "M.Tech / M.E",
-            "CA / CS"
+            "M.Tech / M.E"
         ]
     },
     {
@@ -113,10 +113,10 @@
         "category": "advertisement",
         "last_date": "28 ऑक्टोबर 2026भरती मेळाव्याची",
         "qualification": [
-            "B.Tech / B.E",
-            "Diploma",
-            "ITI",
             "10th Pass",
+            "Diploma",
+            "B.Tech / B.E",
+            "ITI",
             "12th Pass"
         ]
     },
@@ -127,11 +127,11 @@
         "category": "hall_ticket",
         "last_date": "28 ऑक्टोबर 2026",
         "qualification": [
-            "B.Tech / B.E",
+            "B.Ed / D.Ed",
             "Graduate",
-            "10th Pass",
             "AFCAT / Defense",
-            "B.Ed / D.Ed"
+            "10th Pass",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -174,13 +174,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "CA / CS",
+            "B.Ed / D.Ed",
             "Graduate",
             "10th Pass",
-            "12th Pass",
             "AFCAT / Defense",
             "Post Graduate",
-            "B.Ed / D.Ed"
+            "CA / CS",
+            "12th Pass"
         ]
     },
     {
