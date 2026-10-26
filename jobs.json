@@ -6,12 +6,23 @@
         "category": "result",
         "last_date": "13/11/2026",
         "qualification": [
-            "AFCAT / Defense",
-            "Graduate",
             "10th Pass",
+            "Graduate",
             "12th Pass",
             "Diploma",
-            "ITI"
+            "ITI",
+            "AFCAT / Defense"
+        ]
+    },
+    {
+        "title": "Bank of Baroda SO Hall Ticket: बँक ऑफ बडोदामध्ये SO पदाच्या 206 जागांसाठी भरती परीक्षा प्रवेशपत्र",
+        "source_url": "https://majhinaukri.in/hall-ticket/bank-of-baroda-hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/bank-of-baroda-hall-ticket-majhinaukri.webp",
+        "category": "hall_ticket",
+        "last_date": "31 ऑक्टोबर 2026",
+        "qualification": [
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -21,9 +32,9 @@
         "category": "advertisement",
         "last_date": "13 नोव्हेंबर 2026 (11: 55 PM)म",
         "qualification": [
-            "10th Pass",
+            "B.Tech / B.E",
             "ITI",
-            "B.Tech / B.E"
+            "10th Pass"
         ]
     },
     {
@@ -33,9 +44,9 @@
         "category": "advertisement",
         "last_date": "03 नोव्हेंबर 2026",
         "qualification": [
-            "Pharmacy",
+            "B.Tech / B.E",
             "10th Pass",
-            "B.Tech / B.E"
+            "Pharmacy"
         ]
     },
     {
@@ -49,26 +60,15 @@
         ]
     },
     {
-        "title": "RRB JE Hall Ticket: भारतीय रेल्वे JE भरती (CBT 1) परीक्षा प्रवेशपत्र (CEN 04/2026)",
-        "source_url": "https://majhinaukri.in/hall-ticket/rrb-hall-ticket/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/07/rrb-hall-ticket-majhinaukri.webp",
-        "category": "hall_ticket",
-        "last_date": "28 ऑक्टोबर 2026",
-        "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
-        ]
-    },
-    {
         "title": "BHEL Artisan Bharti 2026: भारत हेवी इलेक्ट्रिकल्स लिमिटेड मध्ये 660 जागांसाठी भरती",
         "source_url": "https://majhinaukri.in/bhel-artisan-bharti/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/bhel-artisan-bharti-majhinaukri.webp",
         "category": "advertisement",
         "last_date": "18 नोव्हेंबर 2026 (11:45 PM)पर",
         "qualification": [
-            "10th Pass",
+            "B.Tech / B.E",
             "ITI",
-            "B.Tech / B.E"
+            "10th Pass"
         ]
     },
     {
@@ -78,8 +78,8 @@
         "category": "advertisement",
         "last_date": "25 नोव्हेंबर 2026 (11:59 PM)पर",
         "qualification": [
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -89,9 +89,9 @@
         "category": "advertisement",
         "last_date": "26 ऑक्टोबर 2026लेखी परीक्षा/मु",
         "qualification": [
-            "M.Tech / M.E",
+            "B.Tech / B.E",
             "CA / CS",
-            "B.Tech / B.E"
+            "M.Tech / M.E"
         ]
     },
     {
@@ -102,8 +102,8 @@
         "last_date": "27 ऑक्टोबर 2026परीक्षा: नंतर क",
         "qualification": [
             "Graduate",
-            "12th Pass",
             "B.Tech / B.E",
+            "12th Pass",
             "Diploma",
             "ITI"
         ]
@@ -116,8 +116,8 @@
         "last_date": "28 ऑक्टोबर 2026भरती मेळाव्याची",
         "qualification": [
             "10th Pass",
-            "12th Pass",
             "B.Tech / B.E",
+            "12th Pass",
             "Diploma",
             "ITI"
         ]
@@ -127,13 +127,24 @@
         "source_url": "https://majhinaukri.in/hall-ticket/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2016/09/Hall-Ticket.png",
         "category": "hall_ticket",
+        "last_date": "31 ऑक्टोबर 2026",
+        "qualification": [
+            "B.Ed / D.Ed",
+            "10th Pass",
+            "Graduate",
+            "B.Tech / B.E",
+            "AFCAT / Defense"
+        ]
+    },
+    {
+        "title": "RRB JE Hall Ticket: भारतीय रेल्वे JE भरती (CBT 1) परीक्षा प्रवेशपत्र (CEN 04/2026)",
+        "source_url": "https://majhinaukri.in/hall-ticket/rrb-hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/07/rrb-hall-ticket-majhinaukri.webp",
+        "category": "hall_ticket",
         "last_date": "28 ऑक्टोबर 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "Graduate",
             "10th Pass",
-            "B.Tech / B.E",
-            "B.Ed / D.Ed"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -143,8 +154,8 @@
         "category": "hall_ticket",
         "last_date": "01 नोव्हेंबर 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -154,8 +165,8 @@
         "category": "hall_ticket",
         "last_date": "25 ऑक्टोबर 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -165,8 +176,8 @@
         "category": "result",
         "last_date": "13 सप्टेंबर 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -176,8 +187,8 @@
         "category": "result",
         "last_date": "29 ऑगस्ट 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -187,13 +198,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "AFCAT / Defense",
-            "Graduate",
+            "B.Ed / D.Ed",
             "10th Pass",
+            "CA / CS",
+            "Graduate",
             "12th Pass",
             "Post Graduate",
-            "CA / CS",
-            "B.Ed / D.Ed"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -203,9 +214,9 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "AFCAT / Defense",
+            "12th Pass",
             "10th Pass",
-            "12th Pass"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -225,8 +236,8 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -236,9 +247,9 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
-            "AFCAT / Defense",
+            "Nursing",
             "10th Pass",
-            "Nursing"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -248,8 +259,8 @@
         "category": "result",
         "last_date": "30 जून 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -259,8 +270,8 @@
         "category": "result",
         "last_date": "08 ऑगस्ट 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -270,8 +281,8 @@
         "category": "result",
         "last_date": "11 जुलै 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -281,9 +292,9 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "AFCAT / Defense",
+            "MBBS",
             "10th Pass",
-            "MBBS"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -293,9 +304,9 @@
         "category": "result",
         "last_date": "16 जून 2026",
         "qualification": [
-            "AFCAT / Defense",
+            "Nursing",
             "10th Pass",
-            "Nursing"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -305,8 +316,8 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     }
 ]
