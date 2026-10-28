@@ -7,11 +7,11 @@
         "last_date": "27/11/2026",
         "qualification": [
             "Diploma",
-            "10th Pass",
+            "ITI",
             "AFCAT / Defense",
             "12th Pass",
             "Graduate",
-            "ITI"
+            "10th Pass"
         ]
     },
     {
@@ -22,12 +22,12 @@
         "last_date": "30 सप्टेंबर 2026",
         "qualification": [
             "Diploma",
-            "Nursing",
+            "ITI",
             "Post Graduate",
-            "LLB / Law",
-            "CA / CS",
             "B.Tech / B.E",
-            "ITI"
+            "Nursing",
+            "CA / CS",
+            "LLB / Law"
         ]
     },
     {
@@ -71,10 +71,10 @@
         "last_date": "28 ऑक्टोबर 2026भरती मेळाव्याची",
         "qualification": [
             "Diploma",
-            "10th Pass",
-            "12th Pass",
+            "ITI",
             "B.Tech / B.E",
-            "ITI"
+            "12th Pass",
+            "10th Pass"
         ]
     },
     {
@@ -84,11 +84,11 @@
         "category": "hall_ticket",
         "last_date": "31 ऑक्टोबर 2026",
         "qualification": [
-            "B.Ed / D.Ed",
-            "AFCAT / Defense",
-            "10th Pass",
             "B.Tech / B.E",
-            "Graduate"
+            "AFCAT / Defense",
+            "Graduate",
+            "B.Ed / D.Ed",
+            "10th Pass"
         ]
     },
     {
@@ -153,13 +153,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
+            "Post Graduate",
+            "AFCAT / Defense",
+            "12th Pass",
+            "Graduate",
             "B.Ed / D.Ed",
             "10th Pass",
-            "AFCAT / Defense",
-            "Post Graduate",
-            "CA / CS",
-            "12th Pass",
-            "Graduate"
+            "CA / CS"
         ]
     },
     {
@@ -169,9 +169,9 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "12th Pass",
             "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "12th Pass"
         ]
     },
     {
