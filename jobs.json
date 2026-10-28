@@ -4,14 +4,14 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "18/11/2026",
+        "last_date": "31/10/2026",
         "qualification": [
             "Diploma",
-            "10th Pass",
-            "AFCAT / Defense",
+            "ITI",
             "12th Pass",
             "Graduate",
-            "ITI"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -54,22 +54,10 @@
         "category": "advertisement",
         "last_date": "03 नोव्हेंबर 2026",
         "qualification": [
+            "LLB / Law",
             "B.Tech / B.E",
             "CA / CS",
-            "Graduate",
-            "LLB / Law"
-        ]
-    },
-    {
-        "title": "ISRO URSC Bharti 2026: यूआर राव उपग्रह केंद्रात 61 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/isro-ursc-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/07/isro-ursc-bharti-majhinaukri-1.webp",
-        "category": "advertisement",
-        "last_date": "13 नोव्हेंबर 2026 (11: 55 PM)म",
-        "qualification": [
-            "B.Tech / B.E",
-            "ITI",
-            "10th Pass"
+            "Graduate"
         ]
     },
     {
@@ -79,11 +67,11 @@
         "category": "advertisement",
         "last_date": "28 ऑक्टोबर 2026भरती मेळाव्याची",
         "qualification": [
-            "B.Tech / B.E",
             "Diploma",
-            "10th Pass",
+            "ITI",
+            "B.Tech / B.E",
             "12th Pass",
-            "ITI"
+            "10th Pass"
         ]
     },
     {
@@ -94,10 +82,10 @@
         "last_date": "31 ऑक्टोबर 2026",
         "qualification": [
             "B.Tech / B.E",
-            "10th Pass",
-            "AFCAT / Defense",
             "B.Ed / D.Ed",
-            "Graduate"
+            "Graduate",
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -162,13 +150,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "Post Graduate",
             "10th Pass",
-            "AFCAT / Defense",
             "CA / CS",
-            "12th Pass",
             "B.Ed / D.Ed",
-            "Graduate"
+            "12th Pass",
+            "Graduate",
+            "Post Graduate",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -256,8 +244,8 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "MBBS",
             "10th Pass",
+            "MBBS",
             "AFCAT / Defense"
         ]
     },
