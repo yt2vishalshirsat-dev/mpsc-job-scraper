@@ -8,10 +8,10 @@
         "qualification": [
             "12th Pass",
             "ITI",
-            "AFCAT / Defense",
             "Graduate",
-            "Diploma",
-            "10th Pass"
+            "AFCAT / Defense",
+            "10th Pass",
+            "Diploma"
         ]
     },
     {
@@ -21,13 +21,13 @@
         "category": "advertisement",
         "last_date": "30 सप्टेंबर 2026",
         "qualification": [
-            "CA / CS",
-            "LLB / Law",
             "Nursing",
+            "LLB / Law",
+            "Post Graduate",
             "ITI",
-            "Diploma",
             "B.Tech / B.E",
-            "Post Graduate"
+            "CA / CS",
+            "Diploma"
         ]
     },
     {
@@ -47,9 +47,9 @@
         "category": "advertisement",
         "last_date": "27 ऑक्टोबर 2026  31 ऑक्टोबर 20",
         "qualification": [
+            "B.Tech / B.E",
             "Graduate",
-            "CA / CS",
-            "B.Tech / B.E"
+            "CA / CS"
         ]
     },
     {
@@ -59,8 +59,8 @@
         "category": "advertisement",
         "last_date": "25 नोव्हेंबर 2026 (11:59 PM)पर",
         "qualification": [
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -72,9 +72,9 @@
         "qualification": [
             "12th Pass",
             "ITI",
-            "Diploma",
             "10th Pass",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Diploma"
         ]
     },
     {
@@ -84,9 +84,9 @@
         "category": "hall_ticket",
         "last_date": "31 ऑक्टोबर 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "Graduate",
             "B.Ed / D.Ed",
+            "Graduate",
+            "AFCAT / Defense",
             "10th Pass",
             "B.Tech / B.E"
         ]
@@ -153,13 +153,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "CA / CS",
-            "12th Pass",
-            "AFCAT / Defense",
-            "Graduate",
             "B.Ed / D.Ed",
+            "12th Pass",
+            "Post Graduate",
+            "Graduate",
+            "AFCAT / Defense",
             "10th Pass",
-            "Post Graduate"
+            "CA / CS"
         ]
     },
     {
