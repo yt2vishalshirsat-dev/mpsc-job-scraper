@@ -6,12 +6,12 @@
         "category": "result",
         "last_date": "20/11/2026",
         "qualification": [
-            "ITI",
             "AFCAT / Defense",
-            "10th Pass",
             "Graduate",
+            "12th Pass",
             "Diploma",
-            "12th Pass"
+            "ITI",
+            "10th Pass"
         ]
     },
     {
@@ -21,12 +21,12 @@
         "category": "advertisement",
         "last_date": "20 नोव्हेंबर 2026निकाल/निवड: 1",
         "qualification": [
-            "ITI",
-            "B.Tech / B.E",
-            "10th Pass",
             "Graduate",
+            "12th Pass",
+            "B.Tech / B.E",
             "Diploma",
-            "12th Pass"
+            "ITI",
+            "10th Pass"
         ]
     },
     {
@@ -36,8 +36,8 @@
         "category": "advertisement",
         "last_date": "28 नोव्हेंबर 2026 परीक्षा: नमू",
         "qualification": [
-            "ITI",
             "B.Tech / B.E",
+            "ITI",
             "10th Pass"
         ]
     },
@@ -48,13 +48,13 @@
         "category": "advertisement",
         "last_date": "22 नोव्हेंबर 2026 (11:50 PM)पर",
         "qualification": [
-            "Post Graduate",
-            "B.Tech / B.E",
-            "10th Pass",
-            "B.Ed / D.Ed",
             "Graduate",
+            "12th Pass",
+            "B.Tech / B.E",
             "Diploma",
-            "12th Pass"
+            "Post Graduate",
+            "10th Pass",
+            "B.Ed / D.Ed"
         ]
     },
     {
@@ -64,12 +64,12 @@
         "category": "advertisement",
         "last_date": "30 सप्टेंबर 2026",
         "qualification": [
+            "LLB / Law",
+            "CA / CS",
+            "B.Tech / B.E",
+            "Diploma",
             "Post Graduate",
             "ITI",
-            "B.Tech / B.E",
-            "CA / CS",
-            "LLB / Law",
-            "Diploma",
             "Nursing"
         ]
     },
@@ -80,9 +80,9 @@
         "category": "advertisement",
         "last_date": "27 ऑक्टोबर 2026  31 ऑक्टोबर 20",
         "qualification": [
+            "CA / CS",
             "B.Tech / B.E",
-            "Graduate",
-            "CA / CS"
+            "Graduate"
         ]
     },
     {
@@ -104,8 +104,8 @@
         "last_date": "02 नोव्हेंबर 2026 महत्वाच्या ल",
         "qualification": [
             "B.Tech / B.E",
-            "Graduate",
-            "Diploma"
+            "Diploma",
+            "Graduate"
         ]
     },
     {
@@ -126,11 +126,11 @@
         "category": "hall_ticket",
         "last_date": "31 ऑक्टोबर 2026",
         "qualification": [
-            "B.Tech / B.E",
             "AFCAT / Defense",
-            "B.Ed / D.Ed",
             "Graduate",
-            "10th Pass"
+            "B.Tech / B.E",
+            "10th Pass",
+            "B.Ed / D.Ed"
         ]
     },
     {
@@ -195,13 +195,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "Post Graduate",
             "AFCAT / Defense",
-            "CA / CS",
-            "B.Ed / D.Ed",
             "Graduate",
+            "12th Pass",
+            "CA / CS",
+            "Post Graduate",
             "10th Pass",
-            "12th Pass"
+            "B.Ed / D.Ed"
         ]
     },
     {
@@ -211,9 +211,9 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "12th Pass",
             "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "12th Pass"
         ]
     },
     {
@@ -244,9 +244,9 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
-            "Nursing",
             "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "Nursing"
         ]
     },
     {
@@ -301,9 +301,9 @@
         "category": "result",
         "last_date": "16 जून 2026",
         "qualification": [
-            "Nursing",
             "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "Nursing"
         ]
     },
     {
