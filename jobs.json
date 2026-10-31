@@ -4,13 +4,13 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "22/11/2026",
+        "last_date": "03/11/2026",
         "qualification": [
-            "ITI",
-            "12th Pass",
             "Graduate",
-            "10th Pass",
             "AFCAT / Defense",
+            "12th Pass",
+            "10th Pass",
+            "ITI",
             "Diploma"
         ]
     },
@@ -21,13 +21,13 @@
         "category": "advertisement",
         "last_date": "22 नोव्हेंबर 2026 (11:50 PM)पर",
         "qualification": [
+            "Graduate",
             "B.Tech / B.E",
-            "B.Ed / D.Ed",
             "12th Pass",
             "10th Pass",
+            "Diploma",
             "Post Graduate",
-            "Graduate",
-            "Diploma"
+            "B.Ed / D.Ed"
         ]
     },
     {
@@ -38,12 +38,12 @@
         "last_date": "30 सप्टेंबर 2026",
         "qualification": [
             "B.Tech / B.E",
-            "ITI",
-            "CA / CS",
             "Nursing",
-            "LLB / Law",
+            "ITI",
+            "Diploma",
             "Post Graduate",
-            "Diploma"
+            "LLB / Law",
+            "CA / CS"
         ]
     },
     {
@@ -63,9 +63,9 @@
         "category": "advertisement",
         "last_date": "27 ऑक्टोबर 2026  31 ऑक्टोबर 20",
         "qualification": [
+            "Graduate",
             "B.Tech / B.E",
-            "CA / CS",
-            "Graduate"
+            "CA / CS"
         ]
     },
     {
@@ -75,8 +75,8 @@
         "category": "advertisement",
         "last_date": "01 नोव्हेंबर 2026परीक्षा: 07 न",
         "qualification": [
-            "B.Tech / B.E",
-            "Graduate"
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -86,8 +86,8 @@
         "category": "advertisement",
         "last_date": "02 नोव्हेंबर 2026 महत्वाच्या ल",
         "qualification": [
-            "B.Tech / B.E",
             "Graduate",
+            "B.Tech / B.E",
             "Diploma"
         ]
     },
@@ -109,11 +109,11 @@
         "category": "hall_ticket",
         "last_date": "31 ऑक्टोबर 2026",
         "qualification": [
-            "B.Tech / B.E",
-            "B.Ed / D.Ed",
-            "10th Pass",
+            "Graduate",
             "AFCAT / Defense",
-            "Graduate"
+            "B.Tech / B.E",
+            "10th Pass",
+            "B.Ed / D.Ed"
         ]
     },
     {
@@ -178,13 +178,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "CA / CS",
-            "B.Ed / D.Ed",
+            "Graduate",
+            "AFCAT / Defense",
             "12th Pass",
             "10th Pass",
             "Post Graduate",
-            "AFCAT / Defense",
-            "Graduate"
+            "B.Ed / D.Ed",
+            "CA / CS"
         ]
     },
     {
@@ -228,8 +228,8 @@
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
             "AFCAT / Defense",
-            "Nursing",
-            "10th Pass"
+            "10th Pass",
+            "Nursing"
         ]
     },
     {
@@ -285,8 +285,8 @@
         "last_date": "16 जून 2026",
         "qualification": [
             "AFCAT / Defense",
-            "Nursing",
-            "10th Pass"
+            "10th Pass",
+            "Nursing"
         ]
     },
     {
