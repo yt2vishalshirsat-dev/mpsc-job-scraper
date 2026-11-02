@@ -6,11 +6,11 @@
         "category": "result",
         "last_date": "20/11/2026",
         "qualification": [
-            "ITI",
             "AFCAT / Defense",
-            "Diploma",
-            "10th Pass",
             "12th Pass",
+            "ITI",
+            "10th Pass",
+            "Diploma",
             "Graduate"
         ]
     },
@@ -32,12 +32,12 @@
         "category": "advertisement",
         "last_date": "20 नोव्हेंबर 2026निकाल/निवड: 1",
         "qualification": [
-            "ITI",
-            "Diploma",
-            "B.Tech / B.E",
-            "10th Pass",
             "12th Pass",
-            "Graduate"
+            "ITI",
+            "10th Pass",
+            "Diploma",
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -59,13 +59,13 @@
         "category": "advertisement",
         "last_date": "22 नोव्हेंबर 2026 (11:50 PM)पर",
         "qualification": [
-            "B.Ed / D.Ed",
-            "Diploma",
-            "B.Tech / B.E",
-            "10th Pass",
             "12th Pass",
+            "B.Ed / D.Ed",
+            "10th Pass",
+            "Diploma",
             "Graduate",
-            "Post Graduate"
+            "Post Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -75,13 +75,13 @@
         "category": "advertisement",
         "last_date": "30 सप्टेंबर 2026",
         "qualification": [
-            "ITI",
-            "Diploma",
-            "CA / CS",
             "B.Tech / B.E",
-            "LLB / Law",
+            "ITI",
             "Nursing",
-            "Post Graduate"
+            "CA / CS",
+            "Diploma",
+            "Post Graduate",
+            "LLB / Law"
         ]
     },
     {
@@ -89,11 +89,26 @@
         "source_url": "https://majhinaukri.in/eil-bharti/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/eil-bharti-majhinaukri.webp",
         "category": "advertisement",
-        "last_date": "02 नोव्हेंबर 2026 महत्वाच्या ल",
+        "last_date": "02 नोव्हेंबर 2026 (02:00 PM)मह",
         "qualification": [
-            "Diploma",
             "B.Tech / B.E",
+            "Diploma",
             "Graduate"
+        ]
+    },
+    {
+        "title": "IOCL Apprentice Bharti 2026: इंडियन ऑइल मध्ये अप्रेंटिस पदाच्या 335 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/iocl-apprentice-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/iocl-apprentice-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "04 नोव्हेंबर 2026 (05:00 PM)पर",
+        "qualification": [
+            "12th Pass",
+            "ITI",
+            "10th Pass",
+            "Diploma",
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -115,9 +130,9 @@
         "qualification": [
             "AFCAT / Defense",
             "B.Ed / D.Ed",
-            "B.Tech / B.E",
             "10th Pass",
-            "Graduate"
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -160,11 +175,11 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "B.Ed / D.Ed",
             "AFCAT / Defense",
-            "CA / CS",
-            "10th Pass",
             "12th Pass",
+            "B.Ed / D.Ed",
+            "10th Pass",
+            "CA / CS",
             "Graduate",
             "Post Graduate"
         ]
@@ -209,9 +224,9 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
+            "Nursing",
             "AFCAT / Defense",
-            "10th Pass",
-            "Nursing"
+            "10th Pass"
         ]
     },
     {
@@ -254,9 +269,9 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
+            "MBBS",
             "AFCAT / Defense",
-            "10th Pass",
-            "MBBS"
+            "10th Pass"
         ]
     },
     {
@@ -266,9 +281,9 @@
         "category": "result",
         "last_date": "16 जून 2026",
         "qualification": [
+            "Nursing",
             "AFCAT / Defense",
-            "10th Pass",
-            "Nursing"
+            "10th Pass"
         ]
     },
     {
