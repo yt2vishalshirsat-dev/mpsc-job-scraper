@@ -7,11 +7,11 @@
         "last_date": "08/12/2026",
         "qualification": [
             "Graduate",
-            "Diploma",
             "ITI",
-            "12th Pass",
             "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "12th Pass",
+            "Diploma"
         ]
     },
     {
@@ -21,9 +21,9 @@
         "category": "advertisement",
         "last_date": "02 डिसेंबर 2026 (05:00 PM)महत्",
         "qualification": [
-            "B.Tech / B.E",
             "10th Pass",
-            "ITI"
+            "ITI",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -77,8 +77,8 @@
         "last_date": "01 जानेवारी 2027",
         "qualification": [
             "Graduate",
-            "B.Tech / B.E",
-            "12th Pass"
+            "12th Pass",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -89,11 +89,11 @@
         "last_date": "04 नोव्हेंबर 2026 (05:00 PM)पर",
         "qualification": [
             "Graduate",
-            "Diploma",
             "ITI",
-            "12th Pass",
             "B.Tech / B.E",
-            "10th Pass"
+            "10th Pass",
+            "12th Pass",
+            "Diploma"
         ]
     },
     {
@@ -105,8 +105,8 @@
         "qualification": [
             "Graduate",
             "B.Ed / D.Ed",
-            "AFCAT / Defense",
             "B.Tech / B.E",
+            "AFCAT / Defense",
             "10th Pass"
         ]
     },
@@ -163,11 +163,11 @@
         "qualification": [
             "Graduate",
             "B.Ed / D.Ed",
-            "12th Pass",
-            "AFCAT / Defense",
-            "Post Graduate",
             "CA / CS",
-            "10th Pass"
+            "AFCAT / Defense",
+            "10th Pass",
+            "12th Pass",
+            "Post Graduate"
         ]
     },
     {
@@ -255,9 +255,9 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "MBBS",
             "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "MBBS"
         ]
     },
     {
