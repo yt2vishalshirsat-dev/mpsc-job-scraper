@@ -6,12 +6,23 @@
         "category": "result",
         "last_date": "25/11/2026",
         "qualification": [
-            "ITI",
-            "Graduate",
+            "10th Pass",
             "12th Pass",
             "Diploma",
-            "AFCAT / Defense",
-            "10th Pass"
+            "Graduate",
+            "ITI",
+            "AFCAT / Defense"
+        ]
+    },
+    {
+        "title": "Indian Bank Apprentice Bharti 2026: इंडियन बँकेत अप्रेंटिस पदांच्या 1500 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/indian-bank-apprentice-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/indian-bank-apprentice-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "25 नोव्हेंबर 2026परीक्षा: नंतर",
+        "qualification": [
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -48,25 +59,14 @@
         ]
     },
     {
-        "title": "Indian Bank Apprentice Bharti 2025: इंडियन बँकेत 1500 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/indian-bank-apprentice-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/indian-bank-apprentice-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "25 नोव्हेंबर 2026परीक्षा: नंतर",
-        "qualification": [
-            "B.Tech / B.E",
-            "Graduate"
-        ]
-    },
-    {
         "title": "RRB NTPC Bharti 2026: भारतीय रेल्वेत 5236 जागांसाठी मेगाभरती",
         "source_url": "https://majhinaukri.in/rrb-ntpc-bharti/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/rrb-ntpc-bharti-majhinaukri.webp",
         "category": "advertisement",
         "last_date": "01 जानेवारी 2027",
         "qualification": [
-            "B.Tech / B.E",
             "Graduate",
+            "B.Tech / B.E",
             "12th Pass"
         ]
     },
@@ -77,12 +77,12 @@
         "category": "advertisement",
         "last_date": "04 नोव्हेंबर 2026 (05:00 PM)पर",
         "qualification": [
-            "B.Tech / B.E",
-            "ITI",
-            "Graduate",
+            "10th Pass",
             "12th Pass",
             "Diploma",
-            "10th Pass"
+            "Graduate",
+            "B.Tech / B.E",
+            "ITI"
         ]
     },
     {
@@ -92,11 +92,11 @@
         "category": "hall_ticket",
         "last_date": "05 नोव्हेंबर 2026",
         "qualification": [
-            "B.Tech / B.E",
             "B.Ed / D.Ed",
+            "10th Pass",
             "Graduate",
-            "AFCAT / Defense",
-            "10th Pass"
+            "B.Tech / B.E",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -151,12 +151,12 @@
         "last_date": "तपशील पहा",
         "qualification": [
             "B.Ed / D.Ed",
-            "Graduate",
-            "12th Pass",
-            "AFCAT / Defense",
+            "CA / CS",
             "10th Pass",
+            "12th Pass",
+            "Graduate",
             "Post Graduate",
-            "CA / CS"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -199,8 +199,8 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
-            "10th Pass",
             "Nursing",
+            "10th Pass",
             "AFCAT / Defense"
         ]
     },
@@ -256,8 +256,8 @@
         "category": "result",
         "last_date": "16 जून 2026",
         "qualification": [
-            "10th Pass",
             "Nursing",
+            "10th Pass",
             "AFCAT / Defense"
         ]
     },
