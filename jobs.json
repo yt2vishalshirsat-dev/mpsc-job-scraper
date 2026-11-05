@@ -4,13 +4,28 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "08/12/2026",
+        "last_date": "04/12/2026",
         "qualification": [
             "Graduate",
-            "Diploma",
-            "10th Pass",
             "ITI",
             "AFCAT / Defense",
+            "Diploma",
+            "12th Pass",
+            "10th Pass"
+        ]
+    },
+    {
+        "title": "RRB Isolated Bharti 2026: भारतीय रेल्वेत 191 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/rrb-isolated-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/rrb-isolated-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "04 डिसेंबर 2026परीक्षा: नंतर क",
+        "qualification": [
+            "Graduate",
+            "Post Graduate",
+            "B.Tech / B.E",
+            "Diploma",
+            "LLB / Law",
             "12th Pass"
         ]
     },
@@ -21,9 +36,9 @@
         "category": "advertisement",
         "last_date": "02 डिसेंबर 2026 (05:00 PM)महत्",
         "qualification": [
+            "ITI",
             "B.Tech / B.E",
-            "10th Pass",
-            "ITI"
+            "10th Pass"
         ]
     },
     {
@@ -59,17 +74,6 @@
         ]
     },
     {
-        "title": "SBI SCO Bharti 2026: भारतीय स्टेट बँकेत 77 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/sbi-sco-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/sbi-sco-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "25 नोव्हेंबर 2026महत्वाच्या लि",
-        "qualification": [
-            "AFCAT / Defense",
-            "B.Tech / B.E"
-        ]
-    },
-    {
         "title": "RRB NTPC Bharti 2026: भारतीय रेल्वेत 5236 जागांसाठी मेगाभरती",
         "source_url": "https://majhinaukri.in/rrb-ntpc-bharti/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/rrb-ntpc-bharti-majhinaukri.webp",
@@ -89,11 +93,11 @@
         "last_date": "04 नोव्हेंबर 2026 (05:00 PM)पर",
         "qualification": [
             "Graduate",
-            "Diploma",
-            "B.Tech / B.E",
-            "10th Pass",
             "ITI",
-            "12th Pass"
+            "B.Tech / B.E",
+            "Diploma",
+            "12th Pass",
+            "10th Pass"
         ]
     },
     {
@@ -104,10 +108,10 @@
         "last_date": "05 नोव्हेंबर 2026",
         "qualification": [
             "Graduate",
-            "B.Ed / D.Ed",
             "B.Tech / B.E",
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "B.Ed / D.Ed",
+            "10th Pass"
         ]
     },
     {
@@ -162,12 +166,12 @@
         "last_date": "तपशील पहा",
         "qualification": [
             "Graduate",
-            "B.Ed / D.Ed",
             "Post Graduate",
             "CA / CS",
-            "10th Pass",
             "AFCAT / Defense",
-            "12th Pass"
+            "12th Pass",
+            "B.Ed / D.Ed",
+            "10th Pass"
         ]
     },
     {
@@ -177,9 +181,9 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "AFCAT / Defense",
             "12th Pass",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -210,8 +214,8 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
-            "AFCAT / Defense",
             "Nursing",
+            "AFCAT / Defense",
             "10th Pass"
         ]
     },
@@ -255,9 +259,9 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "AFCAT / Defense",
             "MBBS",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -267,8 +271,8 @@
         "category": "result",
         "last_date": "16 जून 2026",
         "qualification": [
-            "AFCAT / Defense",
             "Nursing",
+            "AFCAT / Defense",
             "10th Pass"
         ]
     },
