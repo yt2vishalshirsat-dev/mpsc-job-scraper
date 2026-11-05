@@ -6,12 +6,12 @@
         "category": "result",
         "last_date": "04/12/2026",
         "qualification": [
-            "Diploma",
-            "Graduate",
-            "AFCAT / Defense",
-            "10th Pass",
             "12th Pass",
-            "ITI"
+            "AFCAT / Defense",
+            "Graduate",
+            "ITI",
+            "10th Pass",
+            "Diploma"
         ]
     },
     {
@@ -21,12 +21,12 @@
         "category": "advertisement",
         "last_date": "04 डिसेंबर 2026परीक्षा: नंतर क",
         "qualification": [
-            "Diploma",
-            "Graduate",
-            "LLB / Law",
-            "Post Graduate",
+            "B.Tech / B.E",
             "12th Pass",
-            "B.Tech / B.E"
+            "Graduate",
+            "Post Graduate",
+            "LLB / Law",
+            "Diploma"
         ]
     },
     {
@@ -36,9 +36,9 @@
         "category": "advertisement",
         "last_date": "02 डिसेंबर 2026 (05:00 PM)महत्",
         "qualification": [
-            "10th Pass",
             "ITI",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "10th Pass"
         ]
     },
     {
@@ -86,18 +86,15 @@
         ]
     },
     {
-        "title": "IOCL Apprentice Bharti 2026: इंडियन ऑइल मध्ये अप्रेंटिस पदाच्या 335 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/iocl-apprentice-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/iocl-apprentice-bharti-majhinaukri.webp",
+        "title": "Naval Dockyard Karwar Apprentice Bharti 2026: कारवार नेव्हल डॉकयार्ड मध्ये अप्रेंटिस पदांच्या 210...",
+        "source_url": "https://majhinaukri.in/naval-dockyard-karwar-apprentice-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/naval-dockyard-karwar-apprentice-bharti-majhinaukri.webp",
         "category": "advertisement",
-        "last_date": "04 नोव्हेंबर 2026 (05:00 PM)पर",
+        "last_date": "08 नोव्हेंबर 2026प्रिंटेड अर्ज",
         "qualification": [
-            "Diploma",
-            "Graduate",
-            "10th Pass",
-            "12th Pass",
             "ITI",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "10th Pass"
         ]
     },
     {
@@ -107,11 +104,11 @@
         "category": "hall_ticket",
         "last_date": "05 नोव्हेंबर 2026",
         "qualification": [
-            "Graduate",
+            "B.Tech / B.E",
             "AFCAT / Defense",
-            "10th Pass",
+            "Graduate",
             "B.Ed / D.Ed",
-            "B.Tech / B.E"
+            "10th Pass"
         ]
     },
     {
@@ -165,13 +162,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "Graduate",
-            "CA / CS",
+            "12th Pass",
             "AFCAT / Defense",
-            "10th Pass",
-            "B.Ed / D.Ed",
+            "Graduate",
             "Post Graduate",
-            "12th Pass"
+            "CA / CS",
+            "B.Ed / D.Ed",
+            "10th Pass"
         ]
     },
     {
@@ -182,8 +179,8 @@
         "last_date": "18 मार्च 2026",
         "qualification": [
             "AFCAT / Defense",
-            "10th Pass",
-            "12th Pass"
+            "12th Pass",
+            "10th Pass"
         ]
     },
     {
@@ -260,8 +257,8 @@
         "last_date": "21 जून 2026",
         "qualification": [
             "AFCAT / Defense",
-            "10th Pass",
-            "MBBS"
+            "MBBS",
+            "10th Pass"
         ]
     },
     {
