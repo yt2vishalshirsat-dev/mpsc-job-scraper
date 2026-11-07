@@ -4,11 +4,11 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "26/11/2026",
+        "last_date": "18/11/2026",
         "qualification": [
-            "AFCAT / Defense",
             "ITI",
             "12th Pass",
+            "AFCAT / Defense",
             "Diploma",
             "Graduate",
             "10th Pass"
@@ -21,10 +21,10 @@
         "category": "advertisement",
         "last_date": "26 नोव्हेंबर 2026महत्वाच्या लि",
         "qualification": [
-            "Diploma",
-            "B.Tech / B.E",
             "Graduate",
-            "ITI"
+            "ITI",
+            "B.Tech / B.E",
+            "Diploma"
         ]
     },
     {
@@ -34,10 +34,10 @@
         "category": "advertisement",
         "last_date": "05 डिसेंबर 2026महत्वाच्या लिंक",
         "qualification": [
-            "Diploma",
-            "B.Tech / B.E",
+            "12th Pass",
             "Graduate",
-            "12th Pass"
+            "B.Tech / B.E",
+            "Diploma"
         ]
     },
     {
@@ -47,9 +47,9 @@
         "category": "advertisement",
         "last_date": "15 नोव्हेंबर 2026 परीक्षा: 22 ",
         "qualification": [
-            "Diploma",
+            "ITI",
             "B.Tech / B.E",
-            "ITI"
+            "Diploma"
         ]
     },
     {
@@ -60,10 +60,10 @@
         "last_date": "18 नोव्हेंबर 2026मुलाखत: डिसें",
         "qualification": [
             "AFCAT / Defense",
+            "B.Tech / B.E",
             "MBBS",
             "Graduate",
             "Post Graduate",
-            "B.Tech / B.E",
             "10th Pass"
         ]
     },
@@ -74,9 +74,9 @@
         "category": "advertisement",
         "last_date": "01 जानेवारी 2027",
         "qualification": [
-            "B.Tech / B.E",
+            "12th Pass",
             "Graduate",
-            "12th Pass"
+            "B.Tech / B.E"
         ]
     },
     {
@@ -98,12 +98,12 @@
         "category": "advertisement",
         "last_date": "04 डिसेंबर 2026परीक्षा: नंतर क",
         "qualification": [
-            "LLB / Law",
             "12th Pass",
+            "LLB / Law",
+            "B.Tech / B.E",
             "Diploma",
             "Graduate",
-            "Post Graduate",
-            "B.Tech / B.E"
+            "Post Graduate"
         ]
     },
     {
@@ -114,9 +114,9 @@
         "last_date": "05 नोव्हेंबर 2026",
         "qualification": [
             "AFCAT / Defense",
+            "B.Tech / B.E",
             "B.Ed / D.Ed",
             "Graduate",
-            "B.Tech / B.E",
             "10th Pass"
         ]
     },
@@ -171,13 +171,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
+            "12th Pass",
             "AFCAT / Defense",
             "B.Ed / D.Ed",
-            "12th Pass",
             "Graduate",
-            "CA / CS",
             "Post Graduate",
-            "10th Pass"
+            "10th Pass",
+            "CA / CS"
         ]
     },
     {
@@ -187,8 +187,8 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "AFCAT / Defense",
             "12th Pass",
+            "AFCAT / Defense",
             "10th Pass"
         ]
     },
@@ -221,8 +221,8 @@
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
             "AFCAT / Defense",
-            "Nursing",
-            "10th Pass"
+            "10th Pass",
+            "Nursing"
         ]
     },
     {
@@ -265,9 +265,9 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "MBBS",
             "AFCAT / Defense",
-            "10th Pass"
+            "10th Pass",
+            "MBBS"
         ]
     },
     {
@@ -278,8 +278,8 @@
         "last_date": "16 जून 2026",
         "qualification": [
             "AFCAT / Defense",
-            "Nursing",
-            "10th Pass"
+            "10th Pass",
+            "Nursing"
         ]
     },
     {
