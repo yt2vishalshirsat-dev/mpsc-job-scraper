@@ -4,14 +4,26 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "18/11/2026",
+        "last_date": "11/12/2026",
         "qualification": [
-            "ITI",
-            "Graduate",
-            "10th Pass",
             "Diploma",
+            "10th Pass",
+            "ITI",
+            "AFCAT / Defense",
             "12th Pass",
-            "AFCAT / Defense"
+            "Graduate"
+        ]
+    },
+    {
+        "title": "Northern Railway Apprentice Bharti 2026: उत्तर रेल्वेत अप्रेंटिस पदांच्या 4651 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/northern-railway-apprentice-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/northern-railway-apprentice-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "11 डिसेंबर 2026 महत्वाच्या लिं",
+        "qualification": [
+            "B.Tech / B.E",
+            "10th Pass",
+            "ITI"
         ]
     },
     {
@@ -21,9 +33,9 @@
         "category": "advertisement",
         "last_date": "13 नोव्हेंबर 2026महत्वाच्या लि",
         "qualification": [
-            "Graduate",
             "B.Tech / B.E",
-            "CA / CS"
+            "CA / CS",
+            "Graduate"
         ]
     },
     {
@@ -33,11 +45,11 @@
         "category": "advertisement",
         "last_date": "18 नोव्हेंबर 2026मुलाखत: डिसें",
         "qualification": [
-            "Graduate",
-            "10th Pass",
-            "MBBS",
             "B.Tech / B.E",
+            "10th Pass",
             "AFCAT / Defense",
+            "MBBS",
+            "Graduate",
             "Post Graduate"
         ]
     },
@@ -48,10 +60,10 @@
         "category": "advertisement",
         "last_date": "26 नोव्हेंबर 2026महत्वाच्या लि",
         "qualification": [
-            "ITI",
-            "Graduate",
             "B.Tech / B.E",
-            "Diploma"
+            "Graduate",
+            "Diploma",
+            "ITI"
         ]
     },
     {
@@ -61,10 +73,10 @@
         "category": "advertisement",
         "last_date": "05 डिसेंबर 2026महत्वाच्या लिंक",
         "qualification": [
-            "Graduate",
-            "Diploma",
             "B.Tech / B.E",
-            "12th Pass"
+            "12th Pass",
+            "Diploma",
+            "Graduate"
         ]
     },
     {
@@ -74,9 +86,9 @@
         "category": "advertisement",
         "last_date": "01 जानेवारी 2027",
         "qualification": [
-            "Graduate",
             "B.Tech / B.E",
-            "12th Pass"
+            "12th Pass",
+            "Graduate"
         ]
     },
     {
@@ -86,24 +98,9 @@
         "category": "advertisement",
         "last_date": "08 नोव्हेंबर 2026प्रिंटेड अर्ज",
         "qualification": [
-            "ITI",
             "B.Tech / B.E",
-            "10th Pass"
-        ]
-    },
-    {
-        "title": "RRB Isolated Bharti 2026: भारतीय रेल्वेत 191 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/rrb-isolated-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/rrb-isolated-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "04 डिसेंबर 2026परीक्षा: नंतर क",
-        "qualification": [
-            "Graduate",
-            "Diploma",
-            "12th Pass",
-            "B.Tech / B.E",
-            "LLB / Law",
-            "Post Graduate"
+            "10th Pass",
+            "ITI"
         ]
     },
     {
@@ -113,11 +110,11 @@
         "category": "hall_ticket",
         "last_date": "05 नोव्हेंबर 2026",
         "qualification": [
-            "Graduate",
-            "B.Ed / D.Ed",
-            "10th Pass",
             "B.Tech / B.E",
-            "AFCAT / Defense"
+            "10th Pass",
+            "AFCAT / Defense",
+            "B.Ed / D.Ed",
+            "Graduate"
         ]
     },
     {
@@ -127,8 +124,8 @@
         "category": "hall_ticket",
         "last_date": "05 नोव्हेंबर 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -138,8 +135,8 @@
         "category": "hall_ticket",
         "last_date": "31 ऑक्टोबर 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -149,8 +146,8 @@
         "category": "result",
         "last_date": "13 सप्टेंबर 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -160,8 +157,8 @@
         "category": "result",
         "last_date": "29 ऑगस्ट 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -171,12 +168,12 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "Graduate",
-            "B.Ed / D.Ed",
             "10th Pass",
-            "12th Pass",
             "CA / CS",
             "AFCAT / Defense",
+            "B.Ed / D.Ed",
+            "12th Pass",
+            "Graduate",
             "Post Graduate"
         ]
     },
@@ -187,9 +184,9 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "10th Pass",
+            "AFCAT / Defense",
             "12th Pass",
-            "AFCAT / Defense"
+            "10th Pass"
         ]
     },
     {
@@ -209,8 +206,8 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -220,9 +217,9 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
+            "AFCAT / Defense",
             "Nursing",
-            "10th Pass",
-            "AFCAT / Defense"
+            "10th Pass"
         ]
     },
     {
@@ -232,8 +229,8 @@
         "category": "result",
         "last_date": "30 जून 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -243,8 +240,8 @@
         "category": "result",
         "last_date": "08 ऑगस्ट 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -254,8 +251,8 @@
         "category": "result",
         "last_date": "11 जुलै 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     },
     {
@@ -265,9 +262,9 @@
         "category": "result",
         "last_date": "21 जून 2026",
         "qualification": [
-            "MBBS",
+            "AFCAT / Defense",
             "10th Pass",
-            "AFCAT / Defense"
+            "MBBS"
         ]
     },
     {
@@ -277,9 +274,9 @@
         "category": "result",
         "last_date": "16 जून 2026",
         "qualification": [
+            "AFCAT / Defense",
             "Nursing",
-            "10th Pass",
-            "AFCAT / Defense"
+            "10th Pass"
         ]
     },
     {
@@ -289,8 +286,8 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "10th Pass"
         ]
     }
 ]
