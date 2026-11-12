@@ -4,14 +4,14 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "14/12/2026",
+        "last_date": "11/12/2026",
         "qualification": [
-            "Diploma",
-            "Graduate",
-            "AFCAT / Defense",
-            "12th Pass",
             "ITI",
-            "10th Pass"
+            "Graduate",
+            "Diploma",
+            "10th Pass",
+            "12th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -48,20 +48,6 @@
         ]
     },
     {
-        "title": "View All Hall Tickets »",
-        "source_url": "https://majhinaukri.in/hall-ticket/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2016/09/Hall-Ticket.png",
-        "category": "hall_ticket",
-        "last_date": "22 नोव्हेंबर 2026",
-        "qualification": [
-            "B.Ed / D.Ed",
-            "Graduate",
-            "AFCAT / Defense",
-            "B.Tech / B.E",
-            "10th Pass"
-        ]
-    },
-    {
         "title": "Northern Railway Apprentice Bharti 2026: उत्तर रेल्वेत अप्रेंटिस पदांच्या 4651 जागांसाठी भरती",
         "source_url": "https://majhinaukri.in/northern-railway-apprentice-bharti/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/northern-railway-apprentice-bharti-majhinaukri.webp",
@@ -81,8 +67,8 @@
         "last_date": "13 नोव्हेंबर 2026महत्वाच्या लि",
         "qualification": [
             "B.Tech / B.E",
-            "CA / CS",
-            "Graduate"
+            "Graduate",
+            "CA / CS"
         ]
     },
     {
@@ -92,25 +78,37 @@
         "category": "advertisement",
         "last_date": "18 नोव्हेंबर 2026मुलाखत: डिसें",
         "qualification": [
+            "MBBS",
             "Graduate",
-            "AFCAT / Defense",
-            "B.Tech / B.E",
-            "Post Graduate",
             "10th Pass",
-            "MBBS"
+            "Post Graduate",
+            "B.Tech / B.E",
+            "AFCAT / Defense"
         ]
     },
     {
-        "title": "ISRO SDSC SHAR Apprentice Bharti 2026: सतीश धवन स्पेस सेंटर येथे अप्रेंटिस पदांच्या 400 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/isro-sdsc-shar-apprentice-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/isro-sdsc-shar-apprentice-bharti-majhinaukri.webp",
+        "title": "ISRO URSC Bharti 2026: यूआर राव उपग्रह केंद्रात 61 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/isro-ursc-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/07/isro-ursc-bharti-majhinaukri-1.webp",
         "category": "advertisement",
-        "last_date": "26 नोव्हेंबर 2026महत्वाच्या लि",
+        "last_date": "13 नोव्हेंबर 2026 (11: 55 PM)म",
         "qualification": [
-            "B.Tech / B.E",
-            "Diploma",
+            "10th Pass",
             "ITI",
-            "Graduate"
+            "B.Tech / B.E"
+        ]
+    },
+    {
+        "title": "CWC Bharti 2026: केंद्रीय वखार महामंडळात 327 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/cwc-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/cwc-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "15 नोव्हेंबर 2026परीक्षा: नमूद",
+        "qualification": [
+            "Diploma",
+            "Post Graduate",
+            "B.Tech / B.E",
+            "CA / CS"
         ]
     },
     {
@@ -121,8 +119,8 @@
         "last_date": "01 जानेवारी 2027",
         "qualification": [
             "B.Tech / B.E",
-            "12th Pass",
-            "Graduate"
+            "Graduate",
+            "12th Pass"
         ]
     },
     {
@@ -138,15 +136,17 @@
         ]
     },
     {
-        "title": "CRPF Sports Quota Bharti 2026: केंद्रीय राखीव पोलीस दलात खेळाडूंच्या 521 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/crpf-sports-quota-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/crpf-sports-quota-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "11 नोव्हेंबर 2026अर्ज दुरुस्ती",
+        "title": "View All Hall Tickets »",
+        "source_url": "https://majhinaukri.in/hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2016/09/Hall-Ticket.png",
+        "category": "hall_ticket",
+        "last_date": "22 नोव्हेंबर 2026",
         "qualification": [
+            "Graduate",
+            "B.Ed / D.Ed",
             "10th Pass",
-            "12th Pass",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -178,13 +178,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "B.Ed / D.Ed",
             "Graduate",
-            "AFCAT / Defense",
+            "CA / CS",
+            "B.Ed / D.Ed",
+            "10th Pass",
             "Post Graduate",
             "12th Pass",
-            "10th Pass",
-            "CA / CS"
+            "AFCAT / Defense"
         ]
     },
     {
@@ -273,8 +273,8 @@
         "last_date": "21 जून 2026",
         "qualification": [
             "10th Pass",
-            "AFCAT / Defense",
-            "MBBS"
+            "MBBS",
+            "AFCAT / Defense"
         ]
     },
     {
