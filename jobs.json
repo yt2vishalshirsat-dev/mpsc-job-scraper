@@ -4,13 +4,37 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "15/11/2026",
+        "last_date": "14/12/2026",
         "qualification": [
-            "ITI",
-            "Graduate",
-            "12th Pass",
             "10th Pass",
+            "ITI",
+            "AFCAT / Defense",
             "Diploma",
+            "12th Pass",
+            "Graduate"
+        ]
+    },
+    {
+        "title": "Oil India Bharti 2026: ऑइल इंडिया लिमिटेड मध्ये विविध पदांची भरती",
+        "source_url": "https://majhinaukri.in/oil-india-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/oil-india-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "14 नोव्हेंबर 2026 14 डिसेंबर 2",
+        "qualification": [
+            "B.Tech / B.E",
+            "Post Graduate",
+            "Diploma",
+            "CA / CS"
+        ]
+    },
+    {
+        "title": "Supreme Court JCA Hall Ticket: भारतीय सर्वोच्च न्यायालय- ज्युनियर कोर्ट असिस्टंट भरती परीक्षा प्रवेशपत्र",
+        "source_url": "https://majhinaukri.in/hall-ticket/supreme-court-hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/supreme-court-hall-ticket-majhinaukri.webp",
+        "category": "hall_ticket",
+        "last_date": "20 नोव्हेंबर 2026",
+        "qualification": [
+            "10th Pass",
             "AFCAT / Defense"
         ]
     },
@@ -21,9 +45,9 @@
         "category": "advertisement",
         "last_date": "01 जानेवारी 2027",
         "qualification": [
-            "Graduate",
             "B.Tech / B.E",
-            "12th Pass"
+            "12th Pass",
+            "Graduate"
         ]
     },
     {
@@ -33,9 +57,9 @@
         "category": "advertisement",
         "last_date": "13 नोव्हेंबर 2026 20 नोव्हेंबर",
         "qualification": [
-            "10th Pass",
+            "B.Tech / B.E",
             "ITI",
-            "B.Tech / B.E"
+            "10th Pass"
         ]
     },
     {
@@ -45,12 +69,12 @@
         "category": "advertisement",
         "last_date": "11 डिसेंबर 2026परीक्षा: डिसेंब",
         "qualification": [
-            "Post Graduate",
-            "CA / CS",
-            "M.Tech / M.E",
             "Diploma",
+            "M.Tech / M.E",
+            "B.Tech / B.E",
             "LLB / Law",
-            "B.Tech / B.E"
+            "Post Graduate",
+            "CA / CS"
         ]
     },
     {
@@ -60,24 +84,13 @@
         "category": "advertisement",
         "last_date": "09 नोव्हेंबर 2026  16 नोव्हेंब",
         "qualification": [
-            "Post Graduate",
-            "ITI",
-            "Graduate",
-            "Nursing",
             "10th Pass",
             "Diploma",
-            "B.Tech / B.E"
-        ]
-    },
-    {
-        "title": "ASRB ICAR Bharti 2026: भारतीय कृषी संशोधन परिषदेत 1,393 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/asrb-icar-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/asrb-icar-bharti-2026-for-1393-posts-majhinaukri.png",
-        "category": "advertisement",
-        "last_date": "17 डिसेंबर 2026 (11:59 PM)अर्ज",
-        "qualification": [
             "B.Tech / B.E",
-            "Diploma"
+            "Nursing",
+            "Post Graduate",
+            "ITI",
+            "Graduate"
         ]
     },
     {
@@ -93,17 +106,30 @@
         ]
     },
     {
+        "title": "CWC Bharti 2026: केंद्रीय वखार महामंडळात 327 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/cwc-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/cwc-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "15 नोव्हेंबर 2026परीक्षा: नमूद",
+        "qualification": [
+            "B.Tech / B.E",
+            "Post Graduate",
+            "Diploma",
+            "CA / CS"
+        ]
+    },
+    {
         "title": "View All Hall Tickets »",
         "source_url": "https://majhinaukri.in/hall-ticket/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2016/09/Hall-Ticket.png",
         "category": "hall_ticket",
-        "last_date": "22 नोव्हेंबर 2026",
+        "last_date": "20 नोव्हेंबर 2026",
         "qualification": [
-            "B.Ed / D.Ed",
-            "Graduate",
             "10th Pass",
             "AFCAT / Defense",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "B.Ed / D.Ed",
+            "Graduate"
         ]
     },
     {
@@ -168,13 +194,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "B.Ed / D.Ed",
-            "Post Graduate",
-            "Graduate",
-            "CA / CS",
-            "12th Pass",
             "10th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "Post Graduate",
+            "B.Ed / D.Ed",
+            "12th Pass",
+            "Graduate",
+            "CA / CS"
         ]
     },
     {
@@ -184,8 +210,8 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "10th Pass",
             "12th Pass",
+            "10th Pass",
             "AFCAT / Defense"
         ]
     },
@@ -228,9 +254,9 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
+            "AFCAT / Defense",
             "10th Pass",
-            "Nursing",
-            "AFCAT / Defense"
+            "Nursing"
         ]
     },
     {
