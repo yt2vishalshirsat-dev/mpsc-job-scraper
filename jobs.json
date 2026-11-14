@@ -4,13 +4,38 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "14/12/2026",
+        "last_date": "27/11/2026",
         "qualification": [
-            "10th Pass",
+            "12th Pass",
+            "Graduate",
             "ITI",
             "AFCAT / Defense",
             "Diploma",
-            "12th Pass",
+            "10th Pass"
+        ]
+    },
+    {
+        "title": "MPSC Group C Bharti 2026: MPSC मार्फत ‘गट-क’ पदांच्या 16,717 जागांसाठी मेगाभरती",
+        "source_url": "https://majhinaukri.in/mpsc-group-c-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/mpsc-group-c-bharti-2026-for-16717-posts-majhinaukri.png",
+        "category": "advertisement",
+        "last_date": "17 जुलै 2026  27 नोव्हेंबर 202",
+        "qualification": [
+            "Graduate",
+            "B.Tech / B.E",
+            "Diploma",
+            "Nursing",
+            "10th Pass"
+        ]
+    },
+    {
+        "title": "Talathi Bharti 2026: महाराष्ट्र राज्य तलाठी भरती 2026",
+        "source_url": "https://majhinaukri.in/talathi-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/talathi-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "05 ऑगस्ट 2026  27 नोव्हेंबर 20",
+        "qualification": [
+            "B.Tech / B.E",
             "Graduate"
         ]
     },
@@ -21,9 +46,9 @@
         "category": "advertisement",
         "last_date": "14 नोव्हेंबर 2026 14 डिसेंबर 2",
         "qualification": [
+            "Diploma",
             "B.Tech / B.E",
             "Post Graduate",
-            "Diploma",
             "CA / CS"
         ]
     },
@@ -57,24 +82,9 @@
         "category": "advertisement",
         "last_date": "13 नोव्हेंबर 2026 20 नोव्हेंबर",
         "qualification": [
-            "B.Tech / B.E",
             "ITI",
-            "10th Pass"
-        ]
-    },
-    {
-        "title": "Exim Bank Bharti 2026: भारतीय निर्यात-आयात बँकेत 120 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/exim-bank-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/exim-bank-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "11 डिसेंबर 2026परीक्षा: डिसेंब",
-        "qualification": [
-            "Diploma",
-            "M.Tech / M.E",
             "B.Tech / B.E",
-            "LLB / Law",
-            "Post Graduate",
-            "CA / CS"
+            "10th Pass"
         ]
     },
     {
@@ -84,13 +94,13 @@
         "category": "advertisement",
         "last_date": "09 नोव्हेंबर 2026  16 नोव्हेंब",
         "qualification": [
-            "10th Pass",
-            "Diploma",
-            "B.Tech / B.E",
-            "Nursing",
-            "Post Graduate",
+            "Graduate",
             "ITI",
-            "Graduate"
+            "B.Tech / B.E",
+            "Diploma",
+            "Nursing",
+            "10th Pass",
+            "Post Graduate"
         ]
     },
     {
@@ -100,22 +110,9 @@
         "category": "advertisement",
         "last_date": "15 नोव्हेंबर 2026 परीक्षा: 22 ",
         "qualification": [
-            "B.Tech / B.E",
             "ITI",
-            "Diploma"
-        ]
-    },
-    {
-        "title": "CWC Bharti 2026: केंद्रीय वखार महामंडळात 327 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/cwc-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/cwc-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "15 नोव्हेंबर 2026परीक्षा: नमूद",
-        "qualification": [
-            "B.Tech / B.E",
-            "Post Graduate",
             "Diploma",
-            "CA / CS"
+            "B.Tech / B.E"
         ]
     },
     {
@@ -125,11 +122,11 @@
         "category": "hall_ticket",
         "last_date": "20 नोव्हेंबर 2026",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense",
+            "Graduate",
             "B.Tech / B.E",
+            "AFCAT / Defense",
             "B.Ed / D.Ed",
-            "Graduate"
+            "10th Pass"
         ]
     },
     {
@@ -194,13 +191,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "AFCAT / Defense",
-            "Post Graduate",
-            "B.Ed / D.Ed",
             "12th Pass",
             "Graduate",
-            "CA / CS"
+            "CA / CS",
+            "B.Ed / D.Ed",
+            "AFCAT / Defense",
+            "10th Pass",
+            "Post Graduate"
         ]
     },
     {
@@ -210,8 +207,8 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "12th Pass",
             "10th Pass",
+            "12th Pass",
             "AFCAT / Defense"
         ]
     },
@@ -254,9 +251,9 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
-            "AFCAT / Defense",
+            "Nursing",
             "10th Pass",
-            "Nursing"
+            "AFCAT / Defense"
         ]
     },
     {
