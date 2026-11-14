@@ -4,14 +4,38 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "11/12/2026",
+        "last_date": "15/11/2026",
+        "qualification": [
+            "ITI",
+            "Graduate",
+            "12th Pass",
+            "10th Pass",
+            "Diploma",
+            "AFCAT / Defense"
+        ]
+    },
+    {
+        "title": "RRB NTPC Bharti 2026: भारतीय रेल्वेत 1688 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/rrb-ntpc-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/rrb-ntpc-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "01 जानेवारी 2027",
+        "qualification": [
+            "Graduate",
+            "B.Tech / B.E",
+            "12th Pass"
+        ]
+    },
+    {
+        "title": "ISRO URSC Bharti 2026: यूआर राव उपग्रह केंद्रात 61 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/isro-ursc-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/07/isro-ursc-bharti-majhinaukri-1.webp",
+        "category": "advertisement",
+        "last_date": "13 नोव्हेंबर 2026 20 नोव्हेंबर",
         "qualification": [
             "10th Pass",
-            "Graduate",
             "ITI",
-            "AFCAT / Defense",
-            "12th Pass",
-            "Diploma"
+            "B.Tech / B.E"
         ]
     },
     {
@@ -21,12 +45,12 @@
         "category": "advertisement",
         "last_date": "11 डिसेंबर 2026परीक्षा: डिसेंब",
         "qualification": [
-            "B.Tech / B.E",
             "Post Graduate",
             "CA / CS",
-            "LLB / Law",
+            "M.Tech / M.E",
             "Diploma",
-            "M.Tech / M.E"
+            "LLB / Law",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -36,35 +60,13 @@
         "category": "advertisement",
         "last_date": "09 नोव्हेंबर 2026  16 नोव्हेंब",
         "qualification": [
-            "10th Pass",
             "Post Graduate",
-            "B.Tech / B.E",
-            "Graduate",
             "ITI",
+            "Graduate",
             "Nursing",
-            "Diploma"
-        ]
-    },
-    {
-        "title": "PNB LBO Result: पंजाब नॅशनल बँक- स्थानिक बँक अधिकारी (LBO) भरती परीक्षा निकाल",
-        "source_url": "https://majhinaukri.in/result/pnb-result/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/pnb-result-majhinaukri.webp",
-        "category": "result",
-        "last_date": "06 सप्टेंबर 2026",
-        "qualification": [
             "10th Pass",
-            "AFCAT / Defense"
-        ]
-    },
-    {
-        "title": "UIIC AO Result: युनायटेड इंडिया इन्शुरन्स कंपनी लि.- एडमिनिस्ट्रेटिव ऑफिसर पूर्व परीक्षा निकाल",
-        "source_url": "https://majhinaukri.in/result/uiic-result/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/uiic-result-majhinaukri.webp",
-        "category": "result",
-        "last_date": "22 ऑक्टोबर 2026",
-        "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
+            "Diploma",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -74,56 +76,20 @@
         "category": "advertisement",
         "last_date": "17 डिसेंबर 2026 (11:59 PM)अर्ज",
         "qualification": [
-            "Diploma",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Diploma"
         ]
     },
     {
-        "title": "NLC India GET Bharti 2026: NLC इंडिया लिमिटेड मध्ये 143 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/nlc-india-get-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/nlc-india-get-bharti-majhinaukri.webp",
+        "title": "SAMEER Bharti 2026: SAMEER मुंबई येथे 174 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/sameer-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/sameer-bharti-majhinaukri.webp",
         "category": "advertisement",
-        "last_date": "14 डिसेंबर 2026 (05:00 PM)महत्",
+        "last_date": "15 नोव्हेंबर 2026 परीक्षा: 22 ",
         "qualification": [
             "B.Tech / B.E",
-            "Graduate"
-        ]
-    },
-    {
-        "title": "ISRO URSC Bharti 2026: यूआर राव उपग्रह केंद्रात 61 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/isro-ursc-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/07/isro-ursc-bharti-majhinaukri-1.webp",
-        "category": "advertisement",
-        "last_date": "13 नोव्हेंबर 2026 (11: 55 PM)म",
-        "qualification": [
             "ITI",
-            "10th Pass",
-            "B.Tech / B.E"
-        ]
-    },
-    {
-        "title": "CWC Bharti 2026: केंद्रीय वखार महामंडळात 327 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/cwc-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/cwc-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "15 नोव्हेंबर 2026परीक्षा: नमूद",
-        "qualification": [
-            "CA / CS",
-            "B.Tech / B.E",
-            "Diploma",
-            "Post Graduate"
-        ]
-    },
-    {
-        "title": "RRB NTPC Bharti 2026: भारतीय रेल्वेत 5236 जागांसाठी मेगाभरती",
-        "source_url": "https://majhinaukri.in/rrb-ntpc-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/rrb-ntpc-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "01 जानेवारी 2027",
-        "qualification": [
-            "12th Pass",
-            "B.Tech / B.E",
-            "Graduate"
+            "Diploma"
         ]
     },
     {
@@ -133,11 +99,11 @@
         "category": "hall_ticket",
         "last_date": "22 नोव्हेंबर 2026",
         "qualification": [
-            "10th Pass",
-            "B.Tech / B.E",
+            "B.Ed / D.Ed",
             "Graduate",
+            "10th Pass",
             "AFCAT / Defense",
-            "B.Ed / D.Ed"
+            "B.Tech / B.E"
         ]
     },
     {
@@ -163,6 +129,28 @@
         ]
     },
     {
+        "title": "PNB LBO Result: पंजाब नॅशनल बँक- स्थानिक बँक अधिकारी (LBO) भरती परीक्षा निकाल",
+        "source_url": "https://majhinaukri.in/result/pnb-result/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/pnb-result-majhinaukri.webp",
+        "category": "result",
+        "last_date": "06 सप्टेंबर 2026",
+        "qualification": [
+            "10th Pass",
+            "AFCAT / Defense"
+        ]
+    },
+    {
+        "title": "UIIC AO Result: युनायटेड इंडिया इन्शुरन्स कंपनी लि.- एडमिनिस्ट्रेटिव ऑफिसर पूर्व परीक्षा निकाल",
+        "source_url": "https://majhinaukri.in/result/uiic-result/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/uiic-result-majhinaukri.webp",
+        "category": "result",
+        "last_date": "22 ऑक्टोबर 2026",
+        "qualification": [
+            "10th Pass",
+            "AFCAT / Defense"
+        ]
+    },
+    {
         "title": "UPSC CDS Result: संयुक्त संरक्षण सेवा-CDS-II 2026 निकाल",
         "source_url": "https://majhinaukri.in/result/upsc-result/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/05/upsc-result-majhinaukri.webp",
@@ -180,13 +168,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
+            "B.Ed / D.Ed",
             "Post Graduate",
             "Graduate",
-            "B.Ed / D.Ed",
-            "AFCAT / Defense",
             "CA / CS",
-            "12th Pass"
+            "12th Pass",
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -196,8 +184,8 @@
         "category": "hall_ticket",
         "last_date": "18 मार्च 2026",
         "qualification": [
-            "12th Pass",
             "10th Pass",
+            "12th Pass",
             "AFCAT / Defense"
         ]
     },
@@ -240,9 +228,9 @@
         "category": "result",
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
-            "AFCAT / Defense",
             "10th Pass",
-            "Nursing"
+            "Nursing",
+            "AFCAT / Defense"
         ]
     },
     {
