@@ -4,14 +4,24 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "23/11/2026",
+        "last_date": "30/11/2026",
         "qualification": [
+            "AFCAT / Defense",
+            "ITI",
             "10th Pass",
             "Diploma",
-            "AFCAT / Defense",
             "12th Pass",
-            "ITI",
             "Graduate"
+        ]
+    },
+    {
+        "title": "Delhi University Bharti 2026: दिल्ली विद्यापीठात असिस्टंट पदाच्या 215 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/delhi-university-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/delhi-university-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "19 नोव्हेंबर 2026  30 नोव्हेंब",
+        "qualification": [
+            "B.Tech / B.E"
         ]
     },
     {
@@ -21,8 +31,8 @@
         "category": "advertisement",
         "last_date": "16 नोव्हेंबर 2026 23 नोव्हेंबर",
         "qualification": [
-            "Graduate",
-            "Diploma"
+            "Diploma",
+            "Graduate"
         ]
     },
     {
@@ -32,10 +42,10 @@
         "category": "advertisement",
         "last_date": "19 डिसेंबर 2026 (05:00 PM)महत्",
         "qualification": [
+            "Diploma",
             "B.Tech / B.E",
             "Post Graduate",
-            "LLB / Law",
-            "Diploma"
+            "LLB / Law"
         ]
     },
     {
@@ -45,25 +55,11 @@
         "category": "advertisement",
         "last_date": "14 डिसेंबर 2026भरती मेळाव्याची",
         "qualification": [
+            "B.Tech / B.E",
+            "ITI",
             "10th Pass",
             "Diploma",
-            "B.Tech / B.E",
-            "12th Pass",
-            "ITI"
-        ]
-    },
-    {
-        "title": "MPSC Group C Bharti 2026: MPSC मार्फत ‘गट-क’ पदांच्या 16,717 जागांसाठी मेगाभरती",
-        "source_url": "https://majhinaukri.in/mpsc-group-c-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/mpsc-group-c-bharti-2026-for-16717-posts-majhinaukri.png",
-        "category": "advertisement",
-        "last_date": "17 जुलै 2026  27 नोव्हेंबर 202",
-        "qualification": [
-            "10th Pass",
-            "Diploma",
-            "B.Tech / B.E",
-            "Nursing",
-            "Graduate"
+            "12th Pass"
         ]
     },
     {
@@ -73,11 +69,11 @@
         "category": "advertisement",
         "last_date": "18 नोव्हेंबर 2026मुलाखत: डिसें",
         "qualification": [
-            "10th Pass",
-            "Post Graduate",
+            "MBBS",
             "B.Tech / B.E",
             "AFCAT / Defense",
-            "MBBS",
+            "Post Graduate",
+            "10th Pass",
             "Graduate"
         ]
     },
@@ -109,8 +105,8 @@
         "last_date": "18 नोव्हेंबर 2026 (11:45 PM)पर",
         "qualification": [
             "10th Pass",
-            "B.Tech / B.E",
-            "ITI"
+            "ITI",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -120,11 +116,11 @@
         "category": "hall_ticket",
         "last_date": "20 नोव्हेंबर 2026",
         "qualification": [
-            "10th Pass",
             "B.Tech / B.E",
             "AFCAT / Defense",
-            "B.Ed / D.Ed",
-            "Graduate"
+            "10th Pass",
+            "Graduate",
+            "B.Ed / D.Ed"
         ]
     },
     {
@@ -189,13 +185,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "10th Pass",
-            "Post Graduate",
-            "AFCAT / Defense",
             "CA / CS",
+            "AFCAT / Defense",
+            "Post Graduate",
+            "10th Pass",
             "12th Pass",
-            "B.Ed / D.Ed",
-            "Graduate"
+            "Graduate",
+            "B.Ed / D.Ed"
         ]
     },
     {
@@ -206,8 +202,8 @@
         "last_date": "18 मार्च 2026",
         "qualification": [
             "10th Pass",
-            "12th Pass",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "12th Pass"
         ]
     },
     {
@@ -250,8 +246,8 @@
         "last_date": "12 सप्टेंबर 2026",
         "qualification": [
             "10th Pass",
-            "Nursing",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "Nursing"
         ]
     },
     {
@@ -295,8 +291,8 @@
         "last_date": "21 जून 2026",
         "qualification": [
             "10th Pass",
-            "MBBS",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "MBBS"
         ]
     }
 ]
