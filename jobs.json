@@ -6,11 +6,11 @@
         "category": "result",
         "last_date": "03/12/2026",
         "qualification": [
-            "Diploma",
-            "10th Pass",
             "ITI",
+            "10th Pass",
             "Graduate",
             "AFCAT / Defense",
+            "Diploma",
             "12th Pass"
         ]
     },
@@ -42,11 +42,11 @@
         "category": "hall_ticket",
         "last_date": "27 नोव्हेंबर 2026",
         "qualification": [
+            "B.Ed / D.Ed",
             "10th Pass",
             "Graduate",
             "AFCAT / Defense",
-            "B.Tech / B.E",
-            "B.Ed / D.Ed"
+            "B.Tech / B.E"
         ]
     },
     {
@@ -99,8 +99,19 @@
         "last_date": "13 नोव्हेंबर 2026 20 नोव्हेंबर",
         "qualification": [
             "10th Pass",
-            "B.Tech / B.E",
-            "ITI"
+            "ITI",
+            "B.Tech / B.E"
+        ]
+    },
+    {
+        "title": "Bank of Baroda Bharti 2026: बँक ऑफ बडोदा मध्ये 837 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/bank-of-baroda-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/bank-of-baroda-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "24 नोव्हेंबर 2026परीक्षा: नमूद",
+        "qualification": [
+            "Graduate",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -110,11 +121,11 @@
         "category": "advertisement",
         "last_date": "20 नोव्हेंबर 2026निकाल/निवड: 1",
         "qualification": [
-            "Diploma",
-            "10th Pass",
             "ITI",
+            "10th Pass",
             "Graduate",
             "B.Tech / B.E",
+            "Diploma",
             "12th Pass"
         ]
     },
@@ -169,13 +180,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
+            "B.Ed / D.Ed",
+            "12th Pass",
             "10th Pass",
             "CA / CS",
             "Graduate",
-            "Post Graduate",
             "AFCAT / Defense",
-            "B.Ed / D.Ed",
-            "12th Pass"
+            "Post Graduate"
         ]
     },
     {
