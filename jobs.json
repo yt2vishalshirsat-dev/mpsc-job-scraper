@@ -4,13 +4,39 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "03/12/2026",
+        "last_date": "29/11/2026",
         "qualification": [
+            "Diploma",
+            "AFCAT / Defense",
+            "Graduate",
             "ITI",
             "10th Pass",
-            "Graduate",
-            "AFCAT / Defense",
+            "12th Pass"
+        ]
+    },
+    {
+        "title": "IBPS PO Result: IBPS मार्फत ‘PO/MT’ भरती (CRP PO/MT-XVI) पूर्व परीक्षा निकाल",
+        "source_url": "https://majhinaukri.in/result/ibps-result/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/ibps-result-majhinaukri.webp",
+        "category": "result",
+        "last_date": "24 ऑगस्ट 2026",
+        "qualification": [
+            "10th Pass",
+            "AFCAT / Defense"
+        ]
+    },
+    {
+        "title": "ONGC Apprentice Bharti 2026: तेल आणि नैसर्गिक वायू महामंडळात अप्रेंटिस पदांच्या 3047 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/ongc-apprentice-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/ongc-apprentice-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "20 नोव्हेंबर 2026 29 नोव्हेंबर",
+        "qualification": [
             "Diploma",
+            "B.Tech / B.E",
+            "Graduate",
+            "ITI",
+            "10th Pass",
             "12th Pass"
         ]
     },
@@ -36,28 +62,14 @@
         ]
     },
     {
-        "title": "View All Hall Tickets »",
-        "source_url": "https://majhinaukri.in/hall-ticket/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2016/09/Hall-Ticket.png",
-        "category": "hall_ticket",
-        "last_date": "27 नोव्हेंबर 2026",
-        "qualification": [
-            "B.Ed / D.Ed",
-            "10th Pass",
-            "Graduate",
-            "AFCAT / Defense",
-            "B.Tech / B.E"
-        ]
-    },
-    {
         "title": "ASRB ICAR Bharti 2026: भारतीय कृषी संशोधन परिषदेत 1,393 जागांसाठी भरती",
         "source_url": "https://majhinaukri.in/asrb-icar-bharti/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/asrb-icar-bharti-2026-for-1393-posts-majhinaukri.png",
         "category": "advertisement",
         "last_date": "17 डिसेंबर 2026 (11:59 PM)अर्ज",
         "qualification": [
-            "B.Tech / B.E",
-            "Diploma"
+            "Diploma",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -81,26 +93,15 @@
         ]
     },
     {
-        "title": "IPR Bharti 2026: प्लाझ्मा संशोधन संस्थेत 58 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/ipr-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/ipr-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "16 नोव्हेंबर 2026 23 नोव्हेंबर",
-        "qualification": [
-            "Graduate",
-            "Diploma"
-        ]
-    },
-    {
         "title": "ISRO URSC Bharti 2026: यूआर राव उपग्रह केंद्रात 61 जागांसाठी भरती",
         "source_url": "https://majhinaukri.in/isro-ursc-bharti/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/07/isro-ursc-bharti-majhinaukri-1.webp",
         "category": "advertisement",
         "last_date": "13 नोव्हेंबर 2026 20 नोव्हेंबर",
         "qualification": [
+            "B.Tech / B.E",
             "10th Pass",
-            "ITI",
-            "B.Tech / B.E"
+            "ITI"
         ]
     },
     {
@@ -110,23 +111,22 @@
         "category": "advertisement",
         "last_date": "24 नोव्हेंबर 2026परीक्षा: नमूद",
         "qualification": [
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
-        "title": "ONGC Apprentice Bharti 2026: तेल आणि नैसर्गिक वायू महामंडळात अप्रेंटिस पदांच्या 3047 जागांसाठी...",
-        "source_url": "https://majhinaukri.in/ongc-apprentice-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/10/ongc-apprentice-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "20 नोव्हेंबर 2026निकाल/निवड: 1",
+        "title": "View All Hall Tickets »",
+        "source_url": "https://majhinaukri.in/hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2016/09/Hall-Ticket.png",
+        "category": "hall_ticket",
+        "last_date": "27 नोव्हेंबर 2026",
         "qualification": [
-            "ITI",
-            "10th Pass",
-            "Graduate",
             "B.Tech / B.E",
-            "Diploma",
-            "12th Pass"
+            "AFCAT / Defense",
+            "Graduate",
+            "B.Ed / D.Ed",
+            "10th Pass"
         ]
     },
     {
@@ -141,7 +141,7 @@
         ]
     },
     {
-        "title": "SBI Apprentice Result: भारतीय स्टेट बँक ‘अप्रेंटिस’ भरती 2026 परीक्षा निकाल",
+        "title": "SBI Clerk Result: SBI लिपिक भरती पूर्व परीक्षा 2026 निकाल  (CRPD/CR/2026-27/17)",
         "source_url": "https://majhinaukri.in/result/sbi-result/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/sbi-result-majhinaukri.webp",
         "category": "result",
@@ -163,30 +163,19 @@
         ]
     },
     {
-        "title": "UIIC AO Result: युनायटेड इंडिया इन्शुरन्स कंपनी लि.- एडमिनिस्ट्रेटिव ऑफिसर पूर्व परीक्षा निकाल",
-        "source_url": "https://majhinaukri.in/result/uiic-result/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/uiic-result-majhinaukri.webp",
-        "category": "result",
-        "last_date": "22 ऑक्टोबर 2026",
-        "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
-        ]
-    },
-    {
         "title": "View All Results »",
         "source_url": "https://majhinaukri.in/result/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2018/01/Majhi-Naukri-Result.png",
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "B.Ed / D.Ed",
-            "12th Pass",
-            "10th Pass",
-            "CA / CS",
-            "Graduate",
             "AFCAT / Defense",
-            "Post Graduate"
+            "Graduate",
+            "Post Graduate",
+            "B.Ed / D.Ed",
+            "10th Pass",
+            "12th Pass",
+            "CA / CS"
         ]
     },
     {
@@ -197,8 +186,8 @@
         "last_date": "18 मार्च 2026",
         "qualification": [
             "10th Pass",
-            "AFCAT / Defense",
-            "12th Pass"
+            "12th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -212,22 +201,22 @@
         ]
     },
     {
-        "title": "UPSC CDS Result: संयुक्त संरक्षण सेवा-CDS-II 2026 निकाल",
-        "source_url": "https://majhinaukri.in/result/upsc-result/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/05/upsc-result-majhinaukri.webp",
+        "title": "UIIC AO Result: युनायटेड इंडिया इन्शुरन्स कंपनी लि.- एडमिनिस्ट्रेटिव ऑफिसर पूर्व परीक्षा निकाल",
+        "source_url": "https://majhinaukri.in/result/uiic-result/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/uiic-result-majhinaukri.webp",
         "category": "result",
-        "last_date": "13 सप्टेंबर 2026",
+        "last_date": "22 ऑक्टोबर 2026",
         "qualification": [
             "10th Pass",
             "AFCAT / Defense"
         ]
     },
     {
-        "title": "IBPS PO Result: IBPS मार्फत ‘PO/MT’ भरती (CRP PO/MT-XVI) पूर्व परीक्षा निकाल",
-        "source_url": "https://majhinaukri.in/result/ibps-result/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/ibps-result-majhinaukri.webp",
+        "title": "UPSC CDS Result: संयुक्त संरक्षण सेवा-CDS-II 2026 निकाल",
+        "source_url": "https://majhinaukri.in/result/upsc-result/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/05/upsc-result-majhinaukri.webp",
         "category": "result",
-        "last_date": "29 ऑगस्ट 2026",
+        "last_date": "13 सप्टेंबर 2026",
         "qualification": [
             "10th Pass",
             "AFCAT / Defense"
