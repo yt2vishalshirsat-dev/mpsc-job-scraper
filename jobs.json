@@ -4,14 +4,29 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "29/11/2026",
+        "last_date": "11/12/2026",
         "qualification": [
-            "ITI",
-            "12th Pass",
-            "AFCAT / Defense",
             "Graduate",
+            "12th Pass",
             "Diploma",
-            "10th Pass"
+            "10th Pass",
+            "AFCAT / Defense",
+            "ITI"
+        ]
+    },
+    {
+        "title": "SIDBI Bharti 2026: भारतीय लघु उद्योग विकास बँकेत 68 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/sidbi-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/sidbi-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "11 डिसेंबर 2026परीक्षा (Phase ",
+        "qualification": [
+            "Graduate",
+            "LLB / Law",
+            "CA / CS",
+            "Post Graduate",
+            "Diploma",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -32,12 +47,12 @@
         "category": "advertisement",
         "last_date": "20 नोव्हेंबर 2026 29 नोव्हेंबर",
         "qualification": [
-            "ITI",
-            "12th Pass",
             "Graduate",
+            "12th Pass",
             "Diploma",
             "10th Pass",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "ITI"
         ]
     },
     {
@@ -48,17 +63,6 @@
         "last_date": "03 डिसेंबर 2026महत्वाच्या लिंक",
         "qualification": [
             "CA / CS"
-        ]
-    },
-    {
-        "title": "SBI Clerk Hall Ticket: भारतीय स्टेट बँक लिपिक (ज्युनियर असोसिएट) भरती 2026 मुख्य परीक्षा प्रवेशपत्र",
-        "source_url": "https://majhinaukri.in/hall-ticket/sbi-hall-ticket/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/sbi-hall-ticket-majhinaukri.webp",
-        "category": "hall_ticket",
-        "last_date": "27 सप्टेंबर 2026",
-        "qualification": [
-            "10th Pass",
-            "AFCAT / Defense"
         ]
     },
     {
@@ -83,28 +87,6 @@
         ]
     },
     {
-        "title": "Delhi University Bharti 2026: दिल्ली विद्यापीठात असिस्टंट पदाच्या 215 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/delhi-university-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/delhi-university-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "19 नोव्हेंबर 2026  30 नोव्हेंब",
-        "qualification": [
-            "B.Tech / B.E"
-        ]
-    },
-    {
-        "title": "ISRO URSC Bharti 2026: यूआर राव उपग्रह केंद्रात 61 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/isro-ursc-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/07/isro-ursc-bharti-majhinaukri-1.webp",
-        "category": "advertisement",
-        "last_date": "13 नोव्हेंबर 2026 20 नोव्हेंबर",
-        "qualification": [
-            "10th Pass",
-            "B.Tech / B.E",
-            "ITI"
-        ]
-    },
-    {
         "title": "Bank of Baroda Bharti 2026: बँक ऑफ बडोदा मध्ये 837 जागांसाठी भरती",
         "source_url": "https://majhinaukri.in/bank-of-baroda-bharti/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/bank-of-baroda-bharti-majhinaukri.webp",
@@ -122,11 +104,22 @@
         "category": "hall_ticket",
         "last_date": "27 नोव्हेंबर 2026",
         "qualification": [
-            "AFCAT / Defense",
-            "B.Ed / D.Ed",
             "Graduate",
             "10th Pass",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "AFCAT / Defense",
+            "B.Ed / D.Ed"
+        ]
+    },
+    {
+        "title": "SBI Clerk Hall Ticket: भारतीय स्टेट बँक लिपिक (ज्युनियर असोसिएट) भरती 2026 मुख्य परीक्षा प्रवेशपत्र",
+        "source_url": "https://majhinaukri.in/hall-ticket/sbi-hall-ticket/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/sbi-hall-ticket-majhinaukri.webp",
+        "category": "hall_ticket",
+        "last_date": "27 सप्टेंबर 2026",
+        "qualification": [
+            "10th Pass",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -169,13 +162,13 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "12th Pass",
-            "AFCAT / Defense",
-            "B.Ed / D.Ed",
-            "CA / CS",
             "Graduate",
+            "CA / CS",
+            "Post Graduate",
+            "12th Pass",
             "10th Pass",
-            "Post Graduate"
+            "AFCAT / Defense",
+            "B.Ed / D.Ed"
         ]
     },
     {
