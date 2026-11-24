@@ -4,14 +4,28 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "07/12/2026",
+        "last_date": "28/12/2026",
         "qualification": [
             "12th Pass",
+            "ITI",
+            "10th Pass",
             "AFCAT / Defense",
             "Diploma",
+            "Graduate"
+        ]
+    },
+    {
+        "title": "BHEL Bharti 2026: भारत हेवी इलेक्ट्रिकल्स लिमिटेड मध्ये 415 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/bhel-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/bhel-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "28 डिसेंबर 2026परीक्षा: 27 जान",
+        "qualification": [
+            "Post Graduate",
+            "Diploma",
+            "B.Tech / B.E",
             "Graduate",
-            "ITI",
-            "10th Pass"
+            "CA / CS"
         ]
     },
     {
@@ -43,12 +57,12 @@
         "last_date": "22 नोव्हेंबर 2026 29 नोव्हेंबर",
         "qualification": [
             "12th Pass",
-            "Diploma",
-            "B.Ed / D.Ed",
-            "Graduate",
-            "B.Tech / B.E",
             "Post Graduate",
-            "10th Pass"
+            "B.Ed / D.Ed",
+            "10th Pass",
+            "Diploma",
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -58,11 +72,11 @@
         "category": "advertisement",
         "last_date": "11 डिसेंबर 2026परीक्षा (Phase ",
         "qualification": [
-            "Diploma",
-            "Graduate",
-            "B.Tech / B.E",
             "Post Graduate",
             "LLB / Law",
+            "Diploma",
+            "B.Tech / B.E",
+            "Graduate",
             "CA / CS"
         ]
     },
@@ -74,21 +88,11 @@
         "last_date": "20 नोव्हेंबर 2026 29 नोव्हेंबर",
         "qualification": [
             "12th Pass",
-            "Diploma",
-            "Graduate",
-            "B.Tech / B.E",
             "ITI",
-            "10th Pass"
-        ]
-    },
-    {
-        "title": "NTPC Bharti 2026: नॅशनल थर्मल पॉवर कॉर्पोरेशन लि. मध्ये 40 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/ntpc-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/08/ntpc-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "03 डिसेंबर 2026महत्वाच्या लिंक",
-        "qualification": [
-            "CA / CS"
+            "10th Pass",
+            "Diploma",
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -98,11 +102,11 @@
         "category": "advertisement",
         "last_date": "17 जुलै 2026  27 नोव्हेंबर 202",
         "qualification": [
-            "Diploma",
-            "Graduate",
-            "B.Tech / B.E",
             "10th Pass",
-            "Nursing"
+            "Nursing",
+            "Diploma",
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -112,8 +116,8 @@
         "category": "advertisement",
         "last_date": "24 नोव्हेंबर 2026परीक्षा: नमूद",
         "qualification": [
-            "Graduate",
-            "B.Tech / B.E"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -123,8 +127,8 @@
         "category": "advertisement",
         "last_date": "25 नोव्हेंबर 2026महत्वाच्या लि",
         "qualification": [
-            "B.Tech / B.E",
-            "AFCAT / Defense"
+            "AFCAT / Defense",
+            "B.Tech / B.E"
         ]
     },
     {
@@ -134,11 +138,11 @@
         "category": "hall_ticket",
         "last_date": "30 नोव्हेंबर 2026",
         "qualification": [
-            "AFCAT / Defense",
             "B.Ed / D.Ed",
-            "Graduate",
+            "10th Pass",
+            "AFCAT / Defense",
             "B.Tech / B.E",
-            "10th Pass"
+            "Graduate"
         ]
     },
     {
@@ -193,11 +197,11 @@
         "last_date": "तपशील पहा",
         "qualification": [
             "12th Pass",
-            "AFCAT / Defense",
-            "B.Ed / D.Ed",
-            "Graduate",
             "Post Graduate",
+            "B.Ed / D.Ed",
             "10th Pass",
+            "AFCAT / Defense",
+            "Graduate",
             "CA / CS"
         ]
     },
