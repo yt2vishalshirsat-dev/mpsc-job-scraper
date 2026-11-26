@@ -4,14 +4,25 @@
         "source_url": "https://majhinaukri.in/current-recruitment/",
         "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2025/05/icon_current-recruitment.png",
         "category": "result",
-        "last_date": "07/12/2026",
+        "last_date": "02/12/2026",
         "qualification": [
             "ITI",
             "AFCAT / Defense",
+            "10th Pass",
             "Diploma",
             "Graduate",
-            "10th Pass",
             "12th Pass"
+        ]
+    },
+    {
+        "title": "SBI SCO Bharti 2026: भारतीय स्टेट बँकेत 77 जागांसाठी भरती",
+        "source_url": "https://majhinaukri.in/sbi-sco-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/sbi-sco-bharti-majhinaukri.webp",
+        "category": "advertisement",
+        "last_date": "25 नोव्हेंबर 2026  02 डिसेंबर ",
+        "qualification": [
+            "B.Tech / B.E",
+            "AFCAT / Defense"
         ]
     },
     {
@@ -32,11 +43,11 @@
         "category": "advertisement",
         "last_date": "28 डिसेंबर 2026परीक्षा: 27 जान",
         "qualification": [
-            "B.Tech / B.E",
-            "Diploma",
             "Post Graduate",
-            "CA / CS",
-            "Graduate"
+            "Diploma",
+            "B.Tech / B.E",
+            "Graduate",
+            "CA / CS"
         ]
     },
     {
@@ -67,28 +78,13 @@
         "category": "advertisement",
         "last_date": "22 नोव्हेंबर 2026 29 नोव्हेंबर",
         "qualification": [
+            "Post Graduate",
+            "10th Pass",
+            "Diploma",
             "B.Ed / D.Ed",
             "B.Tech / B.E",
-            "Diploma",
-            "Post Graduate",
             "Graduate",
-            "10th Pass",
             "12th Pass"
-        ]
-    },
-    {
-        "title": "SIDBI Bharti 2026: भारतीय लघु उद्योग विकास बँकेत 68 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/sidbi-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/sidbi-bharti-majhinaukri.webp",
-        "category": "advertisement",
-        "last_date": "11 डिसेंबर 2026परीक्षा (Phase ",
-        "qualification": [
-            "B.Tech / B.E",
-            "LLB / Law",
-            "Diploma",
-            "Post Graduate",
-            "CA / CS",
-            "Graduate"
         ]
     },
     {
@@ -99,10 +95,10 @@
         "last_date": "17 जुलै 2026  27 नोव्हेंबर 202",
         "qualification": [
             "Nursing",
-            "B.Tech / B.E",
+            "10th Pass",
             "Diploma",
-            "Graduate",
-            "10th Pass"
+            "B.Tech / B.E",
+            "Graduate"
         ]
     },
     {
@@ -117,14 +113,16 @@
         ]
     },
     {
-        "title": "SBI SCO Bharti 2026: भारतीय स्टेट बँकेत 77 जागांसाठी भरती",
-        "source_url": "https://majhinaukri.in/sbi-sco-bharti/",
-        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/09/sbi-sco-bharti-majhinaukri.webp",
+        "title": "ISRO SDSC SHAR Apprentice Bharti 2026: सतीश धवन स्पेस सेंटर येथे अप्रेंटिस पदांच्या...",
+        "source_url": "https://majhinaukri.in/isro-sdsc-shar-apprentice-bharti/",
+        "thumbnail_url": "https://majhinaukri.in/wp-content/uploads/2026/11/isro-sdsc-shar-apprentice-bharti-majhinaukri.webp",
         "category": "advertisement",
-        "last_date": "25 नोव्हेंबर 2026महत्वाच्या लि",
+        "last_date": "26 नोव्हेंबर 2026महत्वाच्या लि",
         "qualification": [
-            "AFCAT / Defense",
-            "B.Tech / B.E"
+            "Graduate",
+            "B.Tech / B.E",
+            "ITI",
+            "Diploma"
         ]
     },
     {
@@ -134,11 +132,11 @@
         "category": "hall_ticket",
         "last_date": "30 नोव्हेंबर 2026",
         "qualification": [
+            "AFCAT / Defense",
+            "10th Pass",
             "B.Ed / D.Ed",
             "B.Tech / B.E",
-            "AFCAT / Defense",
-            "Graduate",
-            "10th Pass"
+            "Graduate"
         ]
     },
     {
@@ -192,12 +190,12 @@
         "category": "result",
         "last_date": "तपशील पहा",
         "qualification": [
-            "B.Ed / D.Ed",
             "AFCAT / Defense",
             "Post Graduate",
-            "CA / CS",
-            "Graduate",
             "10th Pass",
+            "B.Ed / D.Ed",
+            "Graduate",
+            "CA / CS",
             "12th Pass"
         ]
     },
